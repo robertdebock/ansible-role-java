@@ -89,7 +89,7 @@
           - "'1.8.0' in java_version.stderr"
           - "'OpenJDK' in java_version.stderr"
 
-##CentOS 7 openjdk
+# CentOS 7 openjdk
 - name: install centos 7 default (openjdk, 7)
   hosts: centos-7-default
   gather_facts: no
@@ -179,7 +179,7 @@
           - "'1.8.0' in java_version.stderr"
           - "'OpenJDK' in java_version.stderr"
 
-### CentOS 6 oracle
+# CentOS 6 oracle
 - name: install centos 6 oracle 8
   hosts: centos-6-oracle-8
   gather_facts: no
@@ -226,7 +226,7 @@
           - "'9.0.1' in java_version.stderr"
           - "'OpenJDK' not in java_version.stderr"
 
-### CentOS 7 oracle
+# CentOS 7 oracle
 - name: install centos 7 oracle 8
   hosts: centos-7-oracle-8
   gather_facts: no

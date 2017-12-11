@@ -89,7 +89,7 @@
           - "'1.8.0' in java_version.stderr"
           - "'OpenJDK' in java_version.stderr"
 
-##CentOS 7 openjdk
+# CentOS 7 openjdk
 - name: install centos 7 default (openjdk, 7)
   hosts: centos-7-default
   gather_facts: no

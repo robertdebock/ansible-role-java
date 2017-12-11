@@ -8,7 +8,7 @@ driver:
 lint:
   name: yamllint
 platforms:
-##CentOS 6 openjdk
+  # CentOS 6 openjdk
   - name: centos-6-default
     image: centos:6
   - name: centos-6-openjdk-6
@@ -17,7 +17,7 @@ platforms:
     image: centos:6
   - name: centos-6-openjdk-8
     image: centos:6
-##CentOS 7 openjdk
+  # CentOS 7 openjdk
   - name: centos-7-default
     image: centos:7
   - name: centos-7-openjdk-6
@@ -31,7 +31,7 @@ provisioner:
   lint:
     name: ansible-lint
 scenario:
-  name: default
+  name: travis
 verifier:
   name: goss
   lint:
