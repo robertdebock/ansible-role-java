@@ -17,6 +17,6 @@ galaxy_info:
     - java
     - jre
     - jdk
-    
+
 dependencies:
   - robertdebock.bootstrap

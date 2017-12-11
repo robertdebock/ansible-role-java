@@ -1,5 +1,6 @@
 ---
 # defaults file for java
+
 # Set the type of java, valid values are "openjdk" and "oracle".
 java_type: openjdk
 
