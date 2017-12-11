@@ -4,7 +4,9 @@
   package:
     name: "{{ item }}"
   with_items:
-    - java-1.{{ java_version }}.0-{{ java_type }}
+    - "{{ bootstrap_packages[ansible_distribution ~ '-' ~ ansible_distribution_major_version]
+      | default(bootstrap_packages[ansible_distribution]
+      | default(bootstrap_packages['default'] )) }}"
   when:
     - java_type == "openjdk"
 

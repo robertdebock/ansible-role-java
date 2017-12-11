@@ -1,2 +1,7 @@
 ---
 # vars file for java
+java_packages:
+  CentOS:
+    - java-1.{{ java_version }}.0-{{ java_type }}
+  Debian:
+    - openjdk-{{ java_version }}-{{ java_type }}

@@ -178,3 +178,181 @@
         that:
           - "'1.8.0' in java_version.stderr"
           - "'OpenJDK' in java_version.stderr"
+
+- name: install debian jessie default (openjdk, 7)
+  hosts: debian-jessie-default
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+
+  tasks:
+    - name: register java version
+      command: "java -version"
+      changed_when: no
+      register: java_version
+
+    - name: check java version
+      assert:
+        that:
+          - "'1.7.0' in java_version.stderr"
+          - "'OpenJDK' in java_version.stderr"
+
+- name: install debian jessie openjdk 6
+  hosts: debian-jessie-openjdk-6
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: openjdk
+      java_version: 6
+      java_jdk: yes
+
+  tasks:
+    - name: register java version
+      command: "java -version"
+      changed_when: no
+      register: java_version
+
+    - name: check java version
+      assert:
+        that:
+          - "'1.6.0' in java_version.stderr"
+          - "'OpenJDK' in java_version.stderr"
+
+- name: install debian jessie openjdk 7
+  hosts: debian-jessie-openjdk-7
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: openjdk
+      java_version: 7
+      java_jdk: yes
+
+  tasks:
+    - name: register java version
+      command: "java -version"
+      changed_when: no
+      register: java_version
+
+    - name: check java version
+      assert:
+        that:
+          - "'1.7.0' in java_version.stderr"
+          - "'OpenJDK' in java_version.stderr"
+
+- name: install debian jessie openjdk 8
+  hosts: debian-jessie-openjdk-8
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: openjdk
+      java_version: 8
+      java_jdk: yes
+
+  tasks:
+    - name: register java version
+      command: "java -version"
+      changed_when: no
+      register: java_version
+
+    - name: check java version
+      assert:
+        that:
+          - "'1.8.0' in java_version.stderr"
+          - "'OpenJDK' in java_version.stderr"
+
+- name: install debian buster default (openjdk, 7)
+  hosts: debian-buster-default
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+
+  tasks:
+    - name: register java version
+      command: "java -version"
+      changed_when: no
+      register: java_version
+
+    - name: check java version
+      assert:
+        that:
+          - "'1.7.0' in java_version.stderr"
+          - "'OpenJDK' in java_version.stderr"
+
+- name: install debian buster openjdk 6
+  hosts: debian-buster-openjdk-6
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: openjdk
+      java_version: 6
+      java_jdk: yes
+
+  tasks:
+    - name: register java version
+      command: "java -version"
+      changed_when: no
+      register: java_version
+
+    - name: check java version
+      assert:
+        that:
+          - "'1.6.0' in java_version.stderr"
+          - "'OpenJDK' in java_version.stderr"
+
+- name: install debian buster openjdk 7
+  hosts: debian-buster-openjdk-7
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: openjdk
+      java_version: 7
+      java_jdk: yes
+
+  tasks:
+    - name: register java version
+      command: "java -version"
+      changed_when: no
+      register: java_version
+
+    - name: check java version
+      assert:
+        that:
+          - "'1.7.0' in java_version.stderr"
+          - "'OpenJDK' in java_version.stderr"
+
+- name: install debian buster openjdk 8
+  hosts: debian-buster-openjdk-8
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: openjdk
+      java_version: 8
+      java_jdk: yes
+
+  tasks:
+    - name: register java version
+      command: "java -version"
+      changed_when: no
+      register: java_version
+
+    - name: check java version
+      assert:
+        that:
+          - "'1.8.0' in java_version.stderr"
+          - "'OpenJDK' in java_version.stderr"
