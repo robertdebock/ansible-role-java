@@ -1,0 +1,82 @@
+---
+# tasks file for java
+- name: install openjdk jre
+  package:
+    name: "{{ item }}"
+  with_items:
+    - java-1.{{ java_version }}.0-{{ java_type }}
+  when:
+    - java_type == "openjdk"
+
+- name: install openjdk jdk
+  package:
+    name: "{{ item }}"
+  with_items:
+    - java-1.{{ java_version }}.0-{{ java_type }}-devel
+  when:
+    - java_type == "openjdk"
+    - java_jdk == true
+
+- name: copy oracle jre 8
+  copy:
+    src: files/jre-8u151-linux-x64.rpm
+    dest: /tmp/oracle-jre-8.rpm
+  when:
+    - java_type == "oracle"
+    - java_version == 8
+
+- name: install oracle jre 8
+  package:
+    name: /tmp/oracle-jre-8.rpm
+  when:
+    - java_type == "oracle"
+    - java_version == 8
+
+- name: copy oracle jdk 8
+  copy:
+    src: files/jdk-8u151-linux-x64.rpm
+    dest: /tmp/oracle-jdk-8.rpm
+  when:
+    - java_type == "oracle"
+    - java_version == 8
+    - java_jdk == true
+
+- name: install oracle jdk 8
+  package:
+    name: /tmp/oracle-jdk-8.rpm
+  when:
+    - java_type == "oracle"
+    - java_version == 8
+    - java_jdk == true
+
+- name: copy oracle jre 9
+  copy:
+    src: files/jre-9.0.1_linux-x64_bin.rpm
+    dest: /tmp/oracle-jre-9.rpm
+  when:
+    - java_type == "oracle"
+    - java_version == 9
+
+- name: install oracle jre 9
+  package:
+    name: /tmp/oracle-jre-9.rpm
+  when:
+    - java_type == "oracle"
+    - java_version == 9
+
+- name: copy oracle jdk 9
+  copy:
+    src: files/jdk-9.0.1_linux-x64_bin.rpm
+    dest: /tmp/oracle-jdk-9.rpm
+  when:
+    - java_type == "oracle"
+    - java_version == 9
+    - java_jdk == true
+
+- name: install oracle jdk 9
+  package:
+    name: /tmp/oracle-jdk-9.rpm
+  when:
+    - java_type == "oracle"
+    - java_version == 9
+    - java_jdk == true

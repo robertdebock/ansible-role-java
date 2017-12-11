@@ -1,0 +1,46 @@
+---
+dependency:
+  name: galaxy
+  options:
+    role-file: requirements.yml
+driver:
+  name: vagrant
+  provider:
+    name: virtualbox
+lint:
+  name: yamllint
+platforms:
+  - name: centos-6-default
+    box: centos/6
+  - name: centos-6-openjdk-6
+    box: centos/6
+  - name: centos-6-openjdk-7
+    box: centos/6
+  - name: centos-6-openjdk-8
+    box: centos/6
+  - name: centos-7-default
+    box: centos/7
+  - name: centos-7-openjdk-6
+    box: centos/7
+  - name: centos-7-openjdk-7
+    box: centos/7
+  - name: centos-7-openjdk-8
+    box: centos/7
+  - name: centos-6-oracle-8
+    box: centos/6
+  - name: centos-6-oracle-9
+    box: centos/6
+  - name: centos-7-oracle-8
+    box: centos/7
+  - name: centos-7-oracle-9
+    box: centos/7
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+scenario:
+  name: vagrant
+verifier:
+  name: testinfra
+  lint:
+    name: flake8
