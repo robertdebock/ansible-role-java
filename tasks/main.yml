@@ -24,7 +24,7 @@
   when:
     - java_type == "oracle"
     - java_version == 8
-    - ansible_distribution == CentOS
+    - ansible_distribution == "CentOS"
 
 - name: install oracle jre 8 rpm
   package:
@@ -32,7 +32,7 @@
   when:
     - java_type == "oracle"
     - java_version == 8
-    - ansible_distribution == CentOS
+    - ansible_distribution == "CentOS"
 
 - name: copy oracle jdk 8 rpm
   copy:
@@ -42,7 +42,7 @@
     - java_type == "oracle"
     - java_version == 8
     - java_jdk == true
-    - ansible_distribution == CentOS
+    - ansible_distribution == "CentOS"
 
 - name: install oracle jdk 8 rpm
   package:
@@ -51,7 +51,7 @@
     - java_type == "oracle"
     - java_version == 8
     - java_jdk == true
-    - ansible_distribution == CentOS
+    - ansible_distribution == "CentOS"
 
 - name: ensure /opt/jre exist
   file:
