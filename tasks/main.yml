@@ -85,7 +85,6 @@
     path: /opt/jre/jre1.8.0_151/bin/{{ item }}
   with_items:
     - java
-    - javac
   when:
     - java_type == "oracle"
     - java_version == 8
@@ -129,7 +128,6 @@
     path: /opt/jre/jre9.0.1/bin/{{ item }}
   with_items:
     - java
-    - javac
   when:
     - java_type == "oracle"
     - java_version == 9
