@@ -366,7 +366,7 @@
           - "'OpenJDK' not in result_java_version.stderr"
 
 - name: install debian jessie oracle 9
-  hosts: debian-jessie-9
+  hosts: debian-jessie-oracle-9
   gather_facts: no
   become: yes
 
@@ -413,7 +413,7 @@
           - "'OpenJDK' not in result_java_version.stderr"
 
 - name: install debian buster oracle 9
-  hosts: debian-buster-9
+  hosts: debian-buster-oracle-9
   gather_facts: no
   become: yes
 
