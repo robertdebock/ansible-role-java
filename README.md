@@ -19,11 +19,16 @@ Role Variables
 - java_jdk: yes, true, no or false.
 
 Valid combinations:
-- java_version: 6, java_type: openjdk
-- java_version: 7, java_type: openjdk
-- java_version: 8, java_type: openjdk
-- java_version: 8, java_type: oracle
-- java_version: 9, java_type: oracle
+- ansible_distribution: CentOS, java_version: 6, java_type: openjdk
+- ansible_distribution: CentOS, java_version: 7, java_type: openjdk
+- ansible_distribution: CentOS, java_version: 8, java_type: openjdk
+- ansible_distribution: Debian, ansible_distribution_major_version: jessie, java_version: 7, java_type: openjdk
+- ansible_distribution: Debian, ansible_distribution_major_version: buster, java_version: 8, java_type: openjdk
+- ansible_distribution: CentOS, java_version: 8, java_type: oracle
+- ansible_distribution: CentOS, java_version: 9, java_type: oracle
+- ansible_distribution: Debian, java_version: 8, java_type: oracle
+- ansible_distribution: Debian, java_version: 9, java_type: oracle
+
 
 Dependencies
 ------------

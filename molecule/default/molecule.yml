@@ -36,6 +36,34 @@ platforms:
     image: centos:7
   - name: centos-7-oracle-9
     image: centos:7
+  # Debian Jessie OpenJDK
+  - name: debian-jessie-default
+    image: debian:jessie
+  - name: debian-jessie-openjdk-6
+    image: debian:jessie
+  - name: debian-jessie-openjdk-7
+    image: debian:jessie
+  - name: debian-jessie-openjdk-8
+    image: debian:jessie
+  # Debian Jessie OpenJDK
+  - name: debian-buster-default
+    image: debian:buster
+  - name: debian-buster-openjdk-6
+    image: debian:buster
+  - name: debian-buster-openjdk-7
+    image: debian:buster
+  - name: debian-buster-openjdk-8
+    image: debian:buster
+  # Debian Jessie oracle
+  - name: debian-jessie-oracle-8
+    image: debian:jessie
+  - name: debian-jessie-oracle-9
+    image: debian:jessie
+  # Debian Buster oracle
+  - name: debian-buster-oracle-8
+    image: debian:buster
+  - name: debian-buster-oracle-9
+    image: debian:buster
 provisioner:
   name: ansible
   lint:

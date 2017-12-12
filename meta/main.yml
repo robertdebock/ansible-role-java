@@ -14,7 +14,10 @@ galaxy_info:
 
   galaxy_tags:
     - CentOS
+    - Debian
     - java
+    - Oracle
+    - openjdk
     - jre
     - jdk
 

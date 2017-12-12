@@ -34,6 +34,14 @@ platforms:
     box: centos/7
   - name: centos-7-oracle-9
     box: centos/7
+  - name: debian-jessie-oracle-8
+    box: debian-jessie64
+  - name: debian-jessie-oracle-9
+    box: debian-jessie64
+  - name: debian-buster-oracle-8
+    box: debian-buster64
+  - name: debian-buster-oracle-9
+    box: debian-buster64
 provisioner:
   name: ansible
   lint:

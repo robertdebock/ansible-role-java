@@ -4,15 +4,10 @@
 # Set the type of java, valid values are "openjdk" and "oracle".
 java_type: openjdk
 
-# Set the version of java, valid values are "6", 7" (only for openjdk), "8" and "9" (only for oracle).
+# Set the version of java, valid values are "6", 7", "8" and "9".
 java_version: 7
 
 # Set the variable to install jdk (or not), valid values are "yes" and "no".
 java_jdk: yes
 
-# Valid combinations are:
-# java_type: openjdk, java_version: 6
-# java_type: openjdk, java_version: 7
-# java_type: openjdk, java_version: 8
-# java_type: oracle, java_version: 8
-# java_type: oracle, java_version: 9
+# See README.md for valid combinations.

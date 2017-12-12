@@ -12,13 +12,13 @@
     - name: register java version
       command: "java -version"
       changed_when: no
-      register: java_version
+      register: result_java_version
 
     - name: check java version
       assert:
         that:
-          - "'1.7.0' in java_version.stderr"
-          - "'OpenJDK' in java_version.stderr"
+          - "'1.7.0' in result_java_version.stderr"
+          - "'OpenJDK' in result_java_version.stderr"
 
 - name: install centos 6 openjdk 6
   hosts: centos-6-openjdk-6
@@ -35,13 +35,13 @@
     - name: register java version
       command: "java -version"
       changed_when: no
-      register: java_version
+      register: result_java_version
 
     - name: check java version
       assert:
         that:
-          - "'1.6.0' in java_version.stderr"
-          - "'OpenJDK' in java_version.stderr"
+          - "'1.6.0' in result_java_version.stderr"
+          - "'OpenJDK' in result_java_version.stderr"
 
 - name: install centos 6 openjdk 7
   hosts: centos-6-openjdk-7
@@ -58,13 +58,13 @@
     - name: register java version
       command: "java -version"
       changed_when: no
-      register: java_version
+      register: result_java_version
 
     - name: check java version
       assert:
         that:
-          - "'1.7.0' in java_version.stderr"
-          - "'OpenJDK' in java_version.stderr"
+          - "'1.7.0' in result_java_version.stderr"
+          - "'OpenJDK' in result_java_version.stderr"
 
 - name: install centos 6 openjdk 8
   hosts: centos-6-openjdk-8
@@ -81,15 +81,15 @@
     - name: register java version
       command: "java -version"
       changed_when: no
-      register: java_version
+      register: result_java_version
 
     - name: check java version
       assert:
         that:
-          - "'1.8.0' in java_version.stderr"
-          - "'OpenJDK' in java_version.stderr"
+          - "'1.8.0' in result_java_version.stderr"
+          - "'OpenJDK' in result_java_version.stderr"
 
-# CentOS 7 openjdk
+### CentOS 7 openjdk
 - name: install centos 7 default (openjdk, 7)
   hosts: centos-7-default
   gather_facts: no
@@ -102,13 +102,13 @@
     - name: register java version
       command: "java -version"
       changed_when: no
-      register: java_version
+      register: result_java_version
 
     - name: check java version
       assert:
         that:
-          - "'1.7.0' in java_version.stderr"
-          - "'OpenJDK' in java_version.stderr"
+          - "'1.7.0' in result_java_version.stderr"
+          - "'OpenJDK' in result_java_version.stderr"
 
 - name: install centos 7 openjdk 6
   hosts: centos-7-openjdk-6
@@ -125,13 +125,13 @@
     - name: register java version
       command: "java -version"
       changed_when: no
-      register: java_version
+      register: result_java_version
 
     - name: check java version
       assert:
         that:
-          - "'1.6.0' in java_version.stderr"
-          - "'OpenJDK' in java_version.stderr"
+          - "'1.6.0' in result_java_version.stderr"
+          - "'OpenJDK' in result_java_version.stderr"
 
 - name: install centos 7 openjdk 7
   hosts: centos-7-openjdk-7
@@ -148,13 +148,13 @@
     - name: register java version
       command: "java -version"
       changed_when: no
-      register: java_version
+      register: result_java_version
 
     - name: check java version
       assert:
         that:
-          - "'1.7.0' in java_version.stderr"
-          - "'OpenJDK' in java_version.stderr"
+          - "'1.7.0' in result_java_version.stderr"
+          - "'OpenJDK' in result_java_version.stderr"
 
 - name: install centos 7 openjdk 8
   hosts: centos-7-openjdk-8
@@ -171,14 +171,15 @@
     - name: register java version
       command: "java -version"
       changed_when: no
-      register: java_version
+      register: result_java_version
 
     - name: check java version
       assert:
         that:
-          - "'1.8.0' in java_version.stderr"
-          - "'OpenJDK' in java_version.stderr"
+          - "'1.8.0' in result_java_version.stderr"
+          - "'OpenJDK' in result_java_version.stderr"
 
+### Debian Jessie openjkd
 - name: install debian jessie default (openjdk, 7)
   hosts: debian-jessie-default
   gather_facts: no
@@ -191,36 +192,13 @@
     - name: register java version
       command: "java -version"
       changed_when: no
-      register: java_version
+      register: result_java_version
 
     - name: check java version
       assert:
         that:
-          - "'1.7.0' in java_version.stderr"
-          - "'OpenJDK' in java_version.stderr"
-
-- name: install debian jessie openjdk 6
-  hosts: debian-jessie-openjdk-6
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: robertdebock.java
-      java_type: openjdk
-      java_version: 6
-      java_jdk: yes
-
-  tasks:
-    - name: register java version
-      command: "java -version"
-      changed_when: no
-      register: java_version
-
-    - name: check java version
-      assert:
-        that:
-          - "'1.6.0' in java_version.stderr"
-          - "'OpenJDK' in java_version.stderr"
+          - "'1.7.0' in result_java_version.stderr"
+          - "'OpenJDK' in result_java_version.stderr"
 
 - name: install debian jessie openjdk 7
   hosts: debian-jessie-openjdk-7
@@ -237,103 +215,15 @@
     - name: register java version
       command: "java -version"
       changed_when: no
-      register: java_version
+      register: result_java_version
 
     - name: check java version
       assert:
         that:
-          - "'1.7.0' in java_version.stderr"
-          - "'OpenJDK' in java_version.stderr"
+          - "'1.7.0' in result_java_version.stderr"
+          - "'OpenJDK' in result_java_version.stderr"
 
-- name: install debian jessie openjdk 8
-  hosts: debian-jessie-openjdk-8
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: robertdebock.java
-      java_type: openjdk
-      java_version: 8
-      java_jdk: yes
-
-  tasks:
-    - name: register java version
-      command: "java -version"
-      changed_when: no
-      register: java_version
-
-    - name: check java version
-      assert:
-        that:
-          - "'1.8.0' in java_version.stderr"
-          - "'OpenJDK' in java_version.stderr"
-
-- name: install debian buster default (openjdk, 7)
-  hosts: debian-buster-default
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: robertdebock.java
-
-  tasks:
-    - name: register java version
-      command: "java -version"
-      changed_when: no
-      register: java_version
-
-    - name: check java version
-      assert:
-        that:
-          - "'1.7.0' in java_version.stderr"
-          - "'OpenJDK' in java_version.stderr"
-
-- name: install debian buster openjdk 6
-  hosts: debian-buster-openjdk-6
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: robertdebock.java
-      java_type: openjdk
-      java_version: 6
-      java_jdk: yes
-
-  tasks:
-    - name: register java version
-      command: "java -version"
-      changed_when: no
-      register: java_version
-
-    - name: check java version
-      assert:
-        that:
-          - "'1.6.0' in java_version.stderr"
-          - "'OpenJDK' in java_version.stderr"
-
-- name: install debian buster openjdk 7
-  hosts: debian-buster-openjdk-7
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: robertdebock.java
-      java_type: openjdk
-      java_version: 7
-      java_jdk: yes
-
-  tasks:
-    - name: register java version
-      command: "java -version"
-      changed_when: no
-      register: java_version
-
-    - name: check java version
-      assert:
-        that:
-          - "'1.7.0' in java_version.stderr"
-          - "'OpenJDK' in java_version.stderr"
-
+### Debian Buster openjdk
 - name: install debian buster openjdk 8
   hosts: debian-buster-openjdk-8
   gather_facts: no
@@ -349,10 +239,10 @@
     - name: register java version
       command: "java -version"
       changed_when: no
-      register: java_version
+      register: result_java_version
 
     - name: check java version
       assert:
         that:
-          - "'1.8.0' in java_version.stderr"
-          - "'OpenJDK' in java_version.stderr"
+          - "'1.8.0' in result_java_version.stderr"
+          - "'OpenJDK' in result_java_version.stderr"

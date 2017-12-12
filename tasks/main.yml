@@ -4,9 +4,7 @@
   package:
     name: "{{ item }}"
   with_items:
-    - "{{ bootstrap_packages[ansible_distribution ~ '-' ~ ansible_distribution_major_version]
-      | default(bootstrap_packages[ansible_distribution]
-      | default(bootstrap_packages['default'] )) }}"
+    - "{{ java_packages['jre'][ansible_distribution] }}"
   when:
     - java_type == "openjdk"
 
@@ -14,27 +12,29 @@
   package:
     name: "{{ item }}"
   with_items:
-    - java-1.{{ java_version }}.0-{{ java_type }}-devel
+    - "{{ java_packages['jdk'][ansible_distribution] }}"
   when:
     - java_type == "openjdk"
     - java_jdk == true
 
-- name: copy oracle jre 8
+- name: copy oracle jre 8 rpm
   copy:
     src: files/jre-8u151-linux-x64.rpm
     dest: /tmp/oracle-jre-8.rpm
   when:
     - java_type == "oracle"
     - java_version == 8
+    - ansible_distribution == CentOS
 
-- name: install oracle jre 8
+- name: install oracle jre 8 rpm
   package:
     name: /tmp/oracle-jre-8.rpm
   when:
     - java_type == "oracle"
     - java_version == 8
+    - ansible_distribution == CentOS
 
-- name: copy oracle jdk 8
+- name: copy oracle jdk 8 rpm
   copy:
     src: files/jdk-8u151-linux-x64.rpm
     dest: /tmp/oracle-jdk-8.rpm
@@ -42,31 +42,115 @@
     - java_type == "oracle"
     - java_version == 8
     - java_jdk == true
+    - ansible_distribution == CentOS
 
-- name: install oracle jdk 8
+- name: install oracle jdk 8 rpm
   package:
     name: /tmp/oracle-jdk-8.rpm
   when:
     - java_type == "oracle"
     - java_version == 8
     - java_jdk == true
+    - ansible_distribution == CentOS
 
-- name: copy oracle jre 9
+- name: ensure /opt/jre exist
+  file:
+    path: /opt/jre
+    state: directory
+  when:
+    - java_type == "oracle"
+    - ansible_distribution == "Debian"
+
+- name: ensure /opt/jdk exist
+  file:
+    path: /opt/jdk
+    state: directory
+  when:
+    - java_type == "oracle"
+    - ansible_distribution == "Debian"
+    - java_jdk == true
+
+- name: copy oracle jre 8 tar.gz
+  copy:
+    src: files/jre-8u151-linux-x64.tar.gz
+    dest: /tmp/oracle-jre-8.tar.gz
+  when:
+    - java_type == "oracle"
+    - java_version == 8
+    - ansible_distribution == "Debian"
+
+- name: unpack oracle jre 8 tar.gz
+  unarchive:
+    src: /tmp/oracle-jre-8.tar.gz
+    dest: /opt/jre
+  when:
+    - java_type == "oracle"
+    - java_version == 8
+    - ansible_distribution == "Debian"
+
+- name: update alternatives for java to oracle jre 8
+  alternatives:
+    name: "{{ item }}"
+    path: /opt/jre/jre1.8.0_151/bin/{{ item }}
+  with_items:
+    - java
+    - javac
+  when:
+    - java_type == "oracle"
+    - java_version == 8
+    - ansible_distribution == "Debian"
+
+- name: copy oracle jdk 8 tar.gz
+  copy:
+    src: files/jjdk-8u151-linux-x64.tar.gz
+    dest: /tmp/oracle-jdk-8.tar.gz
+  when:
+    - java_type == "oracle"
+    - java_version == 8
+    - ansible_distribution == "Debian"
+    - java_jdk == true
+
+- name: unpack oracle jdk 8 tar.gz
+  unarchive:
+    src: /tmp/oracle-jdk-8.tar.gz
+    dest: /opt/jdk
+  when:
+    - java_type == "oracle"
+    - java_version == 8
+    - ansible_distribution == "Debian"
+    - java_jdk == true
+
+- name: update alternatives for java to oracle jdk 8
+  alternatives:
+    name: "{{ item }}"
+    path: /opt/jdk/jdk1.8.0_151/bin/{{ item }}
+  with_items:
+    - java
+    - javac
+  when:
+    - java_type == "oracle"
+    - java_version == 8
+    - ansible_distribution == "Debian"
+    - java_jdk == true
+
+- name: copy oracle jre 9 rpm
   copy:
     src: files/jre-9.0.1_linux-x64_bin.rpm
     dest: /tmp/oracle-jre-9.rpm
   when:
     - java_type == "oracle"
     - java_version == 9
+    - ansible_distribution == CentOS
 
-- name: install oracle jre 9
+- name: install oracle jre 9 rpm
   package:
     name: /tmp/oracle-jre-9.rpm
   when:
     - java_type == "oracle"
     - java_version == 9
+    - ansible_distribution == CentOS
 
-- name: copy oracle jdk 9
+- name: copy oracle jdk 9 rpm
   copy:
     src: files/jdk-9.0.1_linux-x64_bin.rpm
     dest: /tmp/oracle-jdk-9.rpm
@@ -74,11 +158,13 @@
     - java_type == "oracle"
     - java_version == 9
     - java_jdk == true
+    - ansible_distribution == CentOS
 
-- name: install oracle jdk 9
+- name: install oracle jdk 9 rpm
   package:
     name: /tmp/oracle-jdk-9.rpm
   when:
     - java_type == "oracle"
     - java_version == 9
     - java_jdk == true
+    - ansible_distribution == CentOS

@@ -1,7 +1,13 @@
 ---
 # vars file for java
 java_packages:
-  CentOS:
-    - java-1.{{ java_version }}.0-{{ java_type }}
-  Debian:
-    - openjdk-{{ java_version }}-{{ java_type }}
+  jre:
+    CentOS:
+      - java-1.{{ java_version }}.0-{{ java_type }}
+    Debian:
+      - openjdk-{{ java_version }}-jre
+  jdk:
+    CentOS:
+      - java-1.{{ java_version }}.0-{{ java_type }}-devel
+    Debian:
+      - openjdk-{{ java_version }}-jre
