@@ -70,18 +70,9 @@
     - ansible_distribution == "Debian"
     - java_jdk == true
 
-- name: copy oracle jre 8 tar.gz
-  copy:
-    src: files/jre-8u151-linux-x64.tar.gz
-    dest: /tmp/oracle-jre-8.tar.gz
-  when:
-    - java_type == "oracle"
-    - java_version == 8
-    - ansible_distribution == "Debian"
-
 - name: unpack oracle jre 8 tar.gz
   unarchive:
-    src: /tmp/oracle-jre-8.tar.gz
+    src: files/jre-8u151-linux-x64.tar.gz
     dest: /opt/jre
   when:
     - java_type == "oracle"
@@ -100,19 +91,9 @@
     - java_version == 8
     - ansible_distribution == "Debian"
 
-- name: copy oracle jdk 8 tar.gz
-  copy:
-    src: files/jjdk-8u151-linux-x64.tar.gz
-    dest: /tmp/oracle-jdk-8.tar.gz
-  when:
-    - java_type == "oracle"
-    - java_version == 8
-    - ansible_distribution == "Debian"
-    - java_jdk == true
-
 - name: unpack oracle jdk 8 tar.gz
   unarchive:
-    src: /tmp/oracle-jdk-8.tar.gz
+    src: files/jdk-8u151-linux-x64.tar.gz
     dest: /opt/jdk
   when:
     - java_type == "oracle"
@@ -130,6 +111,50 @@
   when:
     - java_type == "oracle"
     - java_version == 8
+    - ansible_distribution == "Debian"
+    - java_jdk == true
+
+- name: unpack oracle jre 9 tar.gz
+  unarchive:
+    src: files/jre-9.0.1_linux-x64_bin.tar.gz
+    dest: /opt/jre
+  when:
+    - java_type == "oracle"
+    - java_version == 9
+    - ansible_distribution == "Debian"
+
+- name: update alternatives for java to oracle jre 9
+  alternatives:
+    name: "{{ item }}"
+    path: /opt/jre/jre9.0.1/bin/{{ item }}
+  with_items:
+    - java
+    - javac
+  when:
+    - java_type == "oracle"
+    - java_version == 9
+    - ansible_distribution == "Debian"
+
+- name: unpack oracle jdk 9 tar.gz
+  unarchive:
+    src: files/jdk-9.0.1_linux-x64_bin.tar.gz
+    dest: /opt/jdk
+  when:
+    - java_type == "oracle"
+    - java_version == 9
+    - ansible_distribution == "Debian"
+    - java_jdk == true
+
+- name: update alternatives for java to oracle jdk 8
+  alternatives:
+    name: "{{ item }}"
+    path: /opt/jdk/jdk9.0.1/bin/{{ item }}
+  with_items:
+    - java
+    - javac
+  when:
+    - java_type == "oracle"
+    - java_version == 9
     - ansible_distribution == "Debian"
     - java_jdk == true
 
