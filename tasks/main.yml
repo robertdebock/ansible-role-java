@@ -127,7 +127,7 @@
 - name: update alternatives for java to oracle jre 9
   alternatives:
     name: "{{ item }}"
-    path: /opt/jre/jre9.0.1/bin/{{ item }}
+    path: /opt/jre/jre-9.0.1/bin/{{ item }}
   with_items:
     - java
   when:
