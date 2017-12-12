@@ -146,7 +146,7 @@
     - ansible_distribution == "Debian"
     - java_jdk == true
 
-- name: update alternatives for java to oracle jdk 8
+- name: update alternatives for java to oracle jdk 9
   alternatives:
     name: "{{ item }}"
     link: /usr/bin/{{ item }}
