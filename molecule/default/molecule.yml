@@ -39,19 +39,9 @@ platforms:
   # Debian Jessie OpenJDK
   - name: debian-jessie-default
     image: debian:jessie
-  - name: debian-jessie-openjdk-6
-    image: debian:jessie
   - name: debian-jessie-openjdk-7
     image: debian:jessie
-  - name: debian-jessie-openjdk-8
-    image: debian:jessie
   # Debian Jessie OpenJDK
-  - name: debian-buster-default
-    image: debian:buster
-  - name: debian-buster-openjdk-6
-    image: debian:buster
-  - name: debian-buster-openjdk-7
-    image: debian:buster
   - name: debian-buster-openjdk-8
     image: debian:buster
   # Debian Jessie oracle

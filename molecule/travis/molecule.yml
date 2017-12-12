@@ -32,8 +32,6 @@ platforms:
   - name: debian-jessie-openjdk-7
     image: debian:jessie
   # Debian Buster OpenJDK
-  - name: debian-buster-default
-    image: debian:buster
   - name: debian-buster-openjdk-8
     image: debian:buster
 provisioner:
