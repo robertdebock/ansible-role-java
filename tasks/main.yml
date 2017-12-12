@@ -148,7 +148,7 @@
 - name: update alternatives for java to oracle jdk 8
   alternatives:
     name: "{{ item }}"
-    path: /opt/jdk/jdk9.0.1/bin/{{ item }}
+    path: /opt/jdk/jdk-9.0.1/bin/{{ item }}
   with_items:
     - java
     - javac
