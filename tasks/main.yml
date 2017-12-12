@@ -82,6 +82,7 @@
 - name: update alternatives for java to oracle jre 8
   alternatives:
     name: "{{ item }}"
+    link: /usr/bin/{{ item }}
     path: /opt/jre/jre1.8.0_151/bin/{{ item }}
   with_items:
     - java
@@ -103,6 +104,7 @@
 - name: update alternatives for java to oracle jdk 8
   alternatives:
     name: "{{ item }}"
+    link: /usr/bin/{{ item }}
     path: /opt/jdk/jdk1.8.0_151/bin/{{ item }}
   with_items:
     - java
