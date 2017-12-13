@@ -7,6 +7,7 @@
     - "{{ java_packages['jre'][ansible_distribution] }}"
   when:
     - java_type == "openjdk"
+    - java_jdk != true
 
 - name: install openjdk jdk
   package:
@@ -25,6 +26,7 @@
     - java_type == "oracle"
     - java_version == 8
     - ansible_distribution == "CentOS"
+    - java_jdk != true
 
 - name: install oracle jre 8 rpm
   package:
@@ -33,6 +35,7 @@
     - java_type == "oracle"
     - java_version == 8
     - ansible_distribution == "CentOS"
+    - java_jdk != true
 
 - name: copy oracle jdk 8 rpm
   copy:
@@ -60,6 +63,7 @@
   when:
     - java_type == "oracle"
     - ansible_distribution == "Debian"
+    - java_jdk != true
 
 - name: ensure /opt/jdk exist
   file:
@@ -78,6 +82,7 @@
     - java_type == "oracle"
     - java_version == 8
     - ansible_distribution == "Debian"
+    - java_jdk != true
 
 - name: update alternatives for java to oracle jre 8
   alternatives:
@@ -90,6 +95,7 @@
     - java_type == "oracle"
     - java_version == 8
     - ansible_distribution == "Debian"
+    - java_jdk != true
 
 - name: unpack oracle jdk 8 tar.gz
   unarchive:
@@ -123,6 +129,7 @@
     - java_type == "oracle"
     - java_version == 9
     - ansible_distribution == "Debian"
+    - java_jdk != true
 
 - name: update alternatives for java to oracle jre 9
   alternatives:
@@ -135,6 +142,7 @@
     - java_type == "oracle"
     - java_version == 9
     - ansible_distribution == "Debian"
+    - java_jdk != true
 
 - name: unpack oracle jdk 9 tar.gz
   unarchive:
@@ -168,6 +176,7 @@
     - java_type == "oracle"
     - java_version == 9
     - ansible_distribution == "CentOS"
+    - java_jdk != true
 
 - name: install oracle jre 9 rpm
   package:
@@ -176,6 +185,7 @@
     - java_type == "oracle"
     - java_version == 9
     - ansible_distribution == "CentOS"
+    - java_jdk != true
 
 - name: copy oracle jdk 9 rpm
   copy:
