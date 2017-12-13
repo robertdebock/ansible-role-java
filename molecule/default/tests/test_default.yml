@@ -1,8 +1,7 @@
 # Molecule managed
-
 ---
 file:
-  /usr/bin/python:
+  /usr/bin/java:
     exists: True
     owner: root
     group: root
