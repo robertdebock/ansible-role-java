@@ -11,28 +11,45 @@ platforms:
   # CentOS 6 openjdk
   - name: centos-6-default
     image: centos:6
-  - name: centos-6-openjdk-6
+  - name: centos-6-openjdk-6-jre
     image: centos:6
-  - name: centos-6-openjdk-7
+  - name: centos-6-openjdk-6-jdk
     image: centos:6
-  - name: centos-6-openjdk-8
+  - name: centos-6-openjdk-7-jre
     image: centos:6
+  - name: centos-6-openjdk-7-jdk
+    image: centos:6
+  - name: centos-6-openjdk-8-jre
+    image: centos:6
+  - name: centos-6-openjdk-8-jdk
+    image: centos:6
+
   # CentOS 7 openjdk
   - name: centos-7-default
     image: centos:7
-  - name: centos-7-openjdk-6
+  - name: centos-7-openjdk-6-jre
     image: centos:7
-  - name: centos-7-openjdk-7
+  - name: centos-7-openjdk-6-jdk
     image: centos:7
-  - name: centos-7-openjdk-8
+  - name: centos-7-openjdk-7-jre
+    image: centos:7
+  - name: centos-7-openjdk-7-jdk
+    image: centos:7
+  - name: centos-7-openjdk-8-jre
+    image: centos:7
+  - name: centos-7-openjdk-8-jdk
     image: centos:7
   # Debian Jessie OpenJDK
   - name: debian-jessie-default
     image: debian:jessie
-  - name: debian-jessie-openjdk-7
+  - name: debian-jessie-openjdk-7-jre
+    image: debian:jessie
+  - name: debian-jessie-openjdk-7-jdk
     image: debian:jessie
   # Debian Buster OpenJDK
-  - name: debian-buster-openjdk-8
+  - name: debian-buster-openjdk-8-jre
+    image: debian:buster
+  - name: debian-buster-openjdk-8-jdk
     image: debian:buster
 provisioner:
   name: ansible
