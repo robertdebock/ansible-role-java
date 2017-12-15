@@ -1,13 +1,47 @@
 ---
 # vars file for java
+java_install_directory: /opt
 java_packages:
-  jre:
-    CentOS:
-      - java-1.{{ java_version }}.0-{{ java_type }}
-    Debian:
-      - openjdk-{{ java_version }}-jre
-  jdk:
-    CentOS:
-      - java-1.{{ java_version }}.0-{{ java_type }}-devel
-    Debian:
-      - openjdk-{{ java_version }}-jre
+  CentOS:
+    openjdk:
+      jre:
+        6:
+          name: java-1.6.0-openjdk
+        7:
+          name: java-1.7.0-openjdk
+        8:
+          name: java-1.8.0-openjdk
+      jdk:
+        6:
+          name: java-1.6.0-openjdk-devel
+        7:
+          name: java-1.7.0-openjdk-devel
+        8:
+          name: java-1.8.0-openjdk-devel
+  Debian:
+    openjdk:
+      jre:
+        7:
+          name: openjdk-7-jre
+        8:
+          name: openjdk-8-jre
+      jdk:
+        7:
+          name: openjdk-7-jdk
+        8:
+          name: openjdk-8-jdk
+  oracle:
+    jre:
+      8:
+        name: jre-8u151-linux-x64.tar.gz
+        directory: jre1.8.0_151
+      9:
+        name: jre-9.0.1_linux-x64_bin.tar.gz
+        directory: jre-9.0.1
+    jdk:
+      8:
+        name: jdk-8u151-linux-x64.tar.gz
+        directory: jdk1.8.0_151
+      9:
+        name: jdk-9.0.1_linux-x64_bin.tar.gz
+        directory: jdk-9.0.1
