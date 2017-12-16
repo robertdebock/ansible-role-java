@@ -14,21 +14,20 @@ Requirements
 Role Variables
 --------------
 
-- java_version: 6, 7, 8 or 9.
-- java_type: openjdk or oracle.
-- java_jdk: yes, true, no or false.
+- java_version: 6, 7, 8 or 9, defaults: 7
+- java_vendor: openjdk or oracle, default: openjdk
+- java_type: jdk or jre, default: jre
 
 Valid combinations:
-- ansible_distribution: CentOS, java_version: 6, java_type: openjdk
-- ansible_distribution: CentOS, java_version: 7, java_type: openjdk
-- ansible_distribution: CentOS, java_version: 8, java_type: openjdk
-- ansible_distribution: Debian, ansible_distribution_major_version: jessie, java_version: 7, java_type: openjdk
-- ansible_distribution: Debian, ansible_distribution_major_version: buster, java_version: 8, java_type: openjdk
-- ansible_distribution: CentOS, java_version: 8, java_type: oracle
-- ansible_distribution: CentOS, java_version: 9, java_type: oracle
-- ansible_distribution: Debian, java_version: 8, java_type: oracle
-- ansible_distribution: Debian, java_version: 9, java_type: oracle
-
+- ansible_distribution: CentOS, java_version: 6, java_vendor: openjdk
+- ansible_distribution: CentOS, java_version: 7, java_vendor: openjdk
+- ansible_distribution: CentOS, java_version: 8, java_vendor: openjdk
+- ansible_distribution: Debian, ansible_distribution_major_version: jessie, java_version: 7, java_vendor: openjdk
+- ansible_distribution: Debian, ansible_distribution_major_version: buster, java_version: 8, java_vendor: openjdk
+- ansible_distribution: CentOS, java_version: 8, java_vendor: oracle
+- ansible_distribution: CentOS, java_version: 9, java_vendor: oracle
+- ansible_distribution: Debian, java_version: 8, java_vendor: oracle
+- ansible_distribution: Debian, java_version: 9, java_vendor: oracle
 
 Dependencies
 ------------
@@ -47,7 +46,9 @@ Example Playbook
 - hosts: servers
 
   roles:
-    - robertdebock.java
+    - role: robertdebock.java
+      java_version: 8
+
 ```
 
 Install this role using `galaxy install robertdebock.java`.

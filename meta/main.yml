@@ -11,15 +11,25 @@ galaxy_info:
       versions:
         - 6
         - 7
+    - name: debian
+      versions:
+        - Jessie
+        - buster
+    - name: fedora
+      version:
+        - 26
+        - 27
 
   galaxy_tags:
     - CentOS
     - Debian
+    - Fedora
     - java
     - Oracle
     - openjdk
     - jre
     - jdk
+    - alternatives
 
 dependencies:
   - robertdebock.bootstrap

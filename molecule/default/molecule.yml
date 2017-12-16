@@ -86,6 +86,55 @@ platforms:
     image: debian:buster
   - name: debian-buster-oracle-9-jdk
     image: debian:buster
+  # Fedora 26 OpenJDK
+  - name: fedora-26-default
+    image: fedora:26
+  - name: fedora-26-openjdk-6-jre
+    image: fedora:26
+  - name: fedora-26-openjdk-6-jdk
+    image: fedora:26
+  - name: fedora-26-openjdk-7-jre
+    image: fedora:26
+  - name: fedora-26-openjdk-7-jdk
+    image: fedora:26
+  - name: fedora-26-openjdk-8-jre
+    image: fedora:26
+  - name: fedora-26-openjdk-8-jdk
+    image: fedora:26
+  # Fedora 27 OpenJDK
+  - name: fedora-27-default
+    image: fedora:27
+  - name: fedora-27-openjdk-6-jre
+    image: fedora:27
+  - name: fedora-27-openjdk-6-jdk
+    image: fedora:27
+  - name: fedora-27-openjdk-7-jre
+    image: fedora:27
+  - name: fedora-27-openjdk-7-jdk
+    image: fedora:27
+  - name: fedora-27-openjdk-8-jre
+    image: fedora:27
+  - name: fedora-27-openjdk-8-jdk
+    image: fedora:27
+  # Fedora 26 oracle
+  - name: fedora-26-oracle-8-jre
+    image: fedora:26
+  - name: fedora-26-oracle-8-jdk
+    image: fedora:26
+  - name: fedora-26-oracle-9-jre
+    image: fedora:26
+  - name: fedora-26-oracle-9-jdk
+    image: fedora:26
+  # Fedora 27 oracle
+  - name: fedora-27-oracle-8-jre
+    image: fedora:27
+  - name: fedora-27-oracle-8-jdk
+    image: fedora:27
+  - name: fedora-27-oracle-9-jre
+    image: fedora:27
+  - name: fedora-27-oracle-9-jdk
+    image: fedora:27
+
 provisioner:
   name: ansible
   lint:

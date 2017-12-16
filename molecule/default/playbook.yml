@@ -4,6 +4,7 @@
   hosts: centos-6-default
   gather_facts: no
   become: yes
+  strategy: free
 
   roles:
     - role: robertdebock.java
@@ -358,6 +359,236 @@
 
 - name: install debian buster oracle 9 jdk
   hosts: debian-buster-oracle-9-jdk
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: oracle
+      java_version: 9
+      java_jdk: yes
+
+### Fedora 26 OpenJDK
+- name: install fedora 26 default (openjdk, 7)
+  hosts: fedora-26-default
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+
+- name: install fedora 26 openjdk 6 jre
+  hosts: fedora-26-openjdk-6-jre
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: openjdk
+      java_version: 6
+
+- name: install fedora 26 openjdk 6 jdk
+  hosts: fedora-26-openjdk-6-jdk
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: openjdk
+      java_version: 6
+      java_jdk: yes
+
+- name: install fedora 26 openjdk 7 jre
+  hosts: fedora-26-openjdk-7-jre
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: openjdk
+      java_version: 7
+
+- name: install fedora 26 openjdk 7 jdk
+  hosts: fedora-26-openjdk-7-jdk
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: openjdk
+      java_version: 7
+      java_jdk: yes
+
+- name: install fedora 26 openjdk 8 jre
+  hosts: fedora-26-openjdk-8-jre
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: openjdk
+      java_version: 8
+
+- name: install fedora 26 openjdk 8 jdk
+  hosts: fedora-26-openjdk-8-jdk
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: openjdk
+      java_version: 8
+      java_jdk: yes
+
+### Fedora 27 OpenJDK
+- name: install fedora 27 default (openjdk, 7)
+  hosts: fedora-27-default
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+
+- name: install fedora 27 openjdk 6 jre
+  hosts: fedora-27-openjdk-6-jre
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: openjdk
+      java_version: 6
+
+- name: install fedora 27 openjdk 6 jdk
+  hosts: fedora-27-openjdk-6-jdk
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: openjdk
+      java_version: 6
+      java_jdk: yes
+
+- name: install fedora 27 openjdk 7 jre
+  hosts: fedora-27-openjdk-7-jre
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: openjdk
+      java_version: 7
+
+- name: install fedora 27 openjdk 7 jdk
+  hosts: fedora-27-openjdk-7-jdk
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: openjdk
+      java_version: 7
+      java_jdk: yes
+
+- name: install fedora 27 openjdk 8 jre
+  hosts: fedora-27-openjdk-8-jre
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: openjdk
+      java_version: 8
+
+- name: install fedora 27 openjdk 8 jdk
+  hosts: fedora-27-openjdk-8-jdk
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: openjdk
+      java_version: 8
+      java_jdk: yes
+
+### Fedora 26 Oracle
+- name: install fedora 26 oracle 8 jre
+  hosts: fedora-26-oracle-8-jre
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: oracle
+      java_version: 8
+
+- name: install fedora 26 oracle 8 jdk
+  hosts: fedora-26-oracle-8-jdk
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: oracle
+      java_version: 8
+      java_jdk: yes
+
+- name: install fedora 26 oracle 9 jre
+  hosts: fedora-26-oracle-9-jre
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: oracle
+      java_version: 9
+
+- name: install fedora 26 oracle 9 jdk
+  hosts: fedora-26-oracle-9-jdk
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: oracle
+      java_version: 9
+      java_jdk: yes
+
+### Fedora 27 Oracle
+- name: install fedora 27 oracle 8 jre
+  hosts: fedora-27-oracle-8-jre
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: oracle
+      java_version: 8
+
+- name: install fedora 27 oracle 8 jdk
+  hosts: fedora-27-oracle-8-jdk
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: oracle
+      java_version: 8
+      java_jdk: yes
+
+- name: install fedora 27 oracle 9 jre
+  hosts: fedora-27-oracle-9-jre
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_type: oracle
+      java_version: 9
+
+- name: install fedora 27 oracle 9 jdk
+  hosts: fedora-27-oracle-9-jdk
   gather_facts: no
   become: yes
 
