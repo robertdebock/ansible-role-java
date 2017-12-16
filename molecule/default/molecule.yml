@@ -23,6 +23,15 @@ platforms:
     image: centos:6
   - name: centos-6-openjdk-8-jdk
     image: centos:6
+  # CentOS 6 Oracle
+  - name: centos-6-oracle-8-jre
+    image: centos:6
+  - name: centos-6-oracle-8-jdk
+    image: centos:6
+  - name: centos-6-oracle-9-jre
+    image: centos:6
+  - name: centos-6-oracle-9-jdk
+    image: centos:6
   # CentOS 7 OpenJDK
   - name: centos-7-default
     image: centos:7
@@ -38,15 +47,6 @@ platforms:
     image: centos:7
   - name: centos-7-openjdk-8-jdk
     image: centos:7
-  # CentOS 6 Oracle
-  - name: centos-6-oracle-8-jre
-    image: centos:6
-  - name: centos-6-oracle-8-jdk
-    image: centos:6
-  - name: centos-6-oracle-9-jre
-    image: centos:6
-  - name: centos-6-oracle-9-jdk
-    image: centos:6
   # CentOS 7 Oracle
   - name: centos-7-oracle-8-jre
     image: centos:7
@@ -56,7 +56,7 @@ platforms:
     image: centos:7
   - name: centos-7-oracle-9-jdk
     image: centos:7
-  # Debian Jessie openjdk
+  # Debian Jessie OpenJDK
   - name: debian-jessie-default
     image: debian:jessie
   - name: debian-jessie-openjdk-7-jre
@@ -76,9 +76,18 @@ platforms:
     image: debian:jessie
   - name: debian-jessie-oracle-9-jdk
     image: debian:jessie
-  # Debian Buster oracle
+  # Debian Buster openjdk
   - name: debian-buster-default
     image: debian:buster
+  - name: debian-buster-openjdk-7-jre
+    image: debian:buster
+  - name: debian-buster-openjdk-7-jdk
+    image: debian:buster
+  - name: debian-buster-openjdk-8-jre
+    image: debian:buster
+  - name: debian-buster-openjdk-8-jdk
+    image: debian:buster
+  # Debian Buster Oracle
   - name: debian-buster-oracle-8-jre
     image: debian:buster
   - name: debian-buster-oracle-8-jdk
@@ -96,7 +105,7 @@ platforms:
     image: fedora:26
   - name: fedora-26-openjdk-9-jdk
     image: fedora:26
-  # Fedora 26 oracle
+  # Fedora 26 Oracle
   - name: fedora-26-oracle-8-jre
     image: fedora:26
   - name: fedora-26-oracle-8-jdk
@@ -114,7 +123,7 @@ platforms:
     image: fedora:27
   - name: fedora-27-openjdk-9-jdk
     image: fedora:27
-  # Fedora 27 oracle
+  # Fedora 27 Oracle
   - name: fedora-27-oracle-8-jre
     image: fedora:27
   - name: fedora-27-oracle-8-jdk
@@ -123,12 +132,16 @@ platforms:
     image: fedora:27
   - name: fedora-27-oracle-9-jdk
     image: fedora:27
-  # Ubuntu zesty openjdk
+  # Ubuntu Zesty OpenJDK
   - name: ubuntu-zesty-default
     image: ubuntu:zesty
   - name: ubuntu-zesty-openjdk-7-jre
     image: ubuntu:zesty
   - name: ubuntu-zesty-openjdk-7-jdk
+    image: ubuntu:zesty
+  - name: ubuntu-zesty-openjdk-8-jre
+    image: ubuntu:zesty
+  - name: ubuntu-zesty-openjdk-8-jdk
     image: ubuntu:zesty
   # Ubuntu zesty oracle
   - name: ubuntu-zesty-oracle-8-jre
@@ -145,6 +158,10 @@ platforms:
   - name: ubuntu-artful-openjdk-7-jre
     image: ubuntu:artful
   - name: ubuntu-artful-openjdk-7-jdk
+    image: ubuntu:artful
+  - name: ubuntu-artful-openjdk-8-jre
+    image: ubuntu:artful
+  - name: ubuntu-artful-openjdk-8-jdk
     image: ubuntu:artful
   # Ubuntu artful oracle
   - name: ubuntu-artful-oracle-8-jre
