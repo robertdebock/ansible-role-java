@@ -425,7 +425,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: openjdk
+      java_vendor: openjdk
       java_version: 8
 
 - name: install fedora 26 openjdk 8 jdk
@@ -435,7 +435,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: openjdk
+      java_vendor: openjdk
       java_version: 8
       java_type: jdk
 
@@ -446,7 +446,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: openjdk
+      java_vendor: openjdk
       java_version: 7
 
 - name: install fedora 26 openjdk 9 jdk
@@ -456,7 +456,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: openjdk
+      java_vendor: openjdk
       java_version: 9
       java_type: jdk
 
@@ -468,7 +468,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: oracle
+      java_vendor: oracle
       java_version: 8
 
 - name: install fedora 26 oracle 8 jdk
@@ -478,7 +478,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: oracle
+      java_vendor: oracle
       java_version: 8
       java_type: jdk
 
@@ -489,7 +489,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: oracle
+      java_vendor: oracle
       java_version: 9
 
 - name: install fedora 26 oracle 9 jdk
@@ -499,7 +499,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: oracle
+      java_vendor: oracle
       java_version: 9
       java_type: jdk
 
@@ -511,7 +511,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: openjdk
+      java_vendor: openjdk
       java_version: 8
 
 - name: install fedora 27 openjdk 8 jdk
@@ -521,7 +521,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: openjdk
+      java_vendor: openjdk
       java_version: 8
       java_type: jdk
 
@@ -532,7 +532,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: openjdk
+      java_vendor: openjdk
       java_version: 9
 
 - name: install fedora 27 openjdk 9 jdk
@@ -542,7 +542,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: openjdk
+      java_vendor: openjdk
       java_version: 9
       java_type: jdk
 
@@ -554,7 +554,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: oracle
+      java_vendor: oracle
       java_version: 8
 
 - name: install fedora 27 oracle 8 jdk
@@ -564,7 +564,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: oracle
+      java_vendor: oracle
       java_version: 8
       java_type: jdk
 
@@ -575,7 +575,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: oracle
+      java_vendor: oracle
       java_version: 9
 
 - name: install fedora 27 oracle 9 jdk
@@ -585,7 +585,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: oracle
+      java_vendor: oracle
       java_version: 9
       java_type: jdk
 
