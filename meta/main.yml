@@ -7,18 +7,25 @@ galaxy_info:
   min_ansible_container_version: 0.2.0
 
   platforms:
+    - name: centos
+      version:
+        - 6
+        - 7
+    - name: Debian
+      versions:
+        - all
     - name: EL
       versions:
         - 6
         - 7
-    - name: debian
+    - name: Fedora
       versions:
-        - Jessie
-        - buster
-    - name: fedora
-      version:
-        - 26
-        - 27
+        - all
+    - name: Ubuntu
+      versions:
+        - zesty
+        - artful
+
 
   galaxy_tags:
     - CentOS
