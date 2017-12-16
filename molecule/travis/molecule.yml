@@ -86,7 +86,7 @@ provisioner:
   lint:
     name: ansible-lint
 scenario:
-  name: default
+  name: travis
 verifier:
   name: goss
   lint:
