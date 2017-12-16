@@ -8,6 +8,7 @@ driver:
 lint:
   name: yamllint
 platforms:
+  # CentOS 6 OpenJDK
   - name: centos-6-default
     image: centos:6
   - name: centos-6-openjdk-6-jre
@@ -22,6 +23,7 @@ platforms:
     image: centos:6
   - name: centos-6-openjdk-8-jdk
     image: centos:6
+  # CentOS 7 OpenJDK
   - name: centos-7-default
     image: centos:7
   - name: centos-7-openjdk-6-jre
@@ -36,22 +38,55 @@ platforms:
     image: centos:7
   - name: centos-7-openjdk-8-jdk
     image: centos:7
+  # Debian Jessie openjdk
   - name: debian-jessie-default
     image: debian:jessie
   - name: debian-jessie-openjdk-7-jre
     image: debian:jessie
   - name: debian-jessie-openjdk-7-jdk
     image: debian:jessie
-  - name: debian-buster-openjdk-8-jre
-    image: debian:buster
-  - name: debian-buster-openjdk-8-jdk
-    image: debian:buster
+  - name: debian-jessie-openjdk-8-jre
+    image: debian:jessie
+  - name: debian-jessie-openjdk-8-jdk
+    image: debian:jessie
+  # Fedora 26 OpenJDK
+  - name: fedora-26-openjdk-8-jre
+    image: fedora:26
+  - name: fedora-26-openjdk-8-jdk
+    image: fedora:26
+  - name: fedora-26-openjdk-9-jre
+    image: fedora:26
+  - name: fedora-26-openjdk-9-jdk
+    image: fedora:26
+  # Fedora 27 OpenJDK
+  - name: fedora-27-openjdk-8-jre
+    image: fedora:27
+  - name: fedora-27-openjdk-8-jdk
+    image: fedora:27
+  - name: fedora-27-openjdk-9-jre
+    image: fedora:27
+  - name: fedora-27-openjdk-9-jdk
+    image: fedora:27
+  # Ubuntu zesty openjdk
+  - name: ubuntu-zesty-default
+    image: ubuntu:zesty
+  - name: ubuntu-zesty-openjdk-7-jre
+    image: ubuntu:zesty
+  - name: ubuntu-zesty-openjdk-7-jdk
+    image: ubuntu:zesty
+  # Ubuntu artful OpenJDK
+  - name: ubuntu-artful-default
+    image: ubuntu:artful
+  - name: ubuntu-artful-openjdk-7-jre
+    image: ubuntu:artful
+  - name: ubuntu-artful-openjdk-7-jdk
+    image: ubuntu:artful
 provisioner:
   name: ansible
   lint:
     name: ansible-lint
 scenario:
-  name: travis
+  name: default
 verifier:
   name: goss
   lint:

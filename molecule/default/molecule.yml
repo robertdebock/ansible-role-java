@@ -76,7 +76,7 @@ platforms:
     image: debian:jessie
   - name: debian-jessie-oracle-9-jdk
     image: debian:jessie
-  # Debian Buster openjdk
+  # Debian Buster oracle
   - name: debian-buster-default
     image: debian:buster
   - name: debian-buster-oracle-8-jre
