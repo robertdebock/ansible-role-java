@@ -335,7 +335,7 @@
     - role: robertdebock.java
       java_vendor: oracle
       java_version: 8
-      java_type:
+      java_type: jdk
 
 - name: install debian buster oracle 9 jre
   hosts: debian-buster-oracle-9-jre
