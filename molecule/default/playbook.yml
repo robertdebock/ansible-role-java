@@ -1,5 +1,4 @@
 ---
-### CentOS 6 openjdk
 - name: install centos 6 default (openjdk, 7)
   hosts: centos-6-default
   gather_facts: no
@@ -16,7 +15,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: openjdk
+      java_vendor: openjdk
       java_version: 6
 
 - name: install centos 6 openjdk 6 jdk
@@ -26,9 +25,9 @@
 
   roles:
     - role: robertdebock.java
-      java_type: openjdk
+      java_vendor: openjdk
       java_version: 6
-      java_jdk: yes
+      java_type: jdk
 
 - name: install centos 6 openjdk 7 jre
   hosts: centos-6-openjdk-7-jre
@@ -37,7 +36,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: openjdk
+      java_vendor: openjdk
       java_version: 7
 
 - name: install centos 6 openjdk 7 jdk
@@ -47,9 +46,9 @@
 
   roles:
     - role: robertdebock.java
-      java_type: openjdk
+      java_vendor: openjdk
       java_version: 7
-      java_jdk: yes
+      java_type: jdk
 
 - name: install centos 6 openjdk 8 jre
   hosts: centos-6-openjdk-8-jre
@@ -58,7 +57,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: openjdk
+      java_vendor: openjdk
       java_version: 8
 
 - name: install centos 6 openjdk 8
@@ -68,11 +67,10 @@
 
   roles:
     - role: robertdebock.java
-      java_type: openjdk
+      java_vendor: openjdk
       java_version: 8
-      java_jdk: yes
+      java_type: jdk
 
-### CentOS 7 openjdk
 - name: install centos 7 default (openjdk, 7)
   hosts: centos-7-default
   gather_facts: no
@@ -88,9 +86,9 @@
 
   roles:
     - role: robertdebock.java
-      java_type: openjdk
+      java_vendor: openjdk
       java_version: 6
-      java_jdk: yes
+      java_type: jdk
 
 - name: install centos 7 openjdk 6 jre
   hosts: centos-7-openjdk-6-jre
@@ -99,7 +97,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: openjdk
+      java_vendor: openjdk
       java_version: 6
 
 - name: install centos 7 openjdk 7 jre
@@ -109,7 +107,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: openjdk
+      java_vendor: openjdk
       java_version: 7
 
 - name: install centos 7 openjdk 7 jdk
@@ -119,9 +117,9 @@
 
   roles:
     - role: robertdebock.java
-      java_type: openjdk
+      java_vendor: openjdk
       java_version: 7
-      java_jdk: yes
+      java_type: jdk
 
 - name: install centos 7 openjdk 8 jre
   hosts: centos-7-openjdk-8-jre
@@ -130,7 +128,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: openjdk
+      java_vendor: openjdk
       java_version: 8
 
 - name: install centos 7 openjdk 8 jdk
@@ -140,11 +138,10 @@
 
   roles:
     - role: robertdebock.java
-      java_type: openjdk
+      java_vendor: openjdk
       java_version: 8
-      java_jdk: yes
+      java_type: jdk
 
-### Debian Jessie openjkd
 - name: install debian jessie default (openjdk, 7)
   hosts: debian-jessie-default
   gather_facts: no
@@ -160,7 +157,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: openjdk
+      java_vendor: openjdk
       java_version: 7
 
 - name: install debian jessie openjdk 7 jdk
@@ -170,11 +167,10 @@
 
   roles:
     - role: robertdebock.java
-      java_type: openjdk
+      java_vendor: openjdk
       java_version: 7
-      java_jdk: yes
+      java_type: jdk
 
-### Debian Buster openjdk
 - name: install debian buster openjdk 8 jre
   hosts: debian-buster-openjdk-8-jre
   gather_facts: no
@@ -182,7 +178,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: openjdk
+      java_vendor: openjdk
       java_version: 8
 
 - name: install debian buster openjdk 8 jdk
@@ -192,11 +188,9 @@
 
   roles:
     - role: robertdebock.java
-      java_type: openjdk
+      java_vendor: openjdk
       java_version: 8
-      java_jdk: yes
 
-### CentOS 6 oracle
 - name: install centos 6 oracle 8 jre
   hosts: centos-6-oracle-8-jre
   gather_facts: no
@@ -204,7 +198,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: oracle
+      java_vendor: oracle
       java_version: 8
 
 - name: install centos 6 oracle 8 jdk
@@ -214,9 +208,9 @@
 
   roles:
     - role: robertdebock.java
-      java_type: oracle
+      java_vendor: oracle
       java_version: 8
-      java_jdk: yes
+      java_type: jdk
 
 - name: install centos 6 oracle 9 jre
   hosts: centos-6-oracle-9-jre
@@ -225,7 +219,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: oracle
+      java_vendor: oracle
       java_version: 9
 
 - name: install centos 6 oracle 9 jdk
@@ -235,11 +229,10 @@
 
   roles:
     - role: robertdebock.java
-      java_type: oracle
+      java_vendor: oracle
       java_version: 9
-      java_jdk: yes
+      java_type: jdk
 
-### CentOS 7 oracle
 - name: install centos 7 oracle 8 jre
   hosts: centos-7-oracle-8-jre
   gather_facts: no
@@ -247,7 +240,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: oracle
+      java_vendor: oracle
       java_version: 8
 
 - name: install centos 7 oracle 8 jdk
@@ -257,9 +250,9 @@
 
   roles:
     - role: robertdebock.java
-      java_type: oracle
+      java_vendor: oracle
       java_version: 8
-      java_jdk: yes
+      java_type: jdk
 
 - name: install centos 7 oracle 9 jre
   hosts: centos-7-oracle-9-jre
@@ -268,7 +261,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: oracle
+      java_vendor: oracle
       java_version: 9
 
 - name: install centos 7 oracle 9 jdk
@@ -278,11 +271,10 @@
 
   roles:
     - role: robertdebock.java
-      java_type: oracle
+      java_vendor: oracle
       java_version: 9
-      java_jdk: yes
+      java_type: jdk
 
-### Debian Jessie oracle
 - name: install debian jessie oracle 8 jre
   hosts: debian-jessie-oracle-8-jre
   gather_facts: no
@@ -290,7 +282,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: oracle
+      java_vendor: oracle
       java_version: 8
 
 - name: install debian jessie oracle 8 jdk
@@ -300,9 +292,9 @@
 
   roles:
     - role: robertdebock.java
-      java_type: oracle
+      java_vendor: oracle
       java_version: 8
-      java_jdk: yes
+      java_type: jdk
 
 - name: install debian jessie oracle 9 jre
   hosts: debian-jessie-oracle-9-jre
@@ -311,7 +303,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: oracle
+      java_vendor: oracle
       java_version: 9
 
 - name: install debian jessie oracle 9 jdk
@@ -321,11 +313,10 @@
 
   roles:
     - role: robertdebock.java
-      java_type: oracle
+      java_vendor: oracle
       java_version: 9
-      java_jdk: yes
+      java_type: jdk
 
-### Debian buster oracle
 - name: install debian buster oracle 8 jre
   hosts: debian-buster-oracle-8-jre
   gather_facts: no
@@ -333,7 +324,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: oracle
+      java_vendor: oracle
       java_version: 8
 
 - name: install debian buster oracle 8 jdk
@@ -343,9 +334,9 @@
 
   roles:
     - role: robertdebock.java
-      java_type: oracle
+      java_vendor: oracle
       java_version: 8
-      java_jdk: yes
+      java_type: jdk
 
 - name: install debian buster oracle 9 jre
   hosts: debian-buster-oracle-9-jre
@@ -354,7 +345,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: oracle
+      java_vendor: oracle
       java_version: 9
 
 - name: install debian buster oracle 9 jdk
@@ -364,7 +355,7 @@
 
   roles:
     - role: robertdebock.java
-      java_type: oracle
+      java_vendor: oracle
       java_version: 9
       java_jdk: yes
 
