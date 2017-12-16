@@ -49,6 +49,17 @@ platforms:
     image: debian:jessie
   - name: debian-jessie-openjdk-8-jdk
     image: debian:jessie
+  # Debian Buster openjdk
+  - name: debian-buster-default
+    image: debian:buster
+  - name: debian-buster-openjdk-7-jre
+    image: debian:buster
+  - name: debian-buster-openjdk-7-jdk
+    image: debian:buster
+  - name: debian-buster-openjdk-8-jre
+    image: debian:buster
+  - name: debian-buster-openjdk-8-jdk
+    image: debian:buster
   # Fedora 26 OpenJDK
   - name: fedora-26-openjdk-8-jre
     image: fedora:26
@@ -74,6 +85,10 @@ platforms:
     image: ubuntu:zesty
   - name: ubuntu-zesty-openjdk-7-jdk
     image: ubuntu:zesty
+  - name: ubuntu-zesty-openjdk-8-jre
+    image: ubuntu:zesty
+  - name: ubuntu-zesty-openjdk-8-jdk
+    image: ubuntu:zesty
   # Ubuntu artful OpenJDK
   - name: ubuntu-artful-default
     image: ubuntu:artful
@@ -81,6 +96,11 @@ platforms:
     image: ubuntu:artful
   - name: ubuntu-artful-openjdk-7-jdk
     image: ubuntu:artful
+  - name: ubuntu-artful-openjdk-8-jre
+    image: ubuntu:artful
+  - name: ubuntu-artful-openjdk-8-jdk
+    image: ubuntu:artful
+
 provisioner:
   name: ansible
   lint:
