@@ -1,30 +1,10 @@
 ---
 # tasks file for java
-- name: ansible_distribution
-  debug:
-    var: ansible_distribution
-
-- name: ansible_distribution_major_version
-  debug:
-    var: ansible_distribution_major_version
-
-- name: java_vendor
-  debug:
-    var: java_vendor
-
-- name: java_version
-  debug:
-    var: java_version
-
-- name: java_type
-  debug:
-    var: java_type
-
 - name: install software (package)
   package:
     name: "{{ item }}"
   with_items:
-    - "{{ java_package[ansible_distribution][ansible_distribution_major_version|int][java_vendor][java_type][java_version]['name'] }}"
+    - "{{ java_package[ansible_distribution][ansible_distribution_major_version][java_vendor][java_type][java_version]['name'] }}"
   when:
     - java_vendor == "openjdk"
 

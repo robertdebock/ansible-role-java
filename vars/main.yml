@@ -2,7 +2,7 @@
 # vars file for java
 java_package:
   CentOS:
-    6:
+    "6":
       openjdk:
         jre:
           6:
@@ -18,7 +18,7 @@ java_package:
             name: java-1.7.0-openjdk-devel
           8:
             name: java-1.8.0-openjdk-devel
-    7:
+    "7":
       openjdk:
         jre:
           6:
@@ -35,7 +35,7 @@ java_package:
           8:
             name: java-1.8.0-openjdk-devel
   Debian:
-    8:
+    "8":
       openjdk:
         jre:
           7:
@@ -43,7 +43,7 @@ java_package:
         jdk:
           7:
             name: openjdk-7-jdk
-    buster/sid:
+    "buster/sid":
       openjdk:
         jre:
           8:
@@ -56,7 +56,7 @@ java_package:
           9:
             name: openjdk-9-jdk
   Fedora:
-    26:
+    "26":
       openjdk:
         jre:
           8:
@@ -68,7 +68,7 @@ java_package:
             name: java-1.8.0-openjdk-devel
           9:
             name: java-9-openjdk-devel
-    27:
+    "27":
       openjdk:
         jre:
           8:
@@ -81,7 +81,7 @@ java_package:
           9:
             name: java-9-openjdk-devel
   Ubuntu:
-    Zesty:
+    "Zesty":
       openjdk:
         jre:
           7:
@@ -93,7 +93,7 @@ java_package:
             name: openjdk-7-jdk
           8:
             name: openjdk-8-jdk
-    Artful:
+    "Artful":
       openjdk:
         jre:
           7:
