@@ -4,7 +4,7 @@
   package:
     name: "{{ item }}"
   with_items:
-    - "{{ java_packages[ansible_distribution][java_vendor][java_type][java_version]['name'] }}"
+    - "{{ java_packages[ansible_distribution][ansible_distribution_major_version][java_vendor][java_type][java_version]['name'] }}"
   when:
     - java_vendor == "openjdk"
 

@@ -195,34 +195,6 @@
       java_type: jdk
 
 ### Debian Buster OpenJDK
-- name: install debian buster default (openjdk, 7)
-  hosts: debian-buster-default
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: robertdebock.java
-
-- name: install debian buster openjdk 7 jre
-  hosts: debian-buster-openjdk-7-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: robertdebock.java
-      java_vendor: openjdk
-      java_version: 7
-
-- name: install debian buster openjdk 7 jdk
-  hosts: debian-buster-openjdk-7-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: robertdebock.java
-      java_vendor: openjdk
-      java_version: 7
-
 - name: install debian buster openjdk 8 jre
   hosts: debian-buster-openjdk-8-jre
   gather_facts: no
@@ -242,6 +214,26 @@
     - role: robertdebock.java
       java_vendor: openjdk
       java_version: 8
+
+- name: install debian buster openjdk 9 jre
+  hosts: debian-buster-openjdk-9-jre
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_vendor: openjdk
+      java_version: 9
+
+- name: install debian buster openjdk 9 jdk
+  hosts: debian-buster-openjdk-9-jdk
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_vendor: openjdk
+      java_version: 9
 
 ### Fedora 26 OpenJDK
 - name: install fedora 26 openjdk 8 jre
