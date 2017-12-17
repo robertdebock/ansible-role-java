@@ -8,17 +8,10 @@
   when:
     - java_vendor == "openjdk"
 
-- name: ensure directory exist
-  file:
-    path: /opt/{{ java_type }}
-    state: directory
-  when:
-    - java_vendor == "oracle"
-
 - name: install software (tar.gz)
   unarchive:
     src: "{{ item }}"
-    dest: "{{ java_install_directory }}/{{ java_type }}"
+    dest: "{{ java_install_directory }}"
   with_items:
     - "{{ java_packages[java_vendor][java_type][java_version]['name'] }}"
   when:
