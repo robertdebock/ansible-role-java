@@ -126,46 +126,46 @@ platforms:
     image: fedora:27
   - name: fedora-27-oracle-9-jdk
     image: fedora:27
-  # Ubuntu Zesty OpenJDK
-  - name: ubuntu-zesty-default
-    image: ubuntu:zesty
-  - name: ubuntu-zesty-openjdk-7-jre
-    image: ubuntu:zesty
-  - name: ubuntu-zesty-openjdk-7-jdk
-    image: ubuntu:zesty
-  - name: ubuntu-zesty-openjdk-8-jre
-    image: ubuntu:zesty
-  - name: ubuntu-zesty-openjdk-8-jdk
-    image: ubuntu:zesty
-  # Ubuntu zesty oracle
-  - name: ubuntu-zesty-oracle-8-jre
-    image: ubuntu:zesty
-  - name: ubuntu-zesty-oracle-8-jdk
-    image: ubuntu:zesty
-  - name: ubuntu-zesty-oracle-9-jre
-    image: ubuntu:zesty
-  - name: ubuntu-zesty-oracle-9-jdk
-    image: ubuntu:zesty
-  # Ubuntu artful OpenJDK
-  - name: ubuntu-artful-default
-    image: ubuntu:artful
-  - name: ubuntu-artful-openjdk-7-jre
-    image: ubuntu:artful
-  - name: ubuntu-artful-openjdk-7-jdk
-    image: ubuntu:artful
-  - name: ubuntu-artful-openjdk-8-jre
-    image: ubuntu:artful
-  - name: ubuntu-artful-openjdk-8-jdk
-    image: ubuntu:artful
-  # Ubuntu artful oracle
-  - name: ubuntu-artful-oracle-8-jre
-    image: ubuntu:artful
-  - name: ubuntu-artful-oracle-8-jdk
-    image: ubuntu:artful
-  - name: ubuntu-artful-oracle-9-jre
-    image: ubuntu:artful
-  - name: ubuntu-artful-oracle-9-jdk
-    image: ubuntu:artful
+  # Ubuntu 17 OpenJDK
+  - name: ubuntu-17-default
+    image: ubuntu:17
+  - name: ubuntu-17-openjdk-7-jre
+    image: ubuntu:17
+  - name: ubuntu-17-openjdk-7-jdk
+    image: ubuntu:17
+  - name: ubuntu-17-openjdk-8-jre
+    image: ubuntu:17
+  - name: ubuntu-17-openjdk-8-jdk
+    image: ubuntu:17
+  # Ubuntu 17 oracle
+  - name: ubuntu-17-oracle-8-jre
+    image: ubuntu:17
+  - name: ubuntu-17-oracle-8-jdk
+    image: ubuntu:17
+  - name: ubuntu-17-oracle-9-jre
+    image: ubuntu:17
+  - name: ubuntu-17-oracle-9-jdk
+    image: ubuntu:17
+  # Ubuntu 18 OpenJDK
+  - name: ubuntu-18-default
+    image: ubuntu:18
+  - name: ubuntu-18-openjdk-7-jre
+    image: ubuntu:18
+  - name: ubuntu-18-openjdk-7-jdk
+    image: ubuntu:18
+  - name: ubuntu-18-openjdk-8-jre
+    image: ubuntu:18
+  - name: ubuntu-18-openjdk-8-jdk
+    image: ubuntu:18
+  # Ubuntu 18 oracle
+  - name: ubuntu-18-oracle-8-jre
+    image: ubuntu:18
+  - name: ubuntu-18-oracle-8-jdk
+    image: ubuntu:18
+  - name: ubuntu-18-oracle-9-jre
+    image: ubuntu:18
+  - name: ubuntu-18-oracle-9-jdk
+    image: ubuntu:18
 provisioner:
   name: ansible
   lint:

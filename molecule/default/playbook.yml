@@ -560,17 +560,17 @@
       java_version: 9
       java_type: jdk
 
-### Ubuntu Zesty OpenJDK
-- name: install ubuntu zesty default
-  hosts: ubuntu-zesty-default
+### Ubuntu 17 OpenJDK
+- name: install ubuntu 17 default
+  hosts: ubuntu-17-default
   gather_facts: no
   become: yes
 
   roles:
     - role: robertdebock.java
 
-- name: install ubuntu zesty openjdk 7 jre
-  hosts: ubuntu-zesty-openjdk-7-jre
+- name: install ubuntu 17 openjdk 7 jre
+  hosts: ubuntu-17-openjdk-7-jre
   gather_facts: no
   become: yes
 
@@ -579,8 +579,8 @@
       java_vendor: openjdk
       java_version: 7
 
-- name: install ubuntu zesty openjdk 7 jdk
-  hosts: ubuntu-zesty-openjdk-7-jdk
+- name: install ubuntu 17 openjdk 7 jdk
+  hosts: ubuntu-17-openjdk-7-jdk
   gather_facts: no
   become: yes
 
@@ -590,8 +590,8 @@
       java_version: 7
       java_type: jdk
 
-- name: install ubuntu zesty openjdk 8 jre
-  hosts: ubuntu-zesty-openjdk-8-jre
+- name: install ubuntu 17 openjdk 8 jre
+  hosts: ubuntu-17-openjdk-8-jre
   gather_facts: no
   become: yes
 
@@ -600,8 +600,8 @@
       java_vendor: openjdk
       java_version: 8
 
-- name: install ubuntu zesty openjdk 8 jdk
-  hosts: ubuntu-zesty-openjdk-8-jdk
+- name: install ubuntu 17 openjdk 8 jdk
+  hosts: ubuntu-17-openjdk-8-jdk
   gather_facts: no
   become: yes
 
@@ -611,9 +611,9 @@
       java_version: 8
       java_type: jdk
 
-### Ubuntu Zesty Oracle
-- name: install ubuntu zesty oracle 8 jre
-  hosts: ubuntu-zesty-oracle-8-jre
+### Ubuntu 17 Oracle
+- name: install ubuntu 17 oracle 8 jre
+  hosts: ubuntu-17-oracle-8-jre
   gather_facts: no
   become: yes
 
@@ -622,8 +622,8 @@
       java_vendor: oracle
       java_version: 8
 
-- name: install ubuntu zesty oracle 8 jdk
-  hosts: ubuntu-zesty-oracle-8-jdk
+- name: install ubuntu 17 oracle 8 jdk
+  hosts: ubuntu-17-oracle-8-jdk
   gather_facts: no
   become: yes
 
@@ -633,8 +633,8 @@
       java_version: 8
       java_type: jdk
 
-- name: install ubuntu zesty oracle 9 jre
-  hosts: ubuntu-zesty-oracle-9-jre
+- name: install ubuntu 17 oracle 9 jre
+  hosts: ubuntu-17-oracle-9-jre
   gather_facts: no
   become: yes
 
@@ -643,8 +643,8 @@
       java_vendor: oracle
       java_version: 9
 
-- name: install ubuntu zesty oracle 9 jdk
-  hosts: ubuntu-zesty-oracle-9-jdk
+- name: install ubuntu 17 oracle 9 jdk
+  hosts: ubuntu-17-oracle-9-jdk
   gather_facts: no
   become: yes
 
@@ -654,17 +654,17 @@
       java_version: 9
       java_type: jdk
 
-### Ubuntu Artful OpenJDK
-- name: install ubuntu artful default
-  hosts: ubuntu-artful-default
+### Ubuntu 18 OpenJDK
+- name: install ubuntu 18 default
+  hosts: ubuntu-18-default
   gather_facts: no
   become: yes
 
   roles:
     - role: robertdebock.java
 
-- name: install ubuntu artful openjdk 7 jre
-  hosts: ubuntu-artful-openjdk-7-jre
+- name: install ubuntu 18 openjdk 7 jre
+  hosts: ubuntu-18-openjdk-7-jre
   gather_facts: no
   become: yes
 
@@ -673,8 +673,8 @@
       java_vendor: openjdk
       java_version: 7
 
-- name: install ubuntu artful openjdk 7 jdk
-  hosts: ubuntu-artful-openjdk-7-jdk
+- name: install ubuntu 18 openjdk 7 jdk
+  hosts: ubuntu-18-openjdk-7-jdk
   gather_facts: no
   become: yes
 
@@ -684,8 +684,8 @@
       java_version: 7
       java_type: jdk
 
-- name: install ubuntu artful openjdk 8 jre
-  hosts: ubuntu-artful-openjdk-8-jre
+- name: install ubuntu 18 openjdk 8 jre
+  hosts: ubuntu-18-openjdk-8-jre
   gather_facts: no
   become: yes
 
@@ -694,8 +694,8 @@
       java_vendor: openjdk
       java_version: 8
 
-- name: install ubuntu artful openjdk 8 jdk
-  hosts: ubuntu-artful-openjdk-8-jdk
+- name: install ubuntu 18 openjdk 8 jdk
+  hosts: ubuntu-18-openjdk-8-jdk
   gather_facts: no
   become: yes
 
@@ -705,9 +705,9 @@
       java_version: 8
       java_type: jdk
 
-### Ubuntu Artful Oracle
-- name: install ubuntu artful oracle 8 jre
-  hosts: ubuntu-artful-oracle-8-jre
+### Ubuntu 18 Oracle
+- name: install ubuntu 18 oracle 8 jre
+  hosts: ubuntu-18-oracle-8-jre
   gather_facts: no
   become: yes
 
@@ -716,8 +716,8 @@
       java_vendor: oracle
       java_version: 8
 
-- name: install ubuntu artful oracle 8 jdk
-  hosts: ubuntu-artful-oracle-8-jdk
+- name: install ubuntu 18 oracle 8 jdk
+  hosts: ubuntu-18-oracle-8-jdk
   gather_facts: no
   become: yes
 
@@ -727,8 +727,8 @@
       java_version: 8
       java_type: jdk
 
-- name: install ubuntu artful oracle 9 jre
-  hosts: ubuntu-artful-oracle-9-jre
+- name: install ubuntu 18 oracle 9 jre
+  hosts: ubuntu-18-oracle-9-jre
   gather_facts: no
   become: yes
 
@@ -737,8 +737,8 @@
       java_vendor: oracle
       java_version: 9
 
-- name: install ubuntu artful oracle 9 jdk
-  hosts: ubuntu-artful-oracle-9-jdk
+- name: install ubuntu 18 oracle 9 jdk
+  hosts: ubuntu-18-oracle-9-jdk
   gather_facts: no
   become: yes
 

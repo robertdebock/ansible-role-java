@@ -81,7 +81,7 @@ java_package:
           9:
             name: java-9-openjdk-devel
   Ubuntu:
-    "Zesty":
+    "17":
       openjdk:
         jre:
           7:
@@ -93,7 +93,7 @@ java_package:
             name: openjdk-7-jdk
           8:
             name: openjdk-8-jdk
-    "Artful":
+    "18":
       openjdk:
         jre:
           7:
