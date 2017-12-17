@@ -1,13 +1,4 @@
 ---
-
-- name: install debian jessie default
-  hosts: debian-jessie-default
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: robertdebock.java
-
 ### CentOS 6 OpenJDK
 - name: install centos 6 default
   hosts: centos-6-default

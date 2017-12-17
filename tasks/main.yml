@@ -1,14 +1,10 @@
 ---
 # tasks file for java
-- name: debug
-  debug:
-    var: java_package.CentOS.6.openjdk.jre.6.name
-
 - name: install software (package)
   package:
     name: "{{ item }}"
   with_items:
-    - "{{ java_package[ansible_distribution][ansible_distribution_major_version][java_vendor][java_type][java_version]['name'] }}"
+    - "{{ java_package[ansible_distribution][ansible_distribution_major_version|int][java_vendor][java_type][java_version]['name'] }}"
   when:
     - java_vendor == "openjdk"
 
