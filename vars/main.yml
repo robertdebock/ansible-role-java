@@ -43,7 +43,7 @@ java_package:
         jdk:
           7:
             name: openjdk-7-jdk
-    Buster:
+    buster/sid:
       openjdk:
         jre:
           8:
