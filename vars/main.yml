@@ -1,6 +1,5 @@
 ---
 # vars file for java
-java_install_directory: /opt
 java_packages:
   CentOS:
     6:
