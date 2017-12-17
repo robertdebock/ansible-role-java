@@ -57,20 +57,20 @@ platforms:
   - name: centos-7-oracle-9-jdk
     image: centos:7
   # Debian Jessie OpenJDK
-  - name: debian-jessie-default
+  - name: debian-8-default
     image: debian:jessie
-  - name: debian-jessie-openjdk-7-jre
+  - name: debian-8-openjdk-7-jre
     image: debian:jessie
-  - name: debian-jessie-openjdk-7-jdk
+  - name: debian-8-openjdk-7-jdk
     image: debian:jessie
   # Debian Jessie Oracle
-  - name: debian-jessie-oracle-8-jre
+  - name: debian-8-oracle-8-jre
     image: debian:jessie
-  - name: debian-jessie-oracle-8-jdk
+  - name: debian-8-oracle-8-jdk
     image: debian:jessie
-  - name: debian-jessie-oracle-9-jre
+  - name: debian-8-oracle-9-jre
     image: debian:jessie
-  - name: debian-jessie-oracle-9-jdk
+  - name: debian-8-oracle-9-jdk
     image: debian:jessie
   # Debian Buster openjdk
   - name: debian-buster-openjdk-8-jre

@@ -35,7 +35,7 @@ java_package:
           8:
             name: java-1.8.0-openjdk-devel
   Debian:
-    Jessie:
+    8:
       openjdk:
         jre:
           7:

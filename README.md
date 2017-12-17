@@ -18,18 +18,7 @@ Role Variables
 - java_vendor: openjdk or oracle, default: openjdk
 - java_type: jdk or jre, default: jre
 
-Valid combinations:
-- ansible_distribution: CentOS, java_version: 6, java_vendor: openjdk
-- ansible_distribution: CentOS, java_version: 7, java_vendor: openjdk
-- ansible_distribution: CentOS, java_version: 8, java_vendor: openjdk
-
-- ansible_distribution: Debian, ansible_distribution_major_version: jessie, java_version: 7, java_vendor: openjdk
-- ansible_distribution: Debian, ansible_distribution_major_version: buster, java_version: 8, java_vendor: openjdk
-- ansible_distribution: Ubuntu, ansible_distribution_major_version: Zesty, java_version: 7, java_vendor: openjdk
-- ansible_distribution: Ubuntu, ansible_distribution_major_version: Zesty, java_version: 7, java_vendor: openjdk
-
-- ansible_distribution: any, java_version: 8, java_vendor: oracle
-- ansible_distribution: any, java_version: 9, java_vendor: oracle
+Have a look in vars/main.yml to see all available combinations.
 
 Dependencies
 ------------

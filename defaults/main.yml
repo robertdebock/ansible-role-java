@@ -13,5 +13,3 @@ java_version: 7
 # In case of "java_vendor == oracle", a directory has to be set where to
 # install.
 java_install_directory: /opt
-
-# See README.md for valid combinations.
