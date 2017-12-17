@@ -21,6 +21,6 @@
   alternatives:
     name: java
     link: /usr/bin/java
-    path: "{{ java_install_directory }}/{{ java_type }}/{{ java_packages[java_vendor][java_type][java_version]['directory'] }}/bin/java"
+    path: "{{ java_install_directory }}/{{ java_type }}/{{ java_package[java_vendor][java_type][java_version]['directory'] }}/bin/java"
   when:
     - java_vendor == "oracle"
