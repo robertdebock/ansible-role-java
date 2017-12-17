@@ -63,10 +63,6 @@ platforms:
     image: debian:jessie
   - name: debian-jessie-openjdk-7-jdk
     image: debian:jessie
-  - name: debian-jessie-openjdk-8-jre
-    image: debian:jessie
-  - name: debian-jessie-openjdk-8-jdk
-    image: debian:jessie
   # Debian Jessie Oracle
   - name: debian-jessie-oracle-8-jre
     image: debian:jessie

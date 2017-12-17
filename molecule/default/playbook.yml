@@ -259,27 +259,6 @@
       java_version: 7
       java_type: jdk
 
-- name: install debian jessie openjdk 8 jre
-  hosts: debian-jessie-openjdk-8-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: robertdebock.java
-      java_vendor: openjdk
-      java_version: 8
-
-- name: install debian jessie openjdk 8 jdk
-  hosts: debian-jessie-openjdk-8-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: robertdebock.java
-      java_vendor: openjdk
-      java_version: 8
-      java_type: jdk
-
 ### Debian Jessie Oracle
 - name: install debian jessie oracle 8 jre
   hosts: debian-jessie-oracle-8-jre

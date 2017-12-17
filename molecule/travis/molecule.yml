@@ -45,10 +45,6 @@ platforms:
     image: debian:jessie
   - name: debian-jessie-openjdk-7-jdk
     image: debian:jessie
-  - name: debian-jessie-openjdk-8-jre
-    image: debian:jessie
-  - name: debian-jessie-openjdk-8-jdk
-    image: debian:jessie
   # Debian Buster openjdk
   - name: debian-buster-openjdk-8-jre
     image: debian:buster

@@ -42,13 +42,9 @@ java_packages:
         jre:
           7:
             name: openjdk-7-jre
-          8:
-            name: openjdk-8-jre
         jdk:
           7:
             name: openjdk-7-jdk
-          8:
-            name: openjdk-8-jdk
     Buster:
       openjdk:
         jre:
