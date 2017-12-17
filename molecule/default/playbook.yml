@@ -418,7 +418,7 @@
   roles:
     - role: robertdebock.java
       java_vendor: openjdk
-      java_version: 7
+      java_version: 9
 
 - name: install fedora 26 openjdk 9 jdk
   hosts: fedora-26-openjdk-9-jdk

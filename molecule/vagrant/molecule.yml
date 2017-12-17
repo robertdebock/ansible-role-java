@@ -10,44 +10,38 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: centos-6-default
-    box: centos/6
-  - name: centos-6-openjdk-6
-    box: centos/6
-  - name: centos-6-openjdk-7
-    box: centos/6
   - name: centos-6-openjdk-8
-    box: centos/6
-  - name: centos-7-default
-    box: centos/7
-  - name: centos-7-openjdk-6
-    box: centos/7
-  - name: centos-7-openjdk-7
-    box: centos/7
-  - name: centos-7-openjdk-8
-    box: centos/7
-  - name: centos-6-oracle-8
     box: centos/6
   - name: centos-6-oracle-9
     box: centos/6
-  - name: centos-7-oracle-8
+  - name: centos-7-openjdk-8
     box: centos/7
   - name: centos-7-oracle-9
     box: centos/7
-  - name: debian-jessie-default
-    box: debian/jessie64
-  - name: debian-jessie-openjdk-7
+  - name: debian-8-openjdk-8
+    box: desc/jessie64
+  - name: debian-8-oracle-9
     box: debian/jessie64
   - name: debian-buster-openjdk-8
     box: desc/buster64
-  - name: debian-jessie-oracle-8
-    box: debian/jessie64
-  - name: debian-jessie-oracle-9
-    box: debian/jessie64
-  - name: debian-buster-oracle-8
-    box: desc/buster64
   - name: debian-buster-oracle-9
     box: desc/buster64
+  - name: fedora-26-openjdk-9
+    box: fedora/26-cloud-base
+  - name: fedora-26-oracle-9
+    box: fedora/26-cloud-base
+  - name: fedora-27-openjdk-9
+    box: fedora/27-cloud-base
+  - name: fedora-27-oracle-9
+    box: fedora/27-cloud-base
+  - name: ubuntu-17-openjdk-8
+    box: ubuntu/zesty64
+  - name: ubuntu-17-oracle-9
+    box: ubuntu/zesty64
+  - name: ubuntu-18-openjdk-8
+    box: ubuntu/artful64
+  - name: ubuntu-18-oracle-9
+    box: ubuntu/artful64
 provisioner:
   name: ansible
   lint:
