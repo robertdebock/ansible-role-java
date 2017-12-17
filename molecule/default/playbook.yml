@@ -267,7 +267,7 @@
   roles:
     - role: robertdebock.java
       java_vendor: openjdk
-      java_version: 7
+      java_version: 8
 
 - name: install debian jessie openjdk 8 jdk
   hosts: debian-jessie-openjdk-8-jdk
@@ -277,7 +277,7 @@
   roles:
     - role: robertdebock.java
       java_vendor: openjdk
-      java_version: 7
+      java_version: 8
       java_type: jdk
 
 ### Debian Jessie Oracle
