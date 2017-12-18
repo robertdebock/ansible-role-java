@@ -9,7 +9,7 @@ Requirements
 ------------
 
 - For openjdk: Access to a repository containing packages, likely on the internet.
-- For oracle: Download the tar.gz's from the [Oracle website](http://www.oracle.com/technetwork/java/javase/downloads/index.html) and place then in the "files" directory. These files are not included because a license has to be accepted. For each version download the "jre" and "jdk", x64 version.
+- For oracle: Download the rpms and/or tar.gz's from the [Oracle website](http://www.oracle.com/technetwork/java/javase/downloads/index.html) and place then in the "files" directory. These files are not included because a license has to be accepted. For each version download the "jre" and "jdk", x64 version.
 
 Role Variables
 --------------
@@ -55,6 +55,7 @@ For an installation of Oracle jdk version 9, use this playbook:
       java_vendor: oracle
       java_type: jdk
       java_version: 9
+      java_format: rpm
 ```
 
 Install this role using `galaxy install robertdebock.java`.
