@@ -561,35 +561,6 @@
       java_type: jdk
 
 ### Ubuntu 17 OpenJDK
-- name: install ubuntu 17 default
-  hosts: ubuntu-17-default
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: robertdebock.java
-
-- name: install ubuntu 17 openjdk 7 jre
-  hosts: ubuntu-17-openjdk-7-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: robertdebock.java
-      java_vendor: openjdk
-      java_version: 7
-
-- name: install ubuntu 17 openjdk 7 jdk
-  hosts: ubuntu-17-openjdk-7-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: robertdebock.java
-      java_vendor: openjdk
-      java_version: 7
-      java_type: jdk
-
 - name: install ubuntu 17 openjdk 8 jre
   hosts: ubuntu-17-openjdk-8-jre
   gather_facts: no
@@ -609,6 +580,27 @@
     - role: robertdebock.java
       java_vendor: openjdk
       java_version: 8
+      java_type: jdk
+
+- name: install ubuntu 17 openjdk 9 jre
+  hosts: ubuntu-17-openjdk-9-jre
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_vendor: openjdk
+      java_version: 9
+
+- name: install ubuntu 17 openjdk 9 jdk
+  hosts: ubuntu-17-openjdk-9-jdk
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_vendor: openjdk
+      java_version: 9
       java_type: jdk
 
 ### Ubuntu 17 Oracle
@@ -655,35 +647,6 @@
       java_type: jdk
 
 ### Ubuntu 18 OpenJDK
-- name: install ubuntu 18 default
-  hosts: ubuntu-18-default
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: robertdebock.java
-
-- name: install ubuntu 18 openjdk 7 jre
-  hosts: ubuntu-18-openjdk-7-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: robertdebock.java
-      java_vendor: openjdk
-      java_version: 7
-
-- name: install ubuntu 18 openjdk 7 jdk
-  hosts: ubuntu-18-openjdk-7-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: robertdebock.java
-      java_vendor: openjdk
-      java_version: 7
-      java_type: jdk
-
 - name: install ubuntu 18 openjdk 8 jre
   hosts: ubuntu-18-openjdk-8-jre
   gather_facts: no
@@ -703,6 +666,27 @@
     - role: robertdebock.java
       java_vendor: openjdk
       java_version: 8
+      java_type: jdk
+
+- name: install ubuntu 18 openjdk 9 jre
+  hosts: ubuntu-18-openjdk-9-jre
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_vendor: openjdk
+      java_version: 9
+
+- name: install ubuntu 18 openjdk 9 jdk
+  hosts: ubuntu-18-openjdk-9-jdk
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_vendor: openjdk
+      java_version: 9
       java_type: jdk
 
 ### Ubuntu 18 Oracle

@@ -127,15 +127,13 @@ platforms:
   - name: fedora-27-oracle-9-jdk
     image: fedora:27
   # Ubuntu 17 OpenJDK
-  - name: ubuntu-17-default
-    image: ubuntu:17
-  - name: ubuntu-17-openjdk-7-jre
-    image: ubuntu:17
-  - name: ubuntu-17-openjdk-7-jdk
-    image: ubuntu:17
   - name: ubuntu-17-openjdk-8-jre
     image: ubuntu:17
   - name: ubuntu-17-openjdk-8-jdk
+    image: ubuntu:17
+  - name: ubuntu-17-openjdk-9-jre
+    image: ubuntu:17
+  - name: ubuntu-17-openjdk-9-jdk
     image: ubuntu:17
   # Ubuntu 17 oracle
   - name: ubuntu-17-oracle-8-jre
@@ -147,15 +145,13 @@ platforms:
   - name: ubuntu-17-oracle-9-jdk
     image: ubuntu:17
   # Ubuntu 18 OpenJDK
-  - name: ubuntu-18-default
-    image: ubuntu:18
-  - name: ubuntu-18-openjdk-7-jre
-    image: ubuntu:18
-  - name: ubuntu-18-openjdk-7-jdk
-    image: ubuntu:18
   - name: ubuntu-18-openjdk-8-jre
     image: ubuntu:18
   - name: ubuntu-18-openjdk-8-jdk
+    image: ubuntu:18
+  - name: ubuntu-18-openjdk-9-jre
+    image: ubuntu:18
+  - name: ubuntu-18-openjdk-9-jdk
     image: ubuntu:18
   # Ubuntu 18 oracle
   - name: ubuntu-18-oracle-8-jre
