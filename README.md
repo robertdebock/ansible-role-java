@@ -17,6 +17,7 @@ Role Variables
 - java_version: 6, 7, 8 or 9, defaults: 7
 - java_vendor: openjdk or oracle, default: openjdk
 - java_type: jdk or jre, default: jre
+- java_format: rpm or targz, default: targz.
 
 Have a look in vars/main.yml to see all available combinations.
 
