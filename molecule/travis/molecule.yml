@@ -72,28 +72,24 @@ platforms:
     image: fedora:27
   - name: fedora-27-openjdk-9-jdk
     image: fedora:27
-  # Ubuntu zesty openjdk
-  - name: ubuntu-zesty-default
-    image: ubuntu:zesty
-  - name: ubuntu-zesty-openjdk-7-jre
-    image: ubuntu:zesty
-  - name: ubuntu-zesty-openjdk-7-jdk
-    image: ubuntu:zesty
-  - name: ubuntu-zesty-openjdk-8-jre
-    image: ubuntu:zesty
-  - name: ubuntu-zesty-openjdk-8-jdk
-    image: ubuntu:zesty
-  # Ubuntu artful OpenJDK
-  - name: ubuntu-artful-default
-    image: ubuntu:artful
-  - name: ubuntu-artful-openjdk-7-jre
-    image: ubuntu:artful
-  - name: ubuntu-artful-openjdk-7-jdk
-    image: ubuntu:artful
-  - name: ubuntu-artful-openjdk-8-jre
-    image: ubuntu:artful
-  - name: ubuntu-artful-openjdk-8-jdk
-    image: ubuntu:artful
+  # Ubuntu 17 openjdk
+  - name: ubuntu-17-openjdk-8-jre
+    image: ubuntu:17
+  - name: ubuntu-17-openjdk-8-jdk
+    image: ubuntu:17
+  - name: ubuntu-17-openjdk-9-jre
+    image: ubuntu:17
+  - name: ubuntu-17-openjdk-9-jdk
+    image: ubuntu:17
+  # Ubuntu 18 OpenJDK
+  - name: ubuntu-18-openjdk-8-jre
+    image: ubuntu:18
+  - name: ubuntu-18-openjdk-8-jdk
+    image: ubuntu:18
+  - name: ubuntu-18-openjdk-9-jre
+    image: ubuntu:18
+  - name: ubuntu-18-openjdk-9-jdk
+    image: ubuntu:18
 
 provisioner:
   name: ansible
