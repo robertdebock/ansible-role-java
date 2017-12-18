@@ -1,15 +1,15 @@
 java
 =========
 
-[![Build Status](https://travis-ci.org/robertdebock/ansible-role-java.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-java)
+[![Build Status](https://travis-ci.org/robertdebock/robertdebock.java.svg?branch=master)](https://travis-ci.org/robertdebock/robertdebock.java)
 
-Provides Java (either OpenJDK (default) or Oracle.) for your system.
+Provides java (oracle or openjdk), jre or jdk, versions 6, 7, 8 or 9 for many distributions.
 
 Requirements
 ------------
 
 - For openjdk: Access to a repository containing packages, likely on the internet.
-- For oracle: Download the rpm's from the Oracle website and place then in the "files" directory. These files are not included because a license has to be accepted. Oracle website: http://www.oracle.com/technetwork/java/javase/downloads/index.html
+- For oracle: Download the tar.gz's from the [Oracle website](http://www.oracle.com/technetwork/java/javase/downloads/index.html) and place then in the "files" directory. These files are not included because a license has to be accepted. For each version download the "jre" and "jdk", x64 version.
 
 Role Variables
 --------------
@@ -30,16 +30,30 @@ Download the dependencies by issuing this command:
 ansible-galaxy install --role-file requirements.yml
 ```
 
-Example Playbook
+Example Playbooks
 ----------------
 
+For a default installation (defaults in defaults/main.yml) use this playbook:
 ```
 - hosts: servers
+  gather_facts: yes
+  become: yes
 
   roles:
     - role: robertdebock.java
-      java_version: 8
+```
 
+For an installation of Oracle jdk version 9, use this playbook:
+```
+- hosts: servers
+  gather_facts: yes
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_vendor: oracle
+      java_type: jdk
+      java_version: 9
 ```
 
 Install this role using `galaxy install robertdebock.java`.
