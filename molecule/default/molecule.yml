@@ -23,14 +23,23 @@ platforms:
     image: centos:6
   - name: centos-6-openjdk-8-jdk
     image: centos:6
-  # CentOS 6 Oracle
-  - name: centos-6-oracle-8-jre
+  # CentOS 6 Oracle rpm
+  - name: centos-6-oracle-8-jre-rpm
     image: centos:6
-  - name: centos-6-oracle-8-jdk
+  - name: centos-6-oracle-8-jdk-rpm
     image: centos:6
-  - name: centos-6-oracle-9-jre
+  - name: centos-6-oracle-9-jre-rpm
     image: centos:6
-  - name: centos-6-oracle-9-jdk
+  - name: centos-6-oracle-9-jdk-rpm
+    image: centos:6
+  # CentOS 6 Oracle targz
+  - name: centos-6-oracle-8-jre-targz
+    image: centos:6
+  - name: centos-6-oracle-8-jdk-targz
+    image: centos:6
+  - name: centos-6-oracle-9-jre-targz
+    image: centos:6
+  - name: centos-6-oracle-9-jdk-targz
     image: centos:6
   # CentOS 7 OpenJDK
   - name: centos-7-default
@@ -47,14 +56,23 @@ platforms:
     image: centos:7
   - name: centos-7-openjdk-8-jdk
     image: centos:7
-  # CentOS 7 Oracle
-  - name: centos-7-oracle-8-jre
+  # CentOS 7 Oracle rpm
+  - name: centos-7-oracle-8-jre-rpm
     image: centos:7
-  - name: centos-7-oracle-8-jdk
+  - name: centos-7-oracle-8-jdk-rpm
     image: centos:7
-  - name: centos-7-oracle-9-jre
+  - name: centos-7-oracle-9-jre-rpm
     image: centos:7
-  - name: centos-7-oracle-9-jdk
+  - name: centos-7-oracle-9-jdk-rpm
+    image: centos:7
+  # CentOS 7 Oracle targz
+  - name: centos-7-oracle-8-jre-targz
+    image: centos:7
+  - name: centos-7-oracle-8-jdk-targz
+    image: centos:7
+  - name: centos-7-oracle-9-jre-targz
+    image: centos:7
+  - name: centos-7-oracle-9-jdk-targz
     image: centos:7
   # Debian Jessie OpenJDK
   - name: debian-8-default
@@ -99,14 +117,23 @@ platforms:
     image: fedora:26
   - name: fedora-26-openjdk-9-jdk
     image: fedora:26
-  # Fedora 26 Oracle
-  - name: fedora-26-oracle-8-jre
+  # Fedora 26 Oracle rpm
+  - name: fedora-26-oracle-8-jre-rpm
     image: fedora:26
-  - name: fedora-26-oracle-8-jdk
+  - name: fedora-26-oracle-8-jdk-rpm
     image: fedora:26
-  - name: fedora-26-oracle-9-jre
+  - name: fedora-26-oracle-9-jre-rpm
     image: fedora:26
-  - name: fedora-26-oracle-9-jdk
+  - name: fedora-26-oracle-9-jdk-rpm
+    image: fedora:26
+  # Fedora 26 Oracle targz
+  - name: fedora-26-oracle-8-jre-targz
+    image: fedora:26
+  - name: fedora-26-oracle-8-jdk-targz
+    image: fedora:26
+  - name: fedora-26-oracle-9-jre-targz
+    image: fedora:26
+  - name: fedora-26-oracle-9-jdk-targz
     image: fedora:26
   # Fedora 27 OpenJDK
   - name: fedora-27-openjdk-8-jre
@@ -117,14 +144,23 @@ platforms:
     image: fedora:27
   - name: fedora-27-openjdk-9-jdk
     image: fedora:27
-  # Fedora 27 Oracle
-  - name: fedora-27-oracle-8-jre
+  # Fedora 27 Oracle rpm
+  - name: fedora-27-oracle-8-jre-rpm
     image: fedora:27
-  - name: fedora-27-oracle-8-jdk
+  - name: fedora-27-oracle-8-jdk-rpm
     image: fedora:27
-  - name: fedora-27-oracle-9-jre
+  - name: fedora-27-oracle-9-jre-rpm
     image: fedora:27
-  - name: fedora-27-oracle-9-jdk
+  - name: fedora-27-oracle-9-jdk-rpm
+    image: fedora:27
+  # Fedora 27 Oracle targz
+  - name: fedora-27-oracle-8-jre-targz
+    image: fedora:27
+  - name: fedora-27-oracle-8-jdk-targz
+    image: fedora:27
+  - name: fedora-27-oracle-9-jre-targz
+    image: fedora:27
+  - name: fedora-27-oracle-9-jdk-targz
     image: fedora:27
   # Ubuntu 17 OpenJDK
   - name: ubuntu-17-openjdk-8-jre

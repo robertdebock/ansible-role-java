@@ -1,7 +1,7 @@
 ---
 # defaults file for java
 
-# Set the venro of java, valid values are "openjdk" and "oracle".
+# Set the vendor of java, valid values are "openjdk" and "oracle".
 java_vendor: openjdk
 
 # Set the variable to install the type, valid values are "jre" and "jdk".
@@ -10,6 +10,10 @@ java_type: jre
 # Set the version of java, valid values are "6", 7", "8" and "9".
 java_version: 7
 
-# In case of "java_vendor == oracle", a directory has to be set where to
-# install.
+# Set the format of the installation source, valid values are "targz" and
+# "rpm". This is only valid with "java_vendor == oracle"
+java_format: targz
+
+# In case of "java_vendor == oracle" and "java_format == targz", a directory
+# as to be set where to install.
 java_install_directory: /opt

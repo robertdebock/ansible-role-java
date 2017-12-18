@@ -108,15 +108,19 @@ java_package:
   oracle:
     jre:
       8:
-        name: jre-8u151-linux-x64.tar.gz
-        directory: jre1.8.0_151
+        targz: jre-8u152-linux-x64.tar.gz
+        rpm: jre-8u152-linux-x64.rpm
+        directory: jre1.8.0_152
       9:
-        name: jre-9.0.1_linux-x64_bin.tar.gz
+        targz: jre-9.0.1_linux-x64_bin.tar.gz
+        rpm: jre-9.0.1_linux-x64_bin.rpm
         directory: jre-9.0.1
     jdk:
       8:
-        name: jdk-8u151-linux-x64.tar.gz
-        directory: jdk1.8.0_151
+        targz: jdk-8u152-linux-x64.tar.gz
+        rpm: jdk-8u152-linux-x64.rpm
+        directory: jdk1.8.0_152
       9:
-        name: jdk-9.0.1_linux-x64_bin.tar.gz
+        targz: jdk-9.0.1_linux-x64_bin.tar.gz
+        rpm: jdk-9.0.1_linux-x64_bin.rpm
         directory: jdk-9.0.1

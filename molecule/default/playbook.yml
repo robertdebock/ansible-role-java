@@ -71,9 +71,9 @@
       java_version: 8
       java_type: jdk
 
-### CentOS 6 Oracle
-- name: install centos 6 oracle 8 jre
-  hosts: centos-6-oracle-8-jre
+### CentOS 6 Oracle rpm
+- name: install centos 6 oracle 8 jre rpm
+  hosts: centos-6-oracle-8-jre-rpm
   gather_facts: no
   become: yes
 
@@ -81,9 +81,10 @@
     - role: robertdebock.java
       java_vendor: oracle
       java_version: 8
+      java_format: rpm
 
-- name: install centos 6 oracle 8 jdk
-  hosts: centos-6-oracle-8-jdk
+- name: install centos 6 oracle 8 jdk rpm
+  hosts: centos-6-oracle-8-jdk-rpm
   gather_facts: no
   become: yes
 
@@ -92,9 +93,10 @@
       java_vendor: oracle
       java_version: 8
       java_type: jdk
+      java_format: rpm
 
-- name: install centos 6 oracle 9 jre
-  hosts: centos-6-oracle-9-jre
+- name: install centos 6 oracle 9 jre rpm
+  hosts: centos-6-oracle-9-jre-rpm
   gather_facts: no
   become: yes
 
@@ -102,9 +104,10 @@
     - role: robertdebock.java
       java_vendor: oracle
       java_version: 9
+      java_format: rpm
 
-- name: install centos 6 oracle 9 jdk
-  hosts: centos-6-oracle-9-jdk
+- name: install centos 6 oracle 9 jdk rpm
+  hosts: centos-6-oracle-9-jdk-rpm
   gather_facts: no
   become: yes
 
@@ -113,6 +116,54 @@
       java_vendor: oracle
       java_version: 9
       java_type: jdk
+      java_format: rpm
+
+### CentOS 6 Oracle targz
+- name: install centos 6 oracle 8 jre targz
+  hosts: centos-6-oracle-8-jre-targz
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_vendor: oracle
+      java_version: 8
+      java_format: targz
+
+- name: install centos 6 oracle 8 jdk targz
+  hosts: centos-6-oracle-8-jdk-targz
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_vendor: oracle
+      java_version: 8
+      java_type: jdk
+      java_format: targz
+
+- name: install centos 6 oracle 9 jre targz
+  hosts: centos-6-oracle-9-jre-targz
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_vendor: oracle
+      java_version: 9
+      java_format: targz
+
+- name: install centos 6 oracle 9 jdk targz
+  hosts: centos-6-oracle-9-jdk-targz
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_vendor: oracle
+      java_version: 9
+      java_type: jdk
+      java_format: targz
 
 ### CentOS 7 OpenJDK
 - name: install centos 7 default
@@ -186,9 +237,9 @@
       java_version: 8
       java_type: jdk
 
-### CentOS 7 Oracle
-- name: install centos 7 oracle 8 jre
-  hosts: centos-7-oracle-8-jre
+### CentOS 7 Oracle rpm
+- name: install centos 7 oracle 8 jre rpm
+  hosts: centos-7-oracle-8-jre-rpm
   gather_facts: no
   become: yes
 
@@ -196,9 +247,10 @@
     - role: robertdebock.java
       java_vendor: oracle
       java_version: 8
+      java_format: rpm
 
-- name: install centos 7 oracle 8 jdk
-  hosts: centos-7-oracle-8-jdk
+- name: install centos 7 oracle 8 jdk rpm
+  hosts: centos-7-oracle-8-jdk-rpm
   gather_facts: no
   become: yes
 
@@ -207,9 +259,10 @@
       java_vendor: oracle
       java_version: 8
       java_type: jdk
+      java_format: rpm
 
-- name: install centos 7 oracle 9 jre
-  hosts: centos-7-oracle-9-jre
+- name: install centos 7 oracle 9 jre rpm
+  hosts: centos-7-oracle-9-jre-rpm
   gather_facts: no
   become: yes
 
@@ -217,9 +270,10 @@
     - role: robertdebock.java
       java_vendor: oracle
       java_version: 9
+      java_format: rpm
 
-- name: install centos 7 oracle 9 jdk
-  hosts: centos-7-oracle-9-jdk
+- name: install centos 7 oracle 9 jdk rpm
+  hosts: centos-7-oracle-9-jdk-rpm
   gather_facts: no
   become: yes
 
@@ -228,6 +282,54 @@
       java_vendor: oracle
       java_version: 9
       java_type: jdk
+      java_format: rpm
+
+### CentOS 7 Oracle targz
+- name: install centos 7 oracle 8 jre targz
+  hosts: centos-7-oracle-8-jre-targz
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_vendor: oracle
+      java_version: 8
+      java_format: targz
+
+- name: install centos 7 oracle 8 jdk targz
+  hosts: centos-7-oracle-8-jdk-targz
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_vendor: oracle
+      java_version: 8
+      java_type: jdk
+      java_format: targz
+
+- name: install centos 7 oracle 9 jre targz
+  hosts: centos-7-oracle-9-jre-targz
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_vendor: oracle
+      java_version: 9
+      java_format: targz
+
+- name: install centos 7 oracle 9 jdk targz
+  hosts: centos-7-oracle-9-jdk-targz
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_vendor: oracle
+      java_version: 9
+      java_type: jdk
+      java_format: targz
 
 ### Debian Jessie OpenJDK
 - name: install debian 8 default
@@ -431,9 +533,9 @@
       java_version: 9
       java_type: jdk
 
-### Fedora 26 Oracle
-- name: install fedora 26 oracle 8 jre
-  hosts: fedora-26-oracle-8-jre
+### Fedora 26 Oracle rpm
+- name: install fedora 26 oracle 8 jre rpm
+  hosts: fedora-26-oracle-8-jre-rpm
   gather_facts: no
   become: yes
 
@@ -441,9 +543,10 @@
     - role: robertdebock.java
       java_vendor: oracle
       java_version: 8
+      java_format: rpm
 
-- name: install fedora 26 oracle 8 jdk
-  hosts: fedora-26-oracle-8-jdk
+- name: install fedora 26 oracle 8 jdk rpm
+  hosts: fedora-26-oracle-8-jdk-rpm
   gather_facts: no
   become: yes
 
@@ -452,9 +555,10 @@
       java_vendor: oracle
       java_version: 8
       java_type: jdk
+      java_format: rpm
 
-- name: install fedora 26 oracle 9 jre
-  hosts: fedora-26-oracle-9-jre
+- name: install fedora 26 oracle 9 jre rpm
+  hosts: fedora-26-oracle-9-jre-rpm
   gather_facts: no
   become: yes
 
@@ -462,9 +566,10 @@
     - role: robertdebock.java
       java_vendor: oracle
       java_version: 9
+      java_format: rpm
 
-- name: install fedora 26 oracle 9 jdk
-  hosts: fedora-26-oracle-9-jdk
+- name: install fedora 26 oracle 9 jdk rpm
+  hosts: fedora-26-oracle-9-jdk-rpm
   gather_facts: no
   become: yes
 
@@ -473,6 +578,54 @@
       java_vendor: oracle
       java_version: 9
       java_type: jdk
+      java_format: rpm
+
+### Fedora 26 Oracle targz
+- name: install fedora 26 oracle 8 jre targz
+  hosts: fedora-26-oracle-8-jre-targz
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_vendor: oracle
+      java_version: 8
+      java_format: targz
+
+- name: install fedora 26 oracle 8 jdk targz
+  hosts: fedora-26-oracle-8-jdk-targz
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_vendor: oracle
+      java_version: 8
+      java_type: jdk
+      java_format: targz
+
+- name: install fedora 26 oracle 9 jre targz
+  hosts: fedora-26-oracle-9-jre-targz
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_vendor: oracle
+      java_version: 9
+      java_format: targz
+
+- name: install fedora 26 oracle 9 jdk targz
+  hosts: fedora-26-oracle-9-jdk-targz
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_vendor: oracle
+      java_version: 9
+      java_type: jdk
+      java_format: targz
 
 ### Fedora 27 OpenJDK
 - name: install fedora 27 openjdk 8 jre
@@ -517,9 +670,9 @@
       java_version: 9
       java_type: jdk
 
-### Fedora 27 Oracle
-- name: install fedora 27 oracle 8 jre
-  hosts: fedora-27-oracle-8-jre
+### Fedora 27 Oracle rpm
+- name: install fedora 27 oracle 8 jre rpm
+  hosts: fedora-27-oracle-8-jre-rpm
   gather_facts: no
   become: yes
 
@@ -527,9 +680,10 @@
     - role: robertdebock.java
       java_vendor: oracle
       java_version: 8
+      java_format: rpm
 
-- name: install fedora 27 oracle 8 jdk
-  hosts: fedora-27-oracle-8-jdk
+- name: install fedora 27 oracle 8 jdk rpm
+  hosts: fedora-27-oracle-8-jdk-rpm
   gather_facts: no
   become: yes
 
@@ -538,9 +692,10 @@
       java_vendor: oracle
       java_version: 8
       java_type: jdk
+      java_format: rpm
 
-- name: install fedora 27 oracle 9 jre
-  hosts: fedora-27-oracle-9-jre
+- name: install fedora 27 oracle 9 jre rpm
+  hosts: fedora-27-oracle-9-jre-rpm
   gather_facts: no
   become: yes
 
@@ -548,9 +703,10 @@
     - role: robertdebock.java
       java_vendor: oracle
       java_version: 9
+      java_format: rpm
 
-- name: install fedora 27 oracle 9 jdk
-  hosts: fedora-27-oracle-9-jdk
+- name: install fedora 27 oracle 9 jdk rpm
+  hosts: fedora-27-oracle-9-jdk-rpm
   gather_facts: no
   become: yes
 
@@ -559,6 +715,54 @@
       java_vendor: oracle
       java_version: 9
       java_type: jdk
+      java_format: rpm
+
+### Fedora 27 Oracle targz
+- name: install fedora 27 oracle 8 jre targz
+  hosts: fedora-27-oracle-8-jre-targz
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_vendor: oracle
+      java_version: 8
+      java_format: targz
+
+- name: install fedora 27 oracle 8 jdk targz
+  hosts: fedora-27-oracle-8-jdk-targz
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_vendor: oracle
+      java_version: 8
+      java_type: jdk
+      java_format: targz
+
+- name: install fedora 27 oracle 9 jre targz
+  hosts: fedora-27-oracle-9-jre-targz
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_vendor: oracle
+      java_version: 9
+      java_format: targz
+
+- name: install fedora 27 oracle 9 jdk targz
+  hosts: fedora-27-oracle-9-jdk-targz
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
+      java_vendor: oracle
+      java_version: 9
+      java_type: jdk
+      java_format: targz
 
 ### Ubuntu 17 OpenJDK
 - name: install ubuntu 17 openjdk 8 jre

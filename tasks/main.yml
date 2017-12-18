@@ -8,19 +8,40 @@
   when:
     - java_vendor == "openjdk"
 
-- name: install software (unarchive)
+- name: copy software (rpm)
+  copy:
+    src: "{{ item }}"
+    dest: "/tmp/{{ item }}"
+  with_items:
+    - "{{ java_package[java_vendor][java_type][java_version]['rpm'] }}"
+  when:
+    - java_vendor == "oracle"
+    - java_format == "rpm"
+
+- name: install software (rpm)
+  package:
+    name: "{{ item }}"
+  with_items:
+    - "/tmp/{{ java_package[java_vendor][java_type][java_version]['rpm'] }}"
+  when:
+    - java_vendor == "oracle"
+    - java_format == "rpm"
+
+- name: install software (targz)
   unarchive:
     src: "{{ item }}"
     dest: "{{ java_install_directory }}"
   with_items:
-    - "{{ java_package[java_vendor][java_type][java_version]['name'] }}"
+    - "{{ java_package[java_vendor][java_type][java_version]['targz'] }}"
   when:
     - java_vendor == "oracle"
+    - java_format == "targz"
 
-- name: set alternative (tar.gz)
+- name: set alternative (targz)
   alternatives:
     name: java
     link: /usr/bin/java
     path: "{{ java_install_directory }}/{{ java_package[java_vendor][java_type][java_version]['directory'] }}/bin/java"
   when:
     - java_vendor == "oracle"
+    - java_format == " targz"
