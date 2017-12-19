@@ -7,7 +7,7 @@
   strategy: free
 
   roles:
-    - role: robertdebock.bootstrap
+    - role: ansible-role-bootstrap
 
 ### CentOS 6 OpenJDK
 - name: install centos 6 default
