@@ -16,7 +16,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
 
 - name: install centos 6 openjdk 6 jre
   hosts: centos-6-openjdk-6-jre
@@ -24,7 +24,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 6
 
@@ -34,7 +34,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 6
       java_type: jdk
@@ -45,7 +45,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 7
 
@@ -55,7 +55,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 7
       java_type: jdk
@@ -66,7 +66,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 8
 
@@ -76,7 +76,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 8
       java_type: jdk
@@ -88,7 +88,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
 
 - name: install centos 7 openjdk 6 jre
   hosts: centos-7-openjdk-6-jre
@@ -96,7 +96,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 6
 
@@ -106,7 +106,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 6
       java_type: jdk
@@ -117,7 +117,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 7
 
@@ -127,7 +127,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 7
       java_type: jdk
@@ -138,7 +138,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 8
 
@@ -148,7 +148,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 8
       java_type: jdk
@@ -160,7 +160,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
 
 - name: install debian jessie openjdk 7 jre
   hosts: debian-jessie-openjdk-7-jre
@@ -168,7 +168,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 7
 
@@ -178,7 +178,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 7
       java_type: jdk
@@ -190,7 +190,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 8
 
@@ -200,7 +200,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 8
       java_type: jdk
@@ -211,7 +211,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 9
 
@@ -221,7 +221,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 9
       java_type: jdk
@@ -233,7 +233,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 8
 
@@ -243,7 +243,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 8
       java_type: jdk
@@ -254,7 +254,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 9
 
@@ -264,7 +264,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 9
       java_type: jdk
@@ -276,7 +276,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 8
 
@@ -286,7 +286,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 8
       java_type: jdk
@@ -297,7 +297,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 9
 
@@ -307,7 +307,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 9
       java_type: jdk
@@ -319,7 +319,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 8
 
@@ -329,7 +329,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 8
       java_type: jdk
@@ -340,7 +340,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 9
 
@@ -350,7 +350,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 9
       java_type: jdk
@@ -362,7 +362,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 8
 
@@ -372,7 +372,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 8
       java_type: jdk
@@ -383,7 +383,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 9
 
@@ -393,7 +393,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
       java_vendor: openjdk
       java_version: 9
       java_type: jdk
