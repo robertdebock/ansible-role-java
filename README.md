@@ -3,7 +3,12 @@ java
 
 [![Build Status](https://travis-ci.org/robertdebock/robertdebock.java.svg?branch=master)](https://travis-ci.org/robertdebock/robertdebock.java)
 
-Provides java (oracle or openjdk), jre or jdk, versions 6, 7, 8 or 9 for many distributions.
+Provides java (oracle or openjdk), jre or jdk, versions 6, 7, 8 or 9 for many distributions:
+- Alpine
+- CentOS
+- Debian
+- Fedora
+- Ubuntu
 
 Requirements
 ------------
@@ -18,6 +23,7 @@ Role Variables
 - java_vendor: openjdk or oracle, default: openjdk
 - java_type: jdk or jre, default: jre
 - java_format: rpm or targz, default: targz.
+- java_install_directory: for targz installations, default: /opt.
 
 Have a look in vars/main.yml to see all available combinations.
 

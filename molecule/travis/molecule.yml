@@ -8,6 +8,16 @@ driver:
 lint:
   name: yamllint
 platforms:
+  # Alpine 3.5 OpenJDK
+  - name: alpine-3.5-openjdk-8-jre
+    image: alpine:3.5
+  - name: alpine-3.5-openjdk-8-jdk
+    image: alpine:3.5
+  # Alpine 3.6 OpenJDK
+  - name: alpine-3.6-openjdk-8-jre
+    image: alpine:3.6
+  - name: alpine-3.6-openjdk-8-jdk
+    image: alpine:3.6
   # CentOS 6 OpenJDK
   - name: centos-6-default
     image: centos:6

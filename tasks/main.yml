@@ -27,6 +27,14 @@
     - java_vendor == "oracle"
     - java_format == "rpm"
 
+- name: ensure java_install_directory exists
+  file:
+    path: "{{ java_install_directory }}"
+    state: directory
+  when:
+    - java_vendor == "oracle"
+    - java_format == "targz"
+
 - name: install software (targz)
   unarchive:
     src: "{{ item }}"

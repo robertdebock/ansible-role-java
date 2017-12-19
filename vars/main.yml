@@ -1,6 +1,19 @@
 ---
 # vars file for java
 java_package:
+  Alpine:
+    "NA":
+      openjdk:
+        jre:
+          7:
+            name: openjdk7-jre-base
+          8:
+            name: openjdk8-jre-base
+        jdk:
+          7:
+            name: openjdk7
+          8:
+            name: openjdk8
   CentOS:
     "6":
       openjdk:

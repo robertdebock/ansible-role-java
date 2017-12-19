@@ -7,6 +7,9 @@ galaxy_info:
   min_ansible_container_version: 0.2.0
 
   platforms:
+    - name: Alpine
+      versions:
+        - all
     - name: centos
       version:
         - 6
@@ -27,6 +30,7 @@ galaxy_info:
         - artful
 
   galaxy_tags:
+    - Alpine
     - CentOS
     - Debian
     - Fedora
