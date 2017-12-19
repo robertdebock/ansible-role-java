@@ -1,4 +1,14 @@
 ---
+### First run "bootstrap" on every node in "free" strategy.
+- name: bootstrap all systems
+  hosts: all
+  gather_facts: no
+  become: yes
+  strategy: free
+  
+  roles:
+    - role: robertdebock.bootstrap
+
 ### CentOS 6 OpenJDK
 - name: install centos 6 default
   hosts: centos-6-default
