@@ -5,7 +5,7 @@
   gather_facts: no
   become: yes
   strategy: free
-  
+
   roles:
     - role: robertdebock.bootstrap
 
