@@ -26,7 +26,6 @@ galaxy_info:
         - zesty
         - artful
 
-
   galaxy_tags:
     - CentOS
     - Debian
