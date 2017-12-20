@@ -61,7 +61,7 @@ provisioner:
   lint:
     name: ansible-lint
 scenario:
-  name: travis
+  name: travis-jdk
 verifier:
   name: goss
   lint:
