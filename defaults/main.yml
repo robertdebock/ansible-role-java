@@ -8,7 +8,7 @@ java_vendor: openjdk
 java_type: jre
 
 # Set the version of java, valid values are "6", 7", "8" and "9".
-java_version: 7
+java_version: 8
 
 # Set the format of the installation source, valid values are "targz" and
 # "rpm". This is only valid with "java_vendor == oracle"
