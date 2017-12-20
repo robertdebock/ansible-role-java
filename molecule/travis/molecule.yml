@@ -19,8 +19,6 @@ platforms:
   - name: alpine-3.6-openjdk-8-jdk
     image: alpine:3.6
   # CentOS 6 OpenJDK
-  - name: centos-6-default
-    image: centos:6
   - name: centos-6-openjdk-6-jre
     image: centos:6
   - name: centos-6-openjdk-6-jdk
@@ -34,8 +32,6 @@ platforms:
   - name: centos-6-openjdk-8-jdk
     image: centos:6
   # CentOS 7 OpenJDK
-  - name: centos-7-default
-    image: centos:7
   - name: centos-7-openjdk-6-jre
     image: centos:7
   - name: centos-7-openjdk-6-jdk
@@ -49,8 +45,6 @@ platforms:
   - name: centos-7-openjdk-8-jdk
     image: centos:7
   # Debian Jessie openjdk
-  - name: debian-jessie-default
-    image: debian:jessie
   - name: debian-jessie-openjdk-7-jre
     image: debian:jessie
   - name: debian-jessie-openjdk-7-jdk

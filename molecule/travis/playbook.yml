@@ -44,14 +44,6 @@
       java_type: jdk
 
 ### CentOS 6 OpenJDK
-- name: install centos 6 default
-  hosts: centos-6-default
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-
 - name: install centos 6 openjdk 6 jre
   hosts: centos-6-openjdk-6-jre
   gather_facts: no
@@ -116,14 +108,6 @@
       java_type: jdk
 
 ### CentOS 7 OpenJDK
-- name: install centos 7 default
-  hosts: centos-7-default
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-
 - name: install centos 7 openjdk 6 jre
   hosts: centos-7-openjdk-6-jre
   gather_facts: no
@@ -188,14 +172,6 @@
       java_type: jdk
 
 ### Debian Jessie OpenJDK
-- name: install debian jessie default
-  hosts: debian-jessie-default
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-
 - name: install debian jessie openjdk 7 jre
   hosts: debian-jessie-openjdk-7-jre
   gather_facts: no
