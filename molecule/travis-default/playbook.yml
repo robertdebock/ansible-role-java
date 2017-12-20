@@ -1,7 +1,7 @@
 ---
 ### Alpine 3.5 OpenJDK
 - name: install alpine 3.5
-  hosts: alpine-3.5-openjdk-8-jre
+  hosts: alpine-3.5
   gather_facts: no
   become: yes
 
