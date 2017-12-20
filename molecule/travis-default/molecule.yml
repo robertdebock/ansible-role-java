@@ -1,0 +1,50 @@
+---
+dependency:
+  name: galaxy
+  options:
+    role-file: requirements.yml
+driver:
+  name: docker
+lint:
+  name: yamllint
+platforms:
+  # Alpine 3.5 OpenJDK
+  - name: alpine-3.5
+    image: alpine:3.5
+  # Alpine 3.6 OpenJDK
+  - name: alpine-3.6
+    image: alpine:3.6
+  # CentOS 6 OpenJDK
+  - name: centos-6
+    image: centos:6
+  # CentOS 7 OpenJDK
+  - name: centos-7
+    image: centos:7
+  # Debian Jessie openjdk
+  - name: debian-jessie
+    image: debian:jessie
+  # Debian Buster openjdk
+  - name: debian-buster
+    image: debian:buster
+  # Fedora 26 OpenJDK
+  - name: fedora-26
+    image: fedora:26
+  # Fedora 27 OpenJDK
+  - name: fedora-27
+    image: fedora:27
+  # Ubuntu 17 openjdk
+  - name: ubuntu-17
+    image: ubuntu:zesty
+  # Ubuntu 18 OpenJDK
+  - name: ubuntu-18
+    image: ubuntu:artful
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+scenario:
+  name: travis-default
+verifier:
+  name: goss
+  lint:
+    name: 'None'
