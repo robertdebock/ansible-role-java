@@ -7,6 +7,8 @@ env:
   - ansible_version=">=2.2,<2.3"
   - ansible_version=">=2.3,<2.4"
   - ansible_version=">=2.4,<2.5"
+  - java_type="jre"
+  - java_type="jdk"
 
 cache:
   - pip
@@ -18,7 +20,7 @@ install:
   - pip install docker-py
 
 script:
-  - molecule test --scenario-name travis
+  - molecule test --scenario-name travis-"${java_type}"
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
