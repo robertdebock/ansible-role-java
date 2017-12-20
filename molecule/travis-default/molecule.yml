@@ -20,9 +20,6 @@ platforms:
   # CentOS 7 OpenJDK
   - name: centos-7
     image: centos:7
-  # Debian Jessie openjdk
-  - name: debian-jessie
-    image: debian:jessie
   # Debian Buster openjdk
   - name: debian-buster
     image: debian:buster

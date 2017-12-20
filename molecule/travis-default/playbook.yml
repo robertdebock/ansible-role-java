@@ -35,15 +35,6 @@
   roles:
     - role: ansible-role-java
 
-### Debian Jessie
-- name: install debian jessie
-  hosts: debian-jessie
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-
 ### Debian Buster
 - name: install debian buster
   hosts: debian-buster
