@@ -462,14 +462,6 @@
       java_format: targz
 
 ### Debian Jessie OpenJDK
-- name: install debian 8 default
-  hosts: debian-8-default
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-
 - name: install debian 8 openjdk 7 jre
   hosts: debian-8-openjdk-7-jre
   gather_facts: no
