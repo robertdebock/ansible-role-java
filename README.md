@@ -1,7 +1,7 @@
 java
 =========
 
-[![Build Status](https://travis-ci.org/robertdebock/robertdebock.java.svg?branch=master)](https://travis-ci.org/robertdebock/robertdebock.java)
+[![Build Status](https://travis-ci.org/robertdebock/ansible-role-java.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-java)
 
 Provides java (oracle or openjdk), jre or jdk, versions 6, 7, 8 or 9 for many distributions:
 - Alpine
