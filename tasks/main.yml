@@ -45,6 +45,17 @@
     - java_vendor == "oracle"
     - java_format == "targz"
 
+- name: install policy software (targz)
+  unarchive:
+    src: jce_policy-8.zip
+    dest: "{{ java_install_directory }}"
+  with_items:
+    - "{{ java_package[java_vendor][java_type][java_version]['targz'] }}"
+  when:
+    - java_jce is defined
+    - java_vendor == "oracle"
+    - java_version == 8
+
 - name: set alternative (targz)
   alternatives:
     name: java

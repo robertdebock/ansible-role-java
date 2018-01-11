@@ -24,6 +24,7 @@ Role Variables
 - java_type: jdk or jre, default: jre
 - java_format: rpm or targz, default: targz. (only applicable for java_vendor: oracle)
 - java_install_directory: for targz installations, default: /opt. (only applicable for java_vendor: oracle)
+- java_jce: "yes" if you want to install the Java Cryptography Extension, default: unset (only applicable for java_vendor: oracle and java_version: 8)
 
 Have a look in vars/main.yml to see all available combinations.
 
