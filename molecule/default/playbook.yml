@@ -1,70 +1,5 @@
 ---
-### Alpine 3.5 OpenJDK
-- name: install alpine 3.5 openjdk 8 jre
-  hosts: alpine-3.5-openjdk-8-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 8
-
-- name: install alpine 3.5 openjdk 8 jdk
-  hosts: alpine-3.5-openjdk-8-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 8
-      java_type: jdk
-
-### Alpine 3.5 Oracle
-- name: install alpine 3.5 oracle 8 jre
-  hosts: alpine-3.5-oracle-8-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-
-- name: install alpine 3.5 oracle 8 jdk
-  hosts: alpine-3.5-oracle-8-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-      java_type: jdk
-
-- name: install alpine 3.5 oracle 8 jre
-  hosts: alpine-3.5-oracle-8-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-
-- name: install alpine 3.5 oracle 9 jdk
-  hosts: alpine-3.5-oracle-9-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-      java_type: jdk
-
-### Alpine 3.6 OpenJDK
+### alpine 3.6 OpenJDK
 - name: install alpine 3.6 openjdk 8 jre
   hosts: alpine-3.6-openjdk-8-jre
   gather_facts: no
@@ -86,7 +21,7 @@
       java_version: 8
       java_type: jdk
 
-### Alpine 3.6 Oracle
+### alpine 3.6 Oracle
 - name: install alpine 3.6 oracle 8 jre
   hosts: alpine-3.6-oracle-8-jre
   gather_facts: no
@@ -120,6 +55,71 @@
 
 - name: install alpine 3.6 oracle 9 jdk
   hosts: alpine-3.6-oracle-9-jdk
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: ansible-role-java
+      java_vendor: oracle
+      java_version: 9
+      java_type: jdk
+
+### alpine 3.7 OpenJDK
+- name: install alpine 3.7 openjdk 8 jre
+  hosts: alpine-3.7-openjdk-8-jre
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: ansible-role-java
+      java_vendor: openjdk
+      java_version: 8
+
+- name: install alpine 3.7 openjdk 8 jdk
+  hosts: alpine-3.7-openjdk-8-jdk
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: ansible-role-java
+      java_vendor: openjdk
+      java_version: 8
+      java_type: jdk
+
+### alpine 3.7 Oracle
+- name: install alpine 3.7 oracle 8 jre
+  hosts: alpine-3.7-oracle-8-jre
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: ansible-role-java
+      java_vendor: oracle
+      java_version: 8
+
+- name: install alpine 3.7 oracle 8 jdk
+  hosts: alpine-3.7-oracle-8-jdk
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: ansible-role-java
+      java_vendor: oracle
+      java_version: 8
+      java_type: jdk
+
+- name: install alpine 3.7 oracle 8 jre
+  hosts: alpine-3.7-oracle-8-jre
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: ansible-role-java
+      java_vendor: oracle
+      java_version: 8
+
+- name: install alpine 3.7 oracle 9 jdk
+  hosts: alpine-3.7-oracle-9-jdk
   gather_facts: no
   become: yes
 

@@ -9,11 +9,11 @@ lint:
   name: yamllint
 platforms:
   # Alpine 3.5 OpenJDK
-  - name: alpine-3.5
-    image: alpine:3.5
-  # Alpine 3.6 OpenJDK
   - name: alpine-3.6
     image: alpine:3.6
+  # Alpine 3.6 OpenJDK
+  - name: alpine-3.7
+    image: alpine:3.7
   # CentOS 6 OpenJDK
   - name: centos-6
     image: centos:6
