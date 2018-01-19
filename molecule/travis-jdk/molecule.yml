@@ -52,10 +52,6 @@ platforms:
   - name: ubuntu-trusty-openjdk-7-jdk
     image: ubuntu:trusty
   # Ubuntu artful OpenJDK
-  - name: ubuntu-artful-openjdk-6-jdk
-    image: ubuntu:artful
-  - name: ubuntu-artful-openjdk-7-jdk
-    image: ubuntu:artful
   - name: ubuntu-artful-openjdk-8-jdk
     image: ubuntu:artful
   - name: ubuntu-artful-openjdk-9-jdk
