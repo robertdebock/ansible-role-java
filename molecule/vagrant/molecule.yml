@@ -34,7 +34,7 @@ platforms:
     box: fedora/27-cloud-base
   - name: fedora-27-oracle-9
     box: fedora/27-cloud-base
-  - name: ubuntu-trusty-openjdk-8
+  - name: ubuntu-trusty-openjdk-7
     box: ubuntu/trusty64
   - name: ubuntu-trusty-oracle-9
     box: ubuntu/artful64

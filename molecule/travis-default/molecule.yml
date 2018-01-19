@@ -29,9 +29,6 @@ platforms:
   # Fedora 27 OpenJDK
   - name: fedora-27
     image: fedora:27
-  # Ubuntu trusty openjdk
-  - name: ubuntu-trusty
-    image: ubuntu:trusty
   # Ubuntu artful OpenJDK
   - name: ubuntu-artful
     image: ubuntu:artful
