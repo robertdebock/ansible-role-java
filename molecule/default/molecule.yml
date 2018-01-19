@@ -190,41 +190,49 @@ platforms:
     image: fedora:27
   - name: fedora-27-oracle-9-jdk-targz
     image: fedora:27
+  # Ubuntu 14 OpenJDK
+  - name: ubuntu-trusty-openjdk-6-jre
+    image: ubuntu:trusty
+  - name: ubuntu-trusty-openjdk-6-jdk
+    image: ubuntu:trusty
+  - name: ubuntu-trusty-openjdk-7-jre
+    image: ubuntu:trusty
+  - name: ubuntu-trusty-openjdk-7-jdk
+    image: ubuntu:trusty
+  # Ubuntu 14 oracle
+  - name: ubuntu-trusty-oracle-8-jre
+    image: ubuntu:trusty
+  - name: ubuntu-trusty-oracle-8-jdk
+    image: ubuntu:trusty
+  - name: ubuntu-trusty-oracle-9-jre
+    image: ubuntu:trusty
+  - name: ubuntu-trusty-oracle-9-jdk
+    image: ubuntu:trusty
   # Ubuntu 17 OpenJDK
-  - name: ubuntu-17-openjdk-8-jre
+  - name: ubuntu-artful-openjdk-6-jre
     image: ubuntu:artful
-  - name: ubuntu-17-openjdk-8-jdk
+  - name: ubuntu-artful-openjdk-6-jdk
     image: ubuntu:artful
-  - name: ubuntu-17-openjdk-9-jre
+  - name: ubuntu-artful-openjdk-7-jre
     image: ubuntu:artful
-  - name: ubuntu-17-openjdk-9-jdk
+  - name: ubuntu-artful-openjdk-7-jdk
     image: ubuntu:artful
-  # Ubuntu 17 oracle
-  - name: ubuntu-17-oracle-8-jre
+  - name: ubuntu-artful-openjdk-8-jre
     image: ubuntu:artful
-  - name: ubuntu-17-oracle-8-jdk
+  - name: ubuntu-artful-openjdk-8-jdk
     image: ubuntu:artful
-  - name: ubuntu-17-oracle-9-jre
+  - name: ubuntu-artful-openjdk-9-jre
     image: ubuntu:artful
-  - name: ubuntu-17-oracle-9-jdk
-    image: ubuntu:artful
-  # Ubuntu 18 OpenJDK
-  - name: ubuntu-18-openjdk-8-jre
-    image: ubuntu:artful
-  - name: ubuntu-18-openjdk-8-jdk
-    image: ubuntu:artful
-  - name: ubuntu-18-openjdk-9-jre
-    image: ubuntu:artful
-  - name: ubuntu-18-openjdk-9-jdk
+  - name: ubuntu-artful-openjdk-9-jdk
     image: ubuntu:artful
   # Ubuntu 18 oracle
-  - name: ubuntu-18-oracle-8-jre
+  - name: ubuntu-artful-oracle-8-jre
     image: ubuntu:artful
-  - name: ubuntu-18-oracle-8-jdk
+  - name: ubuntu-artful-oracle-8-jdk
     image: ubuntu:artful
-  - name: ubuntu-18-oracle-9-jre
+  - name: ubuntu-artful-oracle-9-jre
     image: ubuntu:artful
-  - name: ubuntu-18-oracle-9-jdk
+  - name: ubuntu-artful-oracle-9-jdk
     image: ubuntu:artful
 provisioner:
   name: ansible

@@ -120,38 +120,18 @@
       java_vendor: oracle
       java_version: 9
 
-- name: install ubuntu 17 openjdk 8
-  hosts: ubuntu-17-openjdk-8
+- name: install ubuntu trusty openjdk 7
+  hosts: ubuntu-trusty-openjdk-7
   gather_facts: no
   become: yes
 
   roles:
     - role: ansible-role-java
       java_vendor: openjdk
-      java_version: 8
+      java_version: 7
 
-- name: install ubuntu 17 oracle 9
-  hosts: ubuntu-17-oracle-9
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-
-- name: install ubuntu 18 openjdk 8
-  hosts: ubuntu-18-openjdk-8
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 8
-
-- name: install ubuntu 18 oracle 9
-  hosts: ubuntu-18-oracle-9
+- name: install ubuntu artful oracle 9
+  hosts: ubuntu-artful-oracle-9
   gather_facts: no
   become: yes
 

@@ -47,11 +47,15 @@ platforms:
   - name: fedora-27-openjdk-9-jdk
     image: fedora:27
   # Ubuntu trusty openjdk
-  - name: ubuntu-trusty-openjdk-8-jdk
+  - name: ubuntu-trusty-openjdk-6-jdk
     image: ubuntu:trusty
-  - name: ubuntu-trusty-openjdk-9-jdk
+  - name: ubuntu-trusty-openjdk-7-jdk
     image: ubuntu:trusty
   # Ubuntu artful OpenJDK
+  - name: ubuntu-artful-openjdk-6-jdk
+    image: ubuntu:artful
+  - name: ubuntu-artful-openjdk-7-jdk
+    image: ubuntu:artful
   - name: ubuntu-artful-openjdk-8-jdk
     image: ubuntu:artful
   - name: ubuntu-artful-openjdk-9-jdk

@@ -97,11 +97,19 @@ java_package:
     "17":
       openjdk:
         jre:
+          6:
+            name: openjdk-6-jre
+          7:
+            name: openjdk-7-jre
           8:
             name: openjdk-8-jre
           9:
             name: openjdk-9-jre
         jdk:
+          6:
+            name: openjdk-6-jdk
+          7:
+            name: openjdk-7-jdk
           8:
             name: openjdk-8-jdk
           9:
@@ -109,15 +117,15 @@ java_package:
     "14":
       openjdk:
         jre:
-          8:
-            name: openjdk-8-jre
-          9:
-            name: openjdk-9-jre
+          6:
+            name: openjdk-6-jre
+          7:
+            name: openjdk-7-jre
         jdk:
-          8:
-            name: openjdk-8-jdk
-          9:
-            name: openjdk-9-jdk
+          6:
+            name: openjdk-6-jdk
+          7:
+            name: openjdk-7-jdk
   oracle:
     jre:
       8:
