@@ -34,13 +34,13 @@ platforms:
     box: fedora/27-cloud-base
   - name: fedora-27-oracle-9
     box: fedora/27-cloud-base
-  - name: ubuntu-17-openjdk-8
-    box: ubuntu/zesty64
-  - name: ubuntu-17-oracle-9
-    box: ubuntu/zesty64
-  - name: ubuntu-18-openjdk-8
+  - name: ubuntu-trusty-openjdk-8
+    box: ubuntu/trusty64
+  - name: ubuntu-trusty-oracle-9
     box: ubuntu/artful64
-  - name: ubuntu-18-oracle-9
+  - name: ubuntu-artful-openjdk-8
+    box: ubuntu/artful64
+  - name: ubuntu-artful-oracle-9
     box: ubuntu/artful64
 provisioner:
   name: ansible

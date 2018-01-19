@@ -192,22 +192,22 @@ platforms:
     image: fedora:27
   # Ubuntu 17 OpenJDK
   - name: ubuntu-17-openjdk-8-jre
-    image: ubuntu:zesty
+    image: ubuntu:artful
   - name: ubuntu-17-openjdk-8-jdk
-    image: ubuntu:zesty
+    image: ubuntu:artful
   - name: ubuntu-17-openjdk-9-jre
-    image: ubuntu:zesty
+    image: ubuntu:artful
   - name: ubuntu-17-openjdk-9-jdk
-    image: ubuntu:zesty
+    image: ubuntu:artful
   # Ubuntu 17 oracle
   - name: ubuntu-17-oracle-8-jre
-    image: ubuntu:zesty
+    image: ubuntu:artful
   - name: ubuntu-17-oracle-8-jdk
-    image: ubuntu:zesty
+    image: ubuntu:artful
   - name: ubuntu-17-oracle-9-jre
-    image: ubuntu:zesty
+    image: ubuntu:artful
   - name: ubuntu-17-oracle-9-jdk
-    image: ubuntu:zesty
+    image: ubuntu:artful
   # Ubuntu 18 OpenJDK
   - name: ubuntu-18-openjdk-8-jre
     image: ubuntu:artful

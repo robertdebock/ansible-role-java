@@ -29,11 +29,11 @@ platforms:
   # Fedora 27 OpenJDK
   - name: fedora-27
     image: fedora:27
-  # Ubuntu 17 openjdk
-  - name: ubuntu-17
-    image: ubuntu:zesty
-  # Ubuntu 18 OpenJDK
-  - name: ubuntu-18
+  # Ubuntu trusty openjdk
+  - name: ubuntu-trusty
+    image: ubuntu:trusty
+  # Ubuntu artful OpenJDK
+  - name: ubuntu-artful
     image: ubuntu:artful
 provisioner:
   name: ansible

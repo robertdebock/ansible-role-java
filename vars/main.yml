@@ -106,7 +106,7 @@ java_package:
             name: openjdk-8-jdk
           9:
             name: openjdk-9-jdk
-    "18":
+    "14":
       openjdk:
         jre:
           8:
