@@ -9,28 +9,34 @@ lint:
   name: yamllint
 platforms:
   # Alpine 3.5 OpenJDK
-  - name: alpine-3.6
+  - name: java-travis-default-alpine-3.6
     image: alpine:3.6
   # Alpine 3.6 OpenJDK
-  - name: alpine-3.7
+  - name: java-travis-default-alpine-3.7
     image: alpine:3.7
   # CentOS 6 OpenJDK
-  - name: centos-6
+  - name: java-travis-default-centos-6
     image: centos:6
   # CentOS 7 OpenJDK
-  - name: centos-7
+  - name: java-travis-default-centos-7
     image: centos:7
   # Debian Buster openjdk
-  - name: debian-buster
+  - name: java-travis-default-debian-buster
     image: debian:buster
   # Fedora 26 OpenJDK
-  - name: fedora-26
+  - name: java-travis-default-fedora-26
     image: fedora:26
   # Fedora 27 OpenJDK
-  - name: fedora-27
+  - name: java-travis-default-fedora-27
     image: fedora:27
+  # Ubuntu trusty OpenJDK
+  - name: java-travis-default-ubuntu-trusty
+    image: ubuntu:trusty
+  # Ubuntu xenial OpenJDK
+  - name: java-travis-default-ubuntu-xenial
+    image: ubuntu:xenial
   # Ubuntu artful OpenJDK
-  - name: ubuntu-artful
+  - name: java-travis-default-ubuntu-artful
     image: ubuntu:artful
 provisioner:
   name: ansible

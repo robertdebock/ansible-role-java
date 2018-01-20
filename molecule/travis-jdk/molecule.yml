@@ -9,52 +9,57 @@ lint:
   name: yamllint
 platforms:
   # Alpine 3.6 OpenJDK
-  - name: alpine-3.6-openjdk-8-jdk
+  - name: java-travis-jdk-alpine-3.6-openjdk-8-jdk
     image: alpine:3.6
   # Alpine 3.7 OpenJDK
-  - name: alpine-3.7-openjdk-8-jdk
+  - name: java-travis-jdk-alpine-3.7-openjdk-8-jdk
     image: alpine:3.7
   # CentOS 6 OpenJDK
-  - name: centos-6-openjdk-6-jdk
+  - name: java-travis-jdk-centos-6-openjdk-6-jdk
     image: centos:6
-  - name: centos-6-openjdk-7-jdk
+  - name: java-travis-jdk-centos-6-openjdk-7-jdk
     image: centos:6
-  - name: centos-6-openjdk-8-jdk
+  - name: java-travis-jdk-centos-6-openjdk-8-jdk
     image: centos:6
   # CentOS 7 OpenJDK
-  - name: centos-7-openjdk-6-jdk
+  - name: java-travis-jdk-centos-7-openjdk-6-jdk
     image: centos:7
-  - name: centos-7-openjdk-7-jdk
+  - name: java-travis-jdk-centos-7-openjdk-7-jdk
     image: centos:7
-  - name: centos-7-openjdk-8-jdk
+  - name: java-travis-jdk-centos-7-openjdk-8-jdk
     image: centos:7
   # Debian Jessie openjdk
-  - name: debian-jessie-openjdk-7-jdk
+  - name: java-travis-jdk-debian-jessie-openjdk-7-jdk
     image: debian:jessie
   # Debian Buster openjdk
-  - name: debian-buster-openjdk-8-jdk
+  - name: java-travis-jdk-debian-buster-openjdk-8-jdk
     image: debian:buster
-  - name: debian-buster-openjdk-9-jdk
+  - name: java-travis-jdk-debian-buster-openjdk-9-jdk
     image: debian:buster
   # Fedora 26 OpenJDK
-  - name: fedora-26-openjdk-8-jdk
+  - name: java-travis-jdk-fedora-26-openjdk-8-jdk
     image: fedora:26
-  - name: fedora-26-openjdk-9-jdk
+  - name: java-travis-jdk-fedora-26-openjdk-9-jdk
     image: fedora:26
   # Fedora 27 OpenJDK
-  - name: fedora-27-openjdk-8-jdk
+  - name: java-travis-jdk-fedora-27-openjdk-8-jdk
     image: fedora:27
-  - name: fedora-27-openjdk-9-jdk
+  - name: java-travis-jdk-fedora-27-openjdk-9-jdk
     image: fedora:27
   # Ubuntu trusty openjdk
-  - name: ubuntu-trusty-openjdk-6-jdk
+  - name: java-travis-jdk-ubuntu-trusty-openjdk-6-jdk
     image: ubuntu:trusty
-  - name: ubuntu-trusty-openjdk-7-jdk
+  - name: java-travis-jdk-ubuntu-trusty-openjdk-7-jdk
     image: ubuntu:trusty
+  # Ubuntu xenial openjdk
+  - name: java-travis-jdk-ubuntu-xenial-openjdk-6-jdk
+    image: ubuntu:xenial
+  - name: java-travis-jdk-ubuntu-xenial-openjdk-7-jdk
+    image: ubuntu:xenial
   # Ubuntu artful OpenJDK
-  - name: ubuntu-artful-openjdk-8-jdk
+  - name: java-travis-jdk-ubuntu-artful-openjdk-8-jdk
     image: ubuntu:artful
-  - name: ubuntu-artful-openjdk-9-jdk
+  - name: java-travis-jdk-ubuntu-artful-openjdk-9-jdk
     image: ubuntu:artful
 provisioner:
   name: ansible

@@ -14,6 +14,24 @@ java_package:
             name: openjdk7
           8:
             name: openjdk8
+  Archlinux:
+    "NA":
+      openjdk:
+        jre:
+          7:
+            name: jre7-openjdk-headless
+          8:
+            name: jre8-openjdk-headless
+          9:
+            name: jre9-openjdk-headless
+
+        jdk:
+          7:
+            name: jdk7-openjdk
+          8:
+            name: jdk8-openjdk
+          9:
+            name: jdk9-openjdk
   CentOS:
     "6":
       openjdk:
@@ -68,6 +86,14 @@ java_package:
             name: openjdk-8-jdk
           9:
             name: openjdk-9-jdk
+    "9":
+      openjdk:
+        jre:
+          8:
+            name: openjdk-8-jre
+        jdk:
+          8:
+            name: openjdk-8-jdk
   Fedora:
     "26":
       openjdk:
@@ -93,7 +119,45 @@ java_package:
             name: java-1.8.0-openjdk-devel
           9:
             name: java-9-openjdk-devel
+  openSUSE Leap:
+    "42":
+      openjdk:
+        jre:
+          7:
+            name: java-1_7_0-openjdk
+          8:
+            name: java-1_8_0-openjdk
+        jdk:
+          7:
+            name: java-1_7_0-openjdk-devel
+          8:
+            name: java-1_8_0-openjdk-devel
   Ubuntu:
+    "14":
+      openjdk:
+        jre:
+          6:
+            name: openjdk-6-jre
+          7:
+            name: openjdk-7-jre
+        jdk:
+          6:
+            name: openjdk-6-jdk
+          7:
+            name: openjdk-7-jdk
+    "16":
+      openjdk:
+        jre:
+          8:
+            name: openjdk-8-jre
+          9:
+            name: openjdk-9-jre
+        jdk:
+          8:
+            name: openjdk-8-jdk
+          9:
+            name: openjdk-9-jdk
+
     "17":
       openjdk:
         jre:
@@ -114,18 +178,6 @@ java_package:
             name: openjdk-8-jdk
           9:
             name: openjdk-9-jdk
-    "14":
-      openjdk:
-        jre:
-          6:
-            name: openjdk-6-jre
-          7:
-            name: openjdk-7-jre
-        jdk:
-          6:
-            name: openjdk-6-jdk
-          7:
-            name: openjdk-7-jdk
   oracle:
     jre:
       8:
