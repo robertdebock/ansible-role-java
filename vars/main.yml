@@ -137,9 +137,9 @@ java_package:
       openjdk:
         jre:
           6:
-            name: openjdk-6-jre
+            name: openjdk-6-jre-headless
           7:
-            name: openjdk-7-jre
+            name: openjdk-7-jre-headless
         jdk:
           6:
             name: openjdk-6-jdk
@@ -149,35 +149,27 @@ java_package:
       openjdk:
         jre:
           8:
-            name: openjdk-8-jre
+            name: openjdk-8-jre-headless
           9:
-            name: openjdk-9-jre
+            name: openjdk-9-jre-headless
         jdk:
           8:
-            name: openjdk-8-jdk
+            name: openjdk-8-jdk-headless
           9:
-            name: openjdk-9-jdk
+            name: openjdk-9-jdk-headless
 
     "17":
       openjdk:
         jre:
-          6:
-            name: openjdk-6-jre
-          7:
-            name: openjdk-7-jre
           8:
-            name: openjdk-8-jre
+            name: openjdk-8-jre-headless
           9:
-            name: openjdk-9-jre
+            name: openjdk-9-jre-headless
         jdk:
-          6:
-            name: openjdk-6-jdk
-          7:
-            name: openjdk-7-jdk
           8:
-            name: openjdk-8-jdk
+            name: openjdk-8-jdk-headless
           9:
-            name: openjdk-9-jdk
+            name: openjdk-9-jdk-headless
   oracle:
     jre:
       8:
