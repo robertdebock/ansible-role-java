@@ -29,9 +29,6 @@ platforms:
   # Fedora 27 OpenJDK
   - name: java-travis-default-fedora-27
     image: fedora:27
-  # Ubuntu trusty OpenJDK
-  - name: java-travis-default-ubuntu-trusty
-    image: ubuntu:trusty
   # Ubuntu xenial OpenJDK
   - name: java-travis-default-ubuntu-xenial
     image: ubuntu:xenial
