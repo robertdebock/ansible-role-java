@@ -49,12 +49,12 @@ platforms:
   # Ubuntu trusty openjdk
   - name: java-travis-jre-ubuntu-trusty-openjdk-6-jre
     image: ubuntu:trusty
-  - name: ubuntu-trusty-openjdk-7-jre
+  - name: java-travis-jre-ubuntu-trusty-openjdk-7-jre
     image: ubuntu:trusty
   # Ubuntu xenial openjdk
-  - name: java-travis-jre-ubuntu-xenial-openjdk-6-jre
+  - name: java-travis-jre-ubuntu-xenial-openjdk-8-jre
     image: ubuntu:xenial
-  - name: ubuntu-xenial-openjdk-7-jre
+  - name: java-travis-jre-ubuntu-xenial-openjdk-9-jre
     image: ubuntu:xenial
   # Ubuntu artful OpenJDK
   - name: java-travis-jre-ubuntu-artful-openjdk-8-jre
