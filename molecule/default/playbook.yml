@@ -1,232 +1,92 @@
 ---
-### alpine 3.6 OpenJDK
-- name: install alpine 3.6 openjdk 8 jre
-  hosts: alpine-3.6-openjdk-8-jre
+# All JRE version.
+- name: openjdk 6 jre
+  hosts: "*-openjdk-6-jre"
   gather_facts: no
   become: yes
 
   roles:
     - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 8
-
-- name: install alpine 3.6 openjdk 8 jdk
-  hosts: alpine-3.6-openjdk-8-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 8
-      java_type: jdk
-
-### alpine 3.6 Oracle
-- name: install alpine 3.6 oracle 8 jre
-  hosts: alpine-3.6-oracle-8-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-
-- name: install alpine 3.6 oracle 8 jdk
-  hosts: alpine-3.6-oracle-8-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-      java_type: jdk
-
-- name: install alpine 3.6 oracle 8 jre
-  hosts: alpine-3.6-oracle-8-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-
-- name: install alpine 3.6 oracle 9 jdk
-  hosts: alpine-3.6-oracle-9-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-      java_type: jdk
-
-### alpine 3.7 OpenJDK
-- name: install alpine 3.7 openjdk 8 jre
-  hosts: alpine-3.7-openjdk-8-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 8
-
-- name: install alpine 3.7 openjdk 8 jdk
-  hosts: alpine-3.7-openjdk-8-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 8
-      java_type: jdk
-
-### alpine 3.7 Oracle
-- name: install alpine 3.7 oracle 8 jre
-  hosts: alpine-3.7-oracle-8-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-
-- name: install alpine 3.7 oracle 8 jdk
-  hosts: alpine-3.7-oracle-8-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-      java_type: jdk
-
-- name: install alpine 3.7 oracle 8 jre
-  hosts: alpine-3.7-oracle-8-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-
-- name: install alpine 3.7 oracle 9 jdk
-  hosts: alpine-3.7-oracle-9-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-      java_type: jdk
-
-### CentOS 6 OpenJDK
-- name: install centos 6 default
-  hosts: centos-6-default
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-
-- name: install centos 6 openjdk 6 jre
-  hosts: centos-6-openjdk-6-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
       java_version: 6
 
-- name: install centos 6 openjdk 6 jdk
-  hosts: centos-6-openjdk-6-jdk
+- name: openjdk 7 jre
+  hosts: "*-openjdk-7-jre"
   gather_facts: no
   become: yes
 
   roles:
     - role: ansible-role-java
-      java_vendor: openjdk
+      java_version: 7
+
+- name: openjdk 8 jre
+  hosts: "*-openjdk-8-jre"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: ansible-role-java
+
+- name: openjdk 9 jre
+  hosts: "*-openjdk-9-jre"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: ansible-role-java
+      java_version: 9
+
+# All JDK version.
+- name: openjdk 6 jdk
+  hosts: "*-openjdk-6-jdk"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: ansible-role-java
       java_version: 6
       java_type: jdk
 
-- name: install centos 6 openjdk 7 jre
-  hosts: centos-6-openjdk-7-jre
+- name: openjdk 7 jdk
+  hosts: "*-openjdk-7-jdk"
   gather_facts: no
   become: yes
 
   roles:
     - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 7
-
-- name: install centos 6 openjdk 7 jdk
-  hosts: centos-6-openjdk-7-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
       java_version: 7
       java_type: jdk
 
-- name: install centos 6 openjdk 8 jre
-  hosts: centos-6-openjdk-8-jre
+- name: openjdk 8 jdk
+  hosts: "*-openjdk-8-jdk"
   gather_facts: no
   become: yes
 
   roles:
     - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 8
-
-- name: install centos 6 openjdk 8
-  hosts: centos-6-openjdk-8-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 8
       java_type: jdk
 
-### CentOS 6 Oracle rpm
-- name: install centos 6 oracle 8 jre rpm
-  hosts: centos-6-oracle-8-jre-rpm
+- name: openjdk 9 jdk
+  hosts: "*-openjdk-9-jdk"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: ansible-role-java
+      java_version: 9
+      java_type: jdk
+
+# All Oracle JREs targz
+- name: oracle 8 jre
+  hosts: "*-oracle-8-jre"
   gather_facts: no
   become: yes
 
   roles:
     - role: ansible-role-java
       java_vendor: oracle
-      java_version: 8
-      java_format: rpm
 
-- name: install centos 6 oracle 8 jdk rpm
-  hosts: centos-6-oracle-8-jdk-rpm
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-      java_type: jdk
-      java_format: rpm
-
-- name: install centos 6 oracle 9 jre rpm
-  hosts: centos-6-oracle-9-jre-rpm
+- name: oracle 9 jre
+  hosts: "*-oracle-9-jre"
   gather_facts: no
   become: yes
 
@@ -234,10 +94,20 @@
     - role: ansible-role-java
       java_vendor: oracle
       java_version: 9
-      java_format: rpm
 
-- name: install centos 6 oracle 9 jdk rpm
-  hosts: centos-6-oracle-9-jdk-rpm
+# All Oracle JDKs
+- name: oracle 8 jdk
+  hosts: "*-oracle-8-jdk"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: ansible-role-java
+      java_vendor: oracle
+      java_type: jdk
+
+- name: oracle 9 jdk
+  hosts: "*-oracle-9-jdk"
   gather_facts: no
   become: yes
 
@@ -246,153 +116,20 @@
       java_vendor: oracle
       java_version: 9
       java_type: jdk
+
+# All Oracle JREs rpm
+- name: oracle 8 jre rpm
+  hosts: "*-oracle-8-jre-rpm"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: ansible-role-java
+      java_vendor: oracle
       java_format: rpm
 
-### CentOS 6 Oracle targz
-- name: install centos 6 oracle 8 jre targz
-  hosts: centos-6-oracle-8-jre-targz
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-      java_format: targz
-
-- name: install centos 6 oracle 8 jdk targz
-  hosts: centos-6-oracle-8-jdk-targz
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-      java_type: jdk
-      java_format: targz
-
-- name: install centos 6 oracle 9 jre targz
-  hosts: centos-6-oracle-9-jre-targz
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-      java_format: targz
-
-- name: install centos 6 oracle 9 jdk targz
-  hosts: centos-6-oracle-9-jdk-targz
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-      java_type: jdk
-      java_format: targz
-
-### CentOS 7 OpenJDK
-- name: install centos 7 default
-  hosts: centos-7-default
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-
-- name: install centos 7 openjdk 6 jdk
-  hosts: centos-7-openjdk-6-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 6
-      java_type: jdk
-
-- name: install centos 7 openjdk 6 jre
-  hosts: centos-7-openjdk-6-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 6
-
-- name: install centos 7 openjdk 7 jre
-  hosts: centos-7-openjdk-7-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 7
-
-- name: install centos 7 openjdk 7 jdk
-  hosts: centos-7-openjdk-7-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 7
-      java_type: jdk
-
-- name: install centos 7 openjdk 8 jre
-  hosts: centos-7-openjdk-8-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 8
-
-- name: install centos 7 openjdk 8 jdk
-  hosts: centos-7-openjdk-8-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 8
-      java_type: jdk
-
-### CentOS 7 Oracle rpm
-- name: install centos 7 oracle 8 jre rpm
-  hosts: centos-7-oracle-8-jre-rpm
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-      java_format: rpm
-
-- name: install centos 7 oracle 8 jdk rpm
-  hosts: centos-7-oracle-8-jdk-rpm
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-      java_type: jdk
-      java_format: rpm
-
-- name: install centos 7 oracle 9 jre rpm
-  hosts: centos-7-oracle-9-jre-rpm
+- name: oracle 9 jre rpm
+  hosts: "*-oracle-9-jre-rpm"
   gather_facts: no
   become: yes
 
@@ -402,8 +139,20 @@
       java_version: 9
       java_format: rpm
 
-- name: install centos 7 oracle 9 jdk rpm
-  hosts: centos-7-oracle-9-jdk-rpm
+# All Oracle JDKs rpm
+- name: oracle 8 jdk rpm
+  hosts: "*-oracle-8-jdk-rpm"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: ansible-role-java
+      java_vendor: oracle
+      java_type: jdk
+      java_format: rpm
+
+- name: oracle 9 jdk rpm
+  hosts: "*-oracle-9-jdk-rpm"
   gather_facts: no
   become: yes
 
@@ -413,647 +162,3 @@
       java_version: 9
       java_type: jdk
       java_format: rpm
-
-### CentOS 7 Oracle targz
-- name: install centos 7 oracle 8 jre targz
-  hosts: centos-7-oracle-8-jre-targz
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-      java_format: targz
-
-- name: install centos 7 oracle 8 jdk targz
-  hosts: centos-7-oracle-8-jdk-targz
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-      java_type: jdk
-      java_format: targz
-
-- name: install centos 7 oracle 9 jre targz
-  hosts: centos-7-oracle-9-jre-targz
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-      java_format: targz
-
-- name: install centos 7 oracle 9 jdk targz
-  hosts: centos-7-oracle-9-jdk-targz
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-      java_type: jdk
-      java_format: targz
-
-### Debian Jessie OpenJDK
-- name: install debian 8 openjdk 7 jre
-  hosts: debian-8-openjdk-7-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 7
-
-- name: install debian 8 openjdk 7 jdk
-  hosts: debian-8-openjdk-7-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 7
-      java_type: jdk
-
-### Debian Jessie Oracle
-- name: install debian 8 oracle 8 jre
-  hosts: debian-8-oracle-8-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-
-- name: install debian 8 oracle 8 jdk
-  hosts: debian-8-oracle-8-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-      java_type: jdk
-
-- name: install debian 8 oracle 9 jre
-  hosts: debian-8-oracle-9-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-
-- name: install debian 8 oracle 9 jdk
-  hosts: debian-8-oracle-9-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-      java_type: jdk
-
-### Debian Buster OpenJDK
-- name: install debian buster openjdk 8 jre
-  hosts: debian-buster-openjdk-8-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 8
-
-- name: install debian buster openjdk 8 jdk
-  hosts: debian-buster-openjdk-8-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 8
-      java_type: jdk
-
-- name: install debian buster openjdk 9 jre
-  hosts: debian-buster-openjdk-9-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 9
-
-- name: install debian buster openjdk 9 jdk
-  hosts: debian-buster-openjdk-9-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 9
-      java_type: jdk
-
-### Debian Buster Oracle
-- name: install debian buster oracle 8 jre
-  hosts: debian-buster-oracle-8-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-
-- name: install debian buster oracle 8 jdk
-  hosts: debian-buster-oracle-8-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-      java_type: jdk
-
-- name: install debian buster oracle 9 jre
-  hosts: debian-buster-oracle-9-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-
-- name: install debian buster oracle 9 jdk
-  hosts: debian-buster-oracle-9-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-      java_type: jdk
-
-### Fedora 26 OpenJDK
-- name: install fedora 26 openjdk 8 jre
-  hosts: fedora-26-openjdk-8-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 8
-
-- name: install fedora 26 openjdk 8 jdk
-  hosts: fedora-26-openjdk-8-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 8
-      java_type: jdk
-
-- name: install fedora 26 openjdk 9 jre
-  hosts: fedora-26-openjdk-9-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 9
-
-- name: install fedora 26 openjdk 9 jdk
-  hosts: fedora-26-openjdk-9-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 9
-      java_type: jdk
-
-### Fedora 26 Oracle rpm
-- name: install fedora 26 oracle 8 jre rpm
-  hosts: fedora-26-oracle-8-jre-rpm
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-      java_format: rpm
-
-- name: install fedora 26 oracle 8 jdk rpm
-  hosts: fedora-26-oracle-8-jdk-rpm
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-      java_type: jdk
-      java_format: rpm
-
-- name: install fedora 26 oracle 9 jre rpm
-  hosts: fedora-26-oracle-9-jre-rpm
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-      java_format: rpm
-
-- name: install fedora 26 oracle 9 jdk rpm
-  hosts: fedora-26-oracle-9-jdk-rpm
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-      java_type: jdk
-      java_format: rpm
-
-### Fedora 26 Oracle targz
-- name: install fedora 26 oracle 8 jre targz
-  hosts: fedora-26-oracle-8-jre-targz
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-      java_format: targz
-
-- name: install fedora 26 oracle 8 jdk targz
-  hosts: fedora-26-oracle-8-jdk-targz
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-      java_type: jdk
-      java_format: targz
-
-- name: install fedora 26 oracle 9 jre targz
-  hosts: fedora-26-oracle-9-jre-targz
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-      java_format: targz
-
-- name: install fedora 26 oracle 9 jdk targz
-  hosts: fedora-26-oracle-9-jdk-targz
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-      java_type: jdk
-      java_format: targz
-
-### Fedora 27 OpenJDK
-- name: install fedora 27 openjdk 8 jre
-  hosts: fedora-27-openjdk-8-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 8
-
-- name: install fedora 27 openjdk 8 jdk
-  hosts: fedora-27-openjdk-8-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 8
-      java_type: jdk
-
-- name: install fedora 27 openjdk 9 jre
-  hosts: fedora-27-openjdk-9-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 9
-
-- name: install fedora 27 openjdk 9 jdk
-  hosts: fedora-27-openjdk-9-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 9
-      java_type: jdk
-
-### Fedora 27 Oracle rpm
-- name: install fedora 27 oracle 8 jre rpm
-  hosts: fedora-27-oracle-8-jre-rpm
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-      java_format: rpm
-
-- name: install fedora 27 oracle 8 jdk rpm
-  hosts: fedora-27-oracle-8-jdk-rpm
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-      java_type: jdk
-      java_format: rpm
-
-- name: install fedora 27 oracle 9 jre rpm
-  hosts: fedora-27-oracle-9-jre-rpm
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-      java_format: rpm
-
-- name: install fedora 27 oracle 9 jdk rpm
-  hosts: fedora-27-oracle-9-jdk-rpm
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-      java_type: jdk
-      java_format: rpm
-
-### Fedora 27 Oracle targz
-- name: install fedora 27 oracle 8 jre targz
-  hosts: fedora-27-oracle-8-jre-targz
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-      java_format: targz
-
-- name: install fedora 27 oracle 8 jdk targz
-  hosts: fedora-27-oracle-8-jdk-targz
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-      java_type: jdk
-      java_format: targz
-
-- name: install fedora 27 oracle 9 jre targz
-  hosts: fedora-27-oracle-9-jre-targz
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-      java_format: targz
-
-- name: install fedora 27 oracle 9 jdk targz
-  hosts: fedora-27-oracle-9-jdk-targz
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-      java_type: jdk
-      java_format: targz
-
-### Ubuntu 17 OpenJDK
-- name: install ubuntu 17 openjdk 8 jre
-  hosts: ubuntu-17-openjdk-8-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 8
-
-- name: install ubuntu 17 openjdk 8 jdk
-  hosts: ubuntu-17-openjdk-8-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 8
-      java_type: jdk
-
-- name: install ubuntu 17 openjdk 9 jre
-  hosts: ubuntu-17-openjdk-9-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 9
-
-- name: install ubuntu 17 openjdk 9 jdk
-  hosts: ubuntu-17-openjdk-9-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 9
-      java_type: jdk
-
-### Ubuntu 17 Oracle
-- name: install ubuntu 17 oracle 8 jre
-  hosts: ubuntu-17-oracle-8-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-
-- name: install ubuntu 17 oracle 8 jdk
-  hosts: ubuntu-17-oracle-8-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-      java_type: jdk
-
-- name: install ubuntu 17 oracle 9 jre
-  hosts: ubuntu-17-oracle-9-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-
-- name: install ubuntu 17 oracle 9 jdk
-  hosts: ubuntu-17-oracle-9-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-      java_type: jdk
-
-### Ubuntu 18 OpenJDK
-- name: install ubuntu 18 openjdk 8 jre
-  hosts: ubuntu-18-openjdk-8-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 8
-
-- name: install ubuntu 18 openjdk 8 jdk
-  hosts: ubuntu-18-openjdk-8-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 8
-      java_type: jdk
-
-- name: install ubuntu 18 openjdk 9 jre
-  hosts: ubuntu-18-openjdk-9-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 9
-
-- name: install ubuntu 18 openjdk 9 jdk
-  hosts: ubuntu-18-openjdk-9-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: openjdk
-      java_version: 9
-      java_type: jdk
-
-### Ubuntu 18 Oracle
-- name: install ubuntu 18 oracle 8 jre
-  hosts: ubuntu-18-oracle-8-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-
-- name: install ubuntu 18 oracle 8 jdk
-  hosts: ubuntu-18-oracle-8-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 8
-      java_type: jdk
-
-- name: install ubuntu 18 oracle 9 jre
-  hosts: ubuntu-18-oracle-9-jre
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-
-- name: install ubuntu 18 oracle 9 jdk
-  hosts: ubuntu-18-oracle-9-jdk
-  gather_facts: no
-  become: yes
-
-  roles:
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-      java_type: jdk
