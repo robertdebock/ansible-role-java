@@ -33,9 +33,9 @@ Dependencies
 
 - robertdebock.bootstrap
 
-Download the dependencies by issuing this command:
+Download all dependencies by issuing this command:
 ```
-ansible-galaxy install --role-file requirements.yml
+ansible-galaxy install robertdebock.java
 ```
 
 Example Playbooks
