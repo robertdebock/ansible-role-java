@@ -4,6 +4,7 @@
   hosts: "*-openjdk-6-jre"
   gather_facts: no
   become: yes
+  strategy: free
 
   roles:
     - role: ansible-role-java
@@ -13,6 +14,7 @@
   hosts: "*-openjdk-7-jre"
   gather_facts: no
   become: yes
+  strategy: free
 
   roles:
     - role: ansible-role-java
@@ -22,6 +24,7 @@
   hosts: "*-openjdk-8-jre"
   gather_facts: no
   become: yes
+  strategy: free
 
   roles:
     - role: ansible-role-java
@@ -30,6 +33,7 @@
   hosts: "*-openjdk-9-jre"
   gather_facts: no
   become: yes
+  strategy: free
 
   roles:
     - role: ansible-role-java
@@ -40,6 +44,7 @@
   hosts: "*-openjdk-6-jdk"
   gather_facts: no
   become: yes
+  strategy: free
 
   roles:
     - role: ansible-role-java
@@ -50,6 +55,7 @@
   hosts: "*-openjdk-7-jdk"
   gather_facts: no
   become: yes
+  strategy: free
 
   roles:
     - role: ansible-role-java
@@ -60,6 +66,7 @@
   hosts: "*-openjdk-8-jdk"
   gather_facts: no
   become: yes
+  strategy: free
 
   roles:
     - role: ansible-role-java
@@ -69,6 +76,7 @@
   hosts: "*-openjdk-9-jdk"
   gather_facts: no
   become: yes
+  strategy: free
 
   roles:
     - role: ansible-role-java
@@ -80,6 +88,7 @@
   hosts: "*-oracle-8-jre"
   gather_facts: no
   become: yes
+  strategy: free
 
   roles:
     - role: ansible-role-java
@@ -89,6 +98,7 @@
   hosts: "*-oracle-9-jre"
   gather_facts: no
   become: yes
+  strategy: free
 
   roles:
     - role: ansible-role-java
@@ -100,6 +110,7 @@
   hosts: "*-oracle-8-jdk"
   gather_facts: no
   become: yes
+  strategy: free
 
   roles:
     - role: ansible-role-java
@@ -110,6 +121,7 @@
   hosts: "*-oracle-9-jdk"
   gather_facts: no
   become: yes
+  strategy: free
 
   roles:
     - role: ansible-role-java
@@ -122,6 +134,7 @@
   hosts: "*-oracle-8-jre-rpm"
   gather_facts: no
   become: yes
+  strategy: free
 
   roles:
     - role: ansible-role-java
@@ -132,6 +145,7 @@
   hosts: "*-oracle-9-jre-rpm"
   gather_facts: no
   become: yes
+  strategy: free
 
   roles:
     - role: ansible-role-java
@@ -144,6 +158,7 @@
   hosts: "*-oracle-8-jdk-rpm"
   gather_facts: no
   become: yes
+  strategy: free
 
   roles:
     - role: ansible-role-java
@@ -155,6 +170,7 @@
   hosts: "*-oracle-9-jdk-rpm"
   gather_facts: no
   become: yes
+  strategy: free
 
   roles:
     - role: ansible-role-java

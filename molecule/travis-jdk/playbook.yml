@@ -3,6 +3,7 @@
   hosts: "*-openjdk-6-jdk"
   gather_facts: no
   become: yes
+  strategy: free
 
   roles:
     - role: ansible-role-java
@@ -13,6 +14,7 @@
   hosts: "*-openjdk-7-jdk"
   gather_facts: no
   become: yes
+  strategy: free
 
   roles:
     - role: ansible-role-java
@@ -23,6 +25,7 @@
   hosts: "*-openjdk-8-jdk"
   gather_facts: no
   become: yes
+  strategy: free
 
   roles:
     - role: ansible-role-java
@@ -33,6 +36,7 @@
   hosts: "*-openjdk-9-jdk"
   gather_facts: no
   become: yes
+  strategy: free
 
   roles:
     - role: ansible-role-java
