@@ -31,6 +31,8 @@ Have a look in vars/main.yml to see all available combinations.
 Dependencies
 ------------
 
+You can prepare your system using this role:
+
 - robertdebock.bootstrap
 
 Download all dependencies by issuing this command:
@@ -48,6 +50,7 @@ For a default installation (defaults in defaults/main.yml) use this playbook:
   become: yes
 
   roles:
+    - role: robertdebock.bootstrap
     - role: robertdebock.java
 ```
 
@@ -58,6 +61,7 @@ For an installation of Oracle jdk version 9, use this playbook:
   become: yes
 
   roles:
+    - role: robertdebock.bootstrap
     - role: robertdebock.java
       java_vendor: oracle
       java_type: jdk

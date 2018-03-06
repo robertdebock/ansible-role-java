@@ -44,5 +44,4 @@ galaxy_info:
     - jdk
     - alternatives
 
-dependencies:
-  - robertdebock.bootstrap
+dependencies: []

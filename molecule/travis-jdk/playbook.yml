@@ -6,6 +6,7 @@
   strategy: free
 
   roles:
+    - role: robertdebock.bootstrap
     - role: ansible-role-java
       java_version: 6
       java_type: jdk
@@ -17,6 +18,7 @@
   strategy: free
 
   roles:
+    - role: robertdebock.bootstrap
     - role: ansible-role-java
       java_version: 7
       java_type: jdk
@@ -28,6 +30,7 @@
   strategy: free
 
   roles:
+    - role: robertdebock.bootstrap
     - role: ansible-role-java
       java_version: 8
       java_type: jdk
@@ -39,6 +42,7 @@
   strategy: free
 
   roles:
+    - role: robertdebock.bootstrap
     - role: ansible-role-java
       java_version: 9
       java_type: jdk
