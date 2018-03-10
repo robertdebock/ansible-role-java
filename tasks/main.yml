@@ -52,7 +52,7 @@
   with_items:
     - "{{ java_package[java_vendor][java_type][java_version]['targz'] }}"
   when:
-    - java_jce is defined
+    - java_jce
     - java_vendor == "oracle"
     - java_version == 8
 
