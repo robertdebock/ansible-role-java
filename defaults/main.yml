@@ -14,6 +14,11 @@ java_version: 8
 # "rpm". This is only valid with "java_vendor == oracle"
 java_format: targz
 
+# Where do the RPMs come from when installing Oracle RPMs?
+# Either "local" or "repository". 
+# Valid for "java_vendor == oracle" and "java_format" == "rpm"
+java_rpm_source: local
+
 # Choose if you can JCE installed. Only applicable for (both):
 # - java_vendor == "oracle"
 # - java_version == "8"

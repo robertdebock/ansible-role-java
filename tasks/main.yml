@@ -17,8 +17,9 @@
   when:
     - java_vendor == "oracle"
     - java_format == "rpm"
+    - java_rpm_source == "local"
 
-- name: install software (rpm)
+- name: install software (rpm) (local)
   package:
     name: "{{ item }}"
   with_items:
@@ -26,6 +27,17 @@
   when:
     - java_vendor == "oracle"
     - java_format == "rpm"
+    - java_rpm_source == "local"
+
+- name: install software (rpm) (repository)
+  package:
+    name: "{{ item }}"
+  with_items:
+    - "{{ java_package[java_vendor][java_type][java_version]['rpm'] }}"
+  when:
+    - java_vendor == "oracle"
+    - java_format == "rpm"
+    - java_rpm_source == "repository"
 
 - name: ensure java_install_directory exists
   file:
