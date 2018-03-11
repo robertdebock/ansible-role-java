@@ -15,7 +15,7 @@ java_version: 8
 java_format: targz
 
 # Where do the RPMs come from when installing Oracle RPMs?
-# Either "local" or "repository". 
+# Either "local" or "repository".
 # Valid for "java_vendor == oracle" and "java_format" == "rpm"
 java_rpm_source: local
 
