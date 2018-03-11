@@ -69,6 +69,21 @@ For an installation of Oracle jdk version 9, use this playbook:
       java_format: rpm
 ```
 
+Red Hat distributes Oracle Java, so this may be an appropriate playbook:
+```
+- hosts: all
+  gather_facts: yes
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: robertdebock.java
+      java_vendor: oracle
+      java_format: rpm
+      java_rpm_source: repository
+```
+
+
 Install this role using `galaxy install robertdebock.java`.
 
 License
