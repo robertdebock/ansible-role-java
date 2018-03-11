@@ -83,7 +83,6 @@ Red Hat distributes Oracle Java, so this may be an appropriate playbook:
       java_rpm_source: repository
 ```
 
-
 Install this role using `galaxy install robertdebock.java`.
 
 License
