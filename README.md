@@ -10,6 +10,10 @@ Provides java (oracle or openjdk), jre or jdk, versions 6, 7, 8 or 9 for many di
 - Fedora
 - Ubuntu
 
+Context
+--------
+This role is a part of many compatible roles. Have a look at [the documentation of these roles](https://robertdebock.nl/) for further information.
+
 Requirements
 ------------
 
