@@ -44,7 +44,7 @@ You can prepare your system using this role:
 
 Download all dependencies by issuing this command:
 ```
-ansible-galaxy install robertdebock.java
+ansible-galaxy install robertdebock.bootstrap
 ```
 
 Example Playbooks
