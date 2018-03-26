@@ -69,9 +69,13 @@ java_package:
     "7":
       openjdk:
         jre:
+          6:
+            name: openjdk-6-jre
           7:
             name: openjdk-7-jre
         jdk:
+          6:
+            name: openjdk-6-jdk
           7:
             name: openjdk-7-jdk
     "8":
