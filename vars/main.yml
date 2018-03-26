@@ -66,6 +66,14 @@ java_package:
           8:
             name: java-1.8.0-openjdk-devel
   Debian:
+    "7":
+      openjdk:
+        jre:
+          7:
+            name: openjdk-7-jre
+        jdk:
+          7:
+            name: openjdk-7-jdk
     "8":
       openjdk:
         jre:
