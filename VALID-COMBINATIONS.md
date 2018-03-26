@@ -11,11 +11,12 @@ release = ansible_distribution_major_version
 |distribution|release     |java_version |java_type  |
 |------------|------------|-------------|-----------|
 | CentOS     | 6 & 7      | 6, 7 & 8    | jre & jdk |
+| Debian     | 7          | 6 & 7       | jre & jdk |
 | Debian     | 8          | 7           | jre & jdk |
-| Debian     | buster/sid | 8 & 9       | jre & jdk |
+| Debian     | 9          | 8 & 9       | jre & jdk |
 | Fedora     | 26 & 27    | 8 & 9       | jre & jdk |
 | Ubuntu     | 14         | 6 & 7       | jre & jdk |
-| Ubuntu     | 17         | 6, 7, 8 & 9 | jre & jdk|
+| Ubuntu     | 17         | 6, 7, 8 & 9 | jre & jdk |
 
 # Oracle
 
@@ -24,5 +25,5 @@ release = ansible_distribution_major_version
 
 |distribution     |release     |java_version|java_type  |java_format|
 |-----------------|------------|------------|-----------|-----------|
-| Any             | Any        | 8 & 9      | jre & jdk | targz     |
-| CentOS & Fedora | Any        | 8 & 9      | jre & jdk | rpm       |
+| Any             | Any        | 8, 9 & 10  | jre & jdk | targz     |
+| CentOS & Fedora | Any        | 8, 9 & 10  | jre & jdk | rpm       |
