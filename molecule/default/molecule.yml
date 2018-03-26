@@ -22,6 +22,10 @@ platforms:
     image: alpine:3.6
   - name: java-default-alpine-3.6-oracle-9-jdk
     image: alpine:3.6
+  - name: java-default-alpine-3.6-oracle-10-jre
+    image: alpine:3.6
+  - name: java-default-alpine-3.6-oracle-10-jdk
+    image: alpine:3.6
   # Alpine 3.7 OpenJDK
   - name: java-default-alpine-3.7-openjdk-8-jre
     image: alpine:3.7
@@ -35,6 +39,10 @@ platforms:
   - name: java-default-alpine-3.7-oracle-9-jre
     image: alpine:3.7
   - name: java-default-alpine-3.7-oracle-9-jdk
+    image: alpine:3.7
+  - name: java-default-alpine-3.7-oracle-10-jre
+    image: alpine:3.7
+  - name: java-default-alpine-3.7-oracle-10-jdk
     image: alpine:3.7
   # CentOS 6 OpenJDK
   - name: java-default-centos-6-default
@@ -60,6 +68,10 @@ platforms:
     image: centos:6
   - name: java-default-centos-6-oracle-9-jdk-rpm
     image: centos:6
+  - name: java-default-centos-6-oracle-10-jre-rpm
+    image: centos:6
+  - name: java-default-centos-6-oracle-10-jdk-rpm
+    image: centos:6
   # CentOS 6 Oracle targz
   - name: java-default-centos-6-oracle-8-jre-targz
     image: centos:6
@@ -68,6 +80,10 @@ platforms:
   - name: java-default-centos-6-oracle-9-jre-targz
     image: centos:6
   - name: java-default-centos-6-oracle-9-jdk-targz
+    image: centos:6
+  - name: java-default-centos-6-oracle-10-jre-targz
+    image: centos:6
+  - name: java-default-centos-6-oracle-10-jdk-targz
     image: centos:6
   # CentOS 7 OpenJDK
   - name: java-default-centos-7-default
@@ -93,6 +109,10 @@ platforms:
     image: centos:7
   - name: java-default-centos-7-oracle-9-jdk-rpm
     image: centos:7
+  - name: java-default-centos-7-oracle-10-jre-rpm
+    image: centos:7
+  - name: java-default-centos-7-oracle-10-jdk-rpm
+    image: centos:7
   # CentOS 7 Oracle targz
   - name: java-default-centos-7-oracle-8-jre-targz
     image: centos:7
@@ -101,6 +121,10 @@ platforms:
   - name: java-default-centos-7-oracle-9-jre-targz
     image: centos:7
   - name: java-default-centos-7-oracle-9-jdk-targz
+    image: centos:7
+  - name: java-default-centos-7-oracle-10-jre-targz
+    image: centos:7
+  - name: java-default-centos-7-oracle-10-jdk-targz
     image: centos:7
   # Debian Jessie OpenJDK
   - name: java-default-debian-8-default
@@ -117,6 +141,10 @@ platforms:
   - name: java-default-debian-8-oracle-9-jre
     image: debian:jessie
   - name: java-default-debian-8-oracle-9-jdk
+    image: debian:jessie
+  - name: java-default-debian-8-oracle-10-jre
+    image: debian:jessie
+  - name: java-default-debian-8-oracle-10-jdk
     image: debian:jessie
   # Debian Buster openjdk
   - name: java-default-debian-buster-openjdk-8-jre
@@ -136,6 +164,11 @@ platforms:
     image: debian:buster
   - name: java-default-debian-buster-oracle-9-jdk
     image: debian:buster
+  - name: java-default-debian-buster-oracle-10-jre
+    image: debian:buster
+  - name: java-default-debian-buster-oracle-10-jdk
+    image: debian:buster
+
   # Fedora 26 OpenJDK
   - name: java-default-fedora-26-openjdk-8-jre
     image: fedora:26
@@ -154,6 +187,10 @@ platforms:
     image: fedora:26
   - name: java-default-fedora-26-oracle-9-jdk-rpm
     image: fedora:26
+  - name: java-default-fedora-26-oracle-10-jre-rpm
+    image: fedora:26
+  - name: java-default-fedora-26-oracle-10-jdk-rpm
+    image: fedora:26
   # Fedora 26 Oracle targz
   - name: java-default-fedora-26-oracle-8-jre-targz
     image: fedora:26
@@ -162,6 +199,10 @@ platforms:
   - name: java-default-fedora-26-oracle-9-jre-targz
     image: fedora:26
   - name: java-default-fedora-26-oracle-9-jdk-targz
+    image: fedora:26
+  - name: java-default-fedora-26-oracle-10-jre-targz
+    image: fedora:26
+  - name: java-default-fedora-26-oracle-10-jdk-targz
     image: fedora:26
   # Fedora 27 OpenJDK
   - name: java-default-fedora-27-openjdk-8-jre
@@ -181,6 +222,10 @@ platforms:
     image: fedora:27
   - name: java-default-fedora-27-oracle-9-jdk-rpm
     image: fedora:27
+  - name: java-default-fedora-27-oracle-10-jre-rpm
+    image: fedora:27
+  - name: java-default-fedora-27-oracle-10-jdk-rpm
+    image: fedora:27
   # Fedora 27 Oracle targz
   - name: java-default-fedora-27-oracle-8-jre-targz
     image: fedora:27
@@ -190,6 +235,11 @@ platforms:
     image: fedora:27
   - name: java-default-fedora-27-oracle-9-jdk-targz
     image: fedora:27
+  - name: java-default-fedora-27-oracle-10-jre-targz
+    image: fedora:27
+  - name: java-default-fedora-27-oracle-10-jdk-targz
+    image: fedora:27
+  # Ubuntu Trusty OpenJDK
   # Ubuntu Trusty OpenJDK
   - name: java-default-ubuntu-trusty-openjdk-6-jre
     image: ubuntu:trusty
@@ -207,6 +257,10 @@ platforms:
   - name: java-default-ubuntu-trusty-oracle-9-jre
     image: ubuntu:trusty
   - name: java-default-ubuntu-trusty-oracle-9-jdk
+    image: ubuntu:trusty
+  - name: java-default-ubuntu-trusty-oracle-10-jre
+    image: ubuntu:trusty
+  - name: java-default-ubuntu-trusty-oracle-10-jdk
     image: ubuntu:trusty
   # Ubuntu Xenial OpenJDK
   - name: java-default-ubuntu-xenial-openjdk-8-jre
@@ -226,6 +280,10 @@ platforms:
     image: ubuntu:xenial
   - name: java-default-ubuntu-xenial-oracle-9-jdk
     image: ubuntu:xenial
+  - name: java-default-ubuntu-xenial-oracle-10-jre
+    image: ubuntu:xenial
+  - name: java-default-ubuntu-xenial-oracle-10-jdk
+    image: ubuntu:xenial
   # Ubuntu Artful OpenJDK
   - name: java-default-ubuntu-artful-openjdk-8-jre
     image: ubuntu:artful
@@ -243,6 +301,10 @@ platforms:
   - name: java-default-ubuntu-artful-oracle-9-jre
     image: ubuntu:artful
   - name: java-default-ubuntu-artful-oracle-9-jdk
+    image: ubuntu:artful
+  - name: java-default-ubuntu-artful-oracle-10-jre
+    image: ubuntu:artful
+  - name: java-default-ubuntu-artful-oracle-10-jdk
     image: ubuntu:artful
 provisioner:
   name: ansible

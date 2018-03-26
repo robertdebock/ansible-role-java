@@ -181,9 +181,9 @@ java_package:
         rpm: jre-9.0.4_linux-x64_bin.rpm
         directory: jre-9.0.4
       10:
-        targz:
-        rpm:
-        directory:
+        targz: jre-10_linux-x64_bin.tar.gz
+        rpm: jre-10_linux-x64_bin.rpm
+        directory: jre-10
     jdk:
       8:
         targz: jdk-8u162-linux-x64.tar.gz
@@ -194,6 +194,6 @@ java_package:
         rpm: jdk-9.0.4_linux-x64_bin.rpm
         directory: jdk-9.0.4
       10:
-        targz:
-        rpm:
-        directory:
+        targz: jdk-10_linux-x64_bin.tar.gz
+        rpm: jdk-10_linux-x64_bin.rpm
+        directory: jdk-10
