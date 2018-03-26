@@ -82,18 +82,6 @@ java_package:
         jdk:
           7:
             name: openjdk-7-jdk
-    "buster/sid":
-      openjdk:
-        jre:
-          8:
-            name: openjdk-8-jre
-          9:
-            name: openjdk-9-jre
-        jdk:
-          8:
-            name: openjdk-8-jdk
-          9:
-            name: openjdk-9-jdk
     "9":
       openjdk:
         jre:
