@@ -14,6 +14,7 @@ release = ansible_distribution_major_version
 | Debian     | 7          | 6 & 7       | jre & jdk |
 | Debian     | 8          | 7           | jre & jdk |
 | Debian     | 9          | 8 & 9       | jre & jdk |
+| Debian     | 10         | 8, 9 & 10   | jre & jdk |
 | Fedora     | 26 & 27    | 8 & 9       | jre & jdk |
 | Ubuntu     | 14         | 6 & 7       | jre & jdk |
 | Ubuntu     | 17         | 6, 7, 8 & 9 | jre & jdk |

@@ -94,6 +94,22 @@ java_package:
         jdk:
           8:
             name: openjdk-8-jdk
+    "buster/sid":
+      openjdk:
+        jre:
+          8:
+            name: openjdk-8-jre
+          9:
+            name: openjdk-9-jre
+          10:
+            name: openjdk-10-jre
+        jdk:
+          8:
+            name: openjdk-8-jdk
+          9:
+            name: openjdk-9-jdk
+          10:
+            name: openjdk-10-jdk 
   Fedora:
     "26":
       openjdk:
