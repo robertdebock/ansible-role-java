@@ -109,7 +109,7 @@ java_package:
           9:
             name: openjdk-9-jdk
           10:
-            name: openjdk-10-jdk 
+            name: openjdk-10-jdk
   Fedora:
     "26":
       openjdk:
