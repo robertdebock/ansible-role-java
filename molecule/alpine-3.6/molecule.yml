@@ -10,6 +10,15 @@ lint:
 platforms:
   - name: java-alpine-3.6
     image: alpine:3.6
+  - name: java-alpine-3.6-openjdk-7-jre
+    image: alpine:3.6
+  - name: java-alpine-3.6-openjdk-8-jre
+    image: alpine:3.6
+  - name: java-alpine-3.6-openjdk-7-jdk
+    image: alpine:3.6
+  - name: java-alpine-3.6-openjdk-8-jdk
+    image: alpine:3.6
+
 provisioner:
   name: ansible
   lint:
