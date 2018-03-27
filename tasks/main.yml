@@ -75,4 +75,4 @@
     path: "{{ java_install_directory }}/{{ java_package[java_vendor][java_type][java_version]['directory'] }}/bin/java"
   when:
     - java_vendor == "oracle"
-    - java_format == " targz"
+    - java_format == "targz"
