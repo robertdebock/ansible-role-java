@@ -8,8 +8,13 @@ driver:
 lint:
   name: yamllint
 platforms:
-    # 14.04 LTS
-  - name: java-ubuntu-trusty
+  - name: java-ubuntu-trusty-openjdk-6-jre
+    image: ubuntu:trusty
+  - name: java-ubuntu-trusty-openjdk-7-jre
+    image: ubuntu:trusty
+  - name: java-ubuntu-trusty-openjdk-6-jdk
+    image: ubuntu:trusty
+  - name: java-ubuntu-trusty-openjdk-7-jdk
     image: ubuntu:trusty
 provisioner:
   name: ansible

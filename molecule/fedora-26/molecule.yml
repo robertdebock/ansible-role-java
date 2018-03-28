@@ -10,6 +10,14 @@ lint:
 platforms:
   - name: java-fedora-26
     image: fedora:26
+  - name: java-fedora-26-openjdk-7-jre
+    image: fedora:26
+  - name: java-fedora-26-openjdk-8-jre
+    image: fedora:26
+  - name: java-fedora-26-openjdk-7-jdk
+    image: fedora:26
+  - name: java-fedora-26-openjdk-8-jdk
+    image: fedora:26
 provisioner:
   name: ansible
   lint:

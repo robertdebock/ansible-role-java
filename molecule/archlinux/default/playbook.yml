@@ -1,0 +1,228 @@
+---
+# All JRE version.
+- name: openjdk 6 jre
+  hosts: "*-openjdk-6-jre"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_version: 6
+
+- name: openjdk 7 jre
+  hosts: "*-openjdk-7-jre"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_version: 7
+
+- name: openjdk 8 jre
+  hosts: "*-openjdk-8-jre"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+
+- name: openjdk 9 jre
+  hosts: "*-openjdk-9-jre"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_version: 9
+
+# All JDK version.
+- name: openjdk 6 jdk
+  hosts: "*-openjdk-6-jdk"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_version: 6
+      java_type: jdk
+
+- name: openjdk 7 jdk
+  hosts: "*-openjdk-7-jdk"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_version: 7
+      java_type: jdk
+
+- name: openjdk 8 jdk
+  hosts: "*-openjdk-8-jdk"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_type: jdk
+
+- name: openjdk 9 jdk
+  hosts: "*-openjdk-9-jdk"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_version: 9
+      java_type: jdk
+
+# All Oracle JREs targz
+- name: oracle 8 jre
+  hosts: "*-oracle-8-jre"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_vendor: oracle
+
+- name: oracle 9 jre
+  hosts: "*-oracle-9-jre"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_vendor: oracle
+      java_version: 9
+
+- name: oracle 10 jre
+  hosts: "*-oracle-10-jre"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_vendor: oracle
+      java_version: 10
+
+# All Oracle JDKs
+- name: oracle 8 jdk
+  hosts: "*-oracle-8-jdk"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_vendor: oracle
+      java_type: jdk
+
+- name: oracle 9 jdk
+  hosts: "*-oracle-9-jdk"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_vendor: oracle
+      java_version: 9
+      java_type: jdk
+
+- name: oracle 10 jdk
+  hosts: "*-oracle-10-jdk"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_vendor: oracle
+      java_version: 10
+      java_type: jdk
+
+# All Oracle JREs rpm
+- name: oracle 8 jre rpm
+  hosts: "*-oracle-8-jre-rpm"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_vendor: oracle
+      java_format: rpm
+
+- name: oracle 9 jre rpm
+  hosts: "*-oracle-9-jre-rpm"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_vendor: oracle
+      java_version: 9
+      java_format: rpm
+
+- name: oracle 10 jre rpm
+  hosts: "*-oracle-10-jre-rpm"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_vendor: oracle
+      java_version: 10
+      java_format: rpm
+
+# All Oracle JDKs rpm
+- name: oracle 8 jdk rpm
+  hosts: "*-oracle-8-jdk-rpm"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_vendor: oracle
+      java_type: jdk
+      java_format: rpm
+
+- name: oracle 9 jdk rpm
+  hosts: "*-oracle-9-jdk-rpm"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_vendor: oracle
+      java_version: 9
+      java_type: jdk
+      java_format: rpm
+
+- name: oracle 10 jdk rpm
+  hosts: "*-oracle-10-jdk-rpm"
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_vendor: oracle
+      java_version: 10
+      java_type: jdk
+      java_format: rpm

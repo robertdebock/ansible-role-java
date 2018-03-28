@@ -10,6 +10,18 @@ lint:
 platforms:
   - name: java-archlinux
     image: base/archlinux
+  - name: java-archlinux-openjdk-7-jre
+    image: base/archlinux
+  - name: java-archlinux-openjdk-8-jre
+    image: base/archlinux
+  - name: java-archlinux-openjdk-9-jre
+    image: base/archlinux
+  - name: java-archlinux-openjdk-7-jdk
+    image: base/archlinux
+  - name: java-archlinux-openjdk-8-jdk
+    image: base/archlinux
+  - name: java-archlinux-openjdk-9-jdk
+    image: base/archlinux
 provisioner:
   name: ansible
   lint:

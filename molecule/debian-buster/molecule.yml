@@ -10,6 +10,14 @@ lint:
 platforms:
   - name: java-debian-buster
     image: debian:buster
+  - name: java-debian-buster-openjdk-7-jre
+    image: debian:buster
+  - name: java-debian-buster-openjdk-8-jre
+    image: debian:buster
+  - name: java-debian-buster-openjdk-7-jdk
+    image: debian:buster
+  - name: java-debian-buster-openjdk-8-jdk
+    image: debian:buster
 provisioner:
   name: ansible
   lint:

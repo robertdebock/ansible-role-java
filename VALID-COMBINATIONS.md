@@ -8,16 +8,20 @@ vars/main.yml, and all tests are described in molecule/defaults/playbook.yml.
 distribution = ansible_distribution
 release = ansible_distribution_major_version
 
-|distribution|release     |java_version |java_type  |
-|------------|------------|-------------|-----------|
-| CentOS     | 6 & 7      | 6, 7 & 8    | jre & jdk |
-| Debian     | 7          | 6 & 7       | jre & jdk |
-| Debian     | 8          | 7           | jre & jdk |
-| Debian     | 9          | 8 & 9       | jre & jdk |
-| Debian     | 10         | 8, 9 & 10   | jre & jdk |
-| Fedora     | 26 & 27    | 8 & 9       | jre & jdk |
-| Ubuntu     | 14         | 6 & 7       | jre & jdk |
-| Ubuntu     | 17         | 6, 7, 8 & 9 | jre & jdk |
+|distribution|release         |java_version |
+|------------|----------------|-------------|
+| alpine     | 3.6 & 3.7      | 7 & 8       |
+| archlinux  | base           | 7, 8 & 9    |
+| CentOS     | 6 & 7          | 6, 7 & 8    |
+| Debian     | 7 (wheezy)     | 6 & 7       |
+| Debian     | 8 (jessie)     | 7           |
+| Debian     | 9 (stretch)    | 8           |
+| Debian     | 10 (buster)    | 8, 9 & 10   |
+| Fedora     | 26 & 27        | 8 & 9       |
+| OpenSUSE   | 42.2 & 42.3    | 7 & 8       |
+| Ubuntu     | 14.04 (trusty) | 6 & 7       |
+| Ubuntu     | 16.04 (xenial) | 8 & 9       |
+| Ubuntu     | 17.10 (artful) | 8 & 9       |
 
 # Oracle
 

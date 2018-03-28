@@ -10,6 +10,18 @@ lint:
 platforms:
   - name: java-centos-7
     image: centos:7
+  - name: java-centos-7-openjdk-6-jre
+    image: centos:7
+  - name: java-centos-7-openjdk-7-jre
+    image: centos:7
+  - name: java-centos-7-openjdk-8-jre
+    image: centos:7
+  - name: java-centos-7-openjdk-6-jdk
+    image: centos:7
+  - name: java-centos-7-openjdk-7-jdk
+    image: centos:7
+  - name: java-centos-7-openjdk-8-jdk
+    image: centos:7
 provisioner:
   name: ansible
   lint:

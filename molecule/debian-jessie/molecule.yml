@@ -8,7 +8,9 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: java-debian-jessie
+  - name: java-debian-jessie-openjdk-7-jre
+    image: debian:jessie
+  - name: java-debian-jessie-openjdk-7-jdk
     image: debian:jessie
 provisioner:
   name: ansible
