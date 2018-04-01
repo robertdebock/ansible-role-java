@@ -76,3 +76,4 @@
   when:
     - java_vendor == "oracle"
     - java_format == "targz"
+    - ansible_distribution != "Alpine"
