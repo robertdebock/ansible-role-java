@@ -26,6 +26,15 @@
       java_version: 9
 
 - name: Converge
+  hosts: "*-openjdk-11-jre"
+  gather_facts: no
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_version: 11
+
+- name: Converge
   hosts: "*-openjdk-8-jdk"
   gather_facts: no
 
@@ -43,4 +52,14 @@
     - role: robertdebock.bootstrap
     - role: ansible-role-java
       java_version: 9
+      java_type: jdk
+
+- name: Converge
+  hosts: "*-openjdk-11-jdk"
+  gather_facts: no
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_version: 11
       java_type: jdk
