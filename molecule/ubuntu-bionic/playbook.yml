@@ -1,12 +1,46 @@
 ---
 - name: Converge
-  hosts: all
+  hosts: all:!"*-openjdk"
   gather_facts: no
-  become: yes
 
   roles:
-    - role: ansible-role-bootstrap
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
 
-  tasks:
-    - name: test connection
-      ping:
+- name: Converge
+  hosts: "*-openjdk-8-jre"
+  gather_facts: no
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_version: 8
+
+- name: Converge
+  hosts: "*-openjdk-9-jre"
+  gather_facts: no
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_version: 9
+
+- name: Converge
+  hosts: "*-openjdk-8-jdk"
+  gather_facts: no
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_version: 8
+      java_type: jdk
+
+- name: Converge
+  hosts: "*-openjdk-9-jdk"
+  gather_facts: no
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_version: 9
+      java_type: jdk
