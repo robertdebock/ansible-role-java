@@ -8,7 +8,7 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: java-ubuntu-xenial
+  - name: java-ubuntu-xenial-default
     image: ubuntu:xenial
   - name: java-ubuntu-xenial-openjdk-7-jre
     image: ubuntu:xenial

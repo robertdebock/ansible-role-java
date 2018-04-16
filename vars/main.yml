@@ -24,7 +24,8 @@ java_package:
             name: jre8-openjdk-headless
           9:
             name: jre9-openjdk-headless
-
+          10:
+            name: jre10-openjdk-headless
         jdk:
           7:
             name: jdk7-openjdk
@@ -32,6 +33,8 @@ java_package:
             name: jdk8-openjdk
           9:
             name: jdk9-openjdk
+          10:
+            name: jdk10-openjdk
   CentOS:
     "6":
       openjdk:
@@ -66,18 +69,6 @@ java_package:
           8:
             name: java-1.8.0-openjdk-devel
   Debian:
-    "7":
-      openjdk:
-        jre:
-          6:
-            name: openjdk-6-jre
-          7:
-            name: openjdk-7-jre
-        jdk:
-          6:
-            name: openjdk-6-jdk
-          7:
-            name: openjdk-7-jdk
     "8":
       openjdk:
         jre:
@@ -85,11 +76,15 @@ java_package:
             name: openjdk-6-jre
           7:
             name: openjdk-7-jre
+          8:
+            name: openjdk-8-jre
         jdk:
           6:
             name: openjdk-6-jdk
           7:
             name: openjdk-7-jdk
+          8:
+            name: openjdk-8-jdk
     "9":
       openjdk:
         jre:
@@ -101,6 +96,8 @@ java_package:
     "buster/sid":
       openjdk:
         jre:
+          7:
+            name: openjdk-7-jre
           8:
             name: openjdk-8-jre
           9:
@@ -110,6 +107,8 @@ java_package:
           11:
             name: openjdk-11-jre
         jdk:
+          7:
+            name: openjdk-7-jdk
           8:
             name: openjdk-8-jdk
           9:
@@ -122,11 +121,15 @@ java_package:
     "26":
       openjdk:
         jre:
+          7:
+            name: java-1.7.0-openjdk
           8:
             name: java-1.8.0-openjdk
           9:
             name: java-9-openjdk
         jdk:
+          7:
+            name: java-1.7.0-openjdk-devel
           8:
             name: java-1.8.0-openjdk-devel
           9:
@@ -201,6 +204,8 @@ java_package:
             name: openjdk-8-jre
           9:
             name: openjdk-9-jre
+          10:
+            name: openjdk-10-jre
           11:
             name: openjdk-11-jre
         jdk:
@@ -208,6 +213,8 @@ java_package:
             name: openjdk-8-jdk
           9:
             name: openjdk-9-jdk
+          10:
+            name: openjdk-10-jdk
           11:
             name: openjdk-11-jre
   oracle:

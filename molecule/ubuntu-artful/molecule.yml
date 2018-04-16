@@ -8,7 +8,7 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: java-ubuntu-artful
+  - name: java-ubuntu-artful-default
     image: ubuntu:artful
   - name: java-ubuntu-artful-openjdk-8-jre
     image: ubuntu:artful

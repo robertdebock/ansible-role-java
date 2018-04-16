@@ -8,7 +8,7 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: java-opensuse-42.3
+  - name: java-opensuse-42.3-default
     image: opensuse:42.3
   - name: java-opensuse-42.3-openjdk-7-jre
     image: opensuse:42.3

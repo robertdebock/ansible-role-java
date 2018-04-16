@@ -8,7 +8,7 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: java-fedora-26
+  - name: java-fedora-26-default
     image: fedora:26
   - name: java-fedora-26-openjdk-7-jre
     image: fedora:26

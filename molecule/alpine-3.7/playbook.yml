@@ -7,6 +7,15 @@
     - role: robertdebock.bootstrap
     - role: ansible-role-java
 
+- name: OpenJDK 6 JRE
+  hosts: "*-openjdk-6-jre"
+  gather_facts: no
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_version: 6
+
 - name: OpenJDK 7 JRE
   hosts: "*-openjdk-7-jre"
   gather_facts: no
@@ -51,6 +60,16 @@
     - role: robertdebock.bootstrap
     - role: ansible-role-java
       java_version: 11
+
+- name: OpenJDK 6 JDK
+  hosts: "*-openjdk-6-jdk"
+  gather_facts: no
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: ansible-role-java
+      java_version: 6
+      java_type: jdk
 
 - name: OpenJDK 7 JDK
   hosts: "*-openjdk-7-jdk"
