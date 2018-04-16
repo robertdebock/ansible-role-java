@@ -107,6 +107,8 @@ java_package:
             name: openjdk-9-jre
           10:
             name: openjdk-10-jre
+          11:
+            name: openjdk-11-jre
         jdk:
           8:
             name: openjdk-8-jdk
@@ -114,6 +116,8 @@ java_package:
             name: openjdk-9-jdk
           10:
             name: openjdk-10-jdk
+          11:
+            name: openjdk-11-jdk
   Fedora:
     "26":
       openjdk:

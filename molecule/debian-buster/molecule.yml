@@ -8,15 +8,23 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: java-debian-buster
-    image: debian:buster
-  - name: java-debian-buster-openjdk-7-jre
+  - name: java-debian-buster-default
     image: debian:buster
   - name: java-debian-buster-openjdk-8-jre
     image: debian:buster
-  - name: java-debian-buster-openjdk-7-jdk
+  - name: java-debian-buster-openjdk-9-jre
+    image: debian:buster
+  - name: java-debian-buster-openjdk-10-jre
+    image: debian:buster
+  - name: java-debian-buster-openjdk-11-jre
     image: debian:buster
   - name: java-debian-buster-openjdk-8-jdk
+    image: debian:buster
+  - name: java-debian-buster-openjdk-9-jdk
+    image: debian:buster
+  - name: java-debian-buster-openjdk-10-jdk
+    image: debian:buster
+  - name: java-debian-buster-openjdk-11-jdk
     image: debian:buster
 provisioner:
   name: ansible
