@@ -8,7 +8,23 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: java-ubuntu-bionic
+  - name: java-ubuntu-bionic-default
+    image: ubuntu:bionic
+  - name: java-ubuntu-bionic-openjdk-8-jre
+    image: ubuntu:bionic
+  - name: java-ubuntu-bionic-openjdk-9-jre
+    image: ubuntu:bionic
+  - name: java-ubuntu-bionic-openjdk-10-jre
+    image: ubuntu:bionic
+  - name: java-ubuntu-bionic-openjdk-11-jre
+    image: ubuntu:bionic
+  - name: java-ubuntu-bionic-openjdk-8-jdk
+    image: ubuntu:bionic
+  - name: java-ubuntu-bionic-openjdk-9-jdk
+    image: ubuntu:bionic
+  - name: java-ubuntu-bionic-openjdk-10-jdk
+    image: ubuntu:bionic
+  - name: java-ubuntu-bionic-openjdk-11-jdk
     image: ubuntu:bionic
 provisioner:
   name: ansible

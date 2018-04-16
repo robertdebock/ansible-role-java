@@ -10,7 +10,11 @@ lint:
 platforms:
   - name: java-debian-jessie-openjdk-7-jre
     image: debian:jessie
+  - name: java-debian-jessie-openjdk-8-jre
+    image: debian:jessie
   - name: java-debian-jessie-openjdk-7-jdk
+    image: debian:jessie
+  - name: java-debian-jessie-openjdk-8-jdk
     image: debian:jessie
 provisioner:
   name: ansible
