@@ -92,15 +92,11 @@ java_package:
             name: openjdk-8-jre
           9:
             name: openjdk-9-jre
-          11:
-            name: openjdk-11-jre
         jdk:
           8:
             name: openjdk-8-jdk
           9:
             name: openjdk-9-jdk
-          11:
-            name: openjdk-11-jdk
   Fedora:
     "26":
       openjdk:
@@ -140,18 +136,6 @@ java_package:
           8:
             name: java-1_8_0-openjdk-devel
   Ubuntu:
-    "14":
-      openjdk:
-        jre:
-          6:
-            name: openjdk-6-jre
-          7:
-            name: openjdk-7-jre
-        jdk:
-          6:
-            name: openjdk-6-jdk
-          7:
-            name: openjdk-7-jdk
     "16":
       openjdk:
         jre:
@@ -163,7 +147,7 @@ java_package:
           8:
             name: openjdk-8-jdk
           9:
-            name: openjdk-9-jdk
+            name: openjdk-9-jdk-headless
 
     "17":
       openjdk:
