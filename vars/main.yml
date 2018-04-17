@@ -61,8 +61,6 @@ java_package:
             name: java-1.7.0-openjdk
           8:
             name: java-1.8.0-openjdk
-          9:
-            name: java-1.9.0-openjdk
         jdk:
           6:
             name: java-1.6.0-openjdk-devel
@@ -70,19 +68,13 @@ java_package:
             name: java-1.7.0-openjdk-devel
           8:
             name: java-1.8.0-openjdk-devel
-          9:
-            name: java-1.9.0-openjdk-devel
   Debian:
     "8":
       openjdk:
         jre:
-          6:
-            name: openjdk-6-jre
           7:
             name: openjdk-7-jre
         jdk:
-          6:
-            name: openjdk-6-jdk
           7:
             name: openjdk-7-jdk
     "9":
@@ -163,15 +155,11 @@ java_package:
     "16":
       openjdk:
         jre:
-          7:
-            name: openjdk-7-jre
           8:
             name: openjdk-8-jre
           9:
             name: openjdk-9-jre
         jdk:
-          7:
-            name: openjdk-7.jdk
           8:
             name: openjdk-8-jdk
           9:
