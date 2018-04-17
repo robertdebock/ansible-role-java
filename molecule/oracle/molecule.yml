@@ -99,6 +99,19 @@ platforms:
     image: debian:jessie
   - name: java-default-debian-8-oracle-10-jdk
     image: debian:jessie
+  # Debian Stretch Oracle
+  - name: java-default-debian-9-oracle-8-jre
+    image: debian:stretch
+  - name: java-default-debian-9-oracle-8-jdk
+    image: debian:stretch
+  - name: java-default-debian-9-oracle-9-jre
+    image: debian:stretch
+  - name: java-default-debian-9-oracle-9-jdk
+    image: debian:stretch
+  - name: java-default-debian-9-oracle-10-jre
+    image: debian:stretch
+  - name: java-default-debian-9-oracle-10-jdk
+    image: debian:stretch
   # Debian Buster Oracle
   - name: java-default-debian-buster-oracle-8-jre
     image: debian:buster
@@ -164,19 +177,6 @@ platforms:
     image: fedora:27
   - name: java-default-fedora-27-oracle-10-jdk-targz
     image: fedora:27
-  # Ubuntu Trusty oracle
-  - name: java-default-ubuntu-trusty-oracle-8-jre
-    image: ubuntu:trusty
-  - name: java-default-ubuntu-trusty-oracle-8-jdk
-    image: ubuntu:trusty
-  - name: java-default-ubuntu-trusty-oracle-9-jre
-    image: ubuntu:trusty
-  - name: java-default-ubuntu-trusty-oracle-9-jdk
-    image: ubuntu:trusty
-  - name: java-default-ubuntu-trusty-oracle-10-jre
-    image: ubuntu:trusty
-  - name: java-default-ubuntu-trusty-oracle-10-jdk
-    image: ubuntu:trusty
   # Ubuntu Xenial oracle
   - name: java-default-ubuntu-xenial-oracle-8-jre
     image: ubuntu:xenial
@@ -203,6 +203,19 @@ platforms:
     image: ubuntu:artful
   - name: java-default-ubuntu-artful-oracle-10-jdk
     image: ubuntu:artful
+  # Ubuntu Bionic oracle
+  - name: java-default-ubuntu-bionic-oracle-8-jre
+    image: ubuntu:bionic
+  - name: java-default-ubuntu-bionic-oracle-8-jdk
+    image: ubuntu:bionic
+  - name: java-default-ubuntu-bionic-oracle-9-jre
+    image: ubuntu:bionic
+  - name: java-default-ubuntu-bionic-oracle-9-jdk
+    image: ubuntu:bionic
+  - name: java-default-ubuntu-bionic-oracle-10-jre
+    image: ubuntu:bionic
+  - name: java-default-ubuntu-bionic-oracle-10-jdk
+    image: ubuntu:bionic
 provisioner:
   name: ansible
   lint:
