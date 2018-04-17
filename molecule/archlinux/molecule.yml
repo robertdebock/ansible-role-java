@@ -8,7 +8,7 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: java-archlinux
+  - name: java-archlinux-default
     image: base/archlinux
   - name: java-archlinux-openjdk-7-jre
     image: base/archlinux
