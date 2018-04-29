@@ -18,7 +18,6 @@ release = ansible_distribution_major_version
 | Debian     | 10 (buster)    | 8 & 9         |
 | Fedora     | 26 & 27        | 8 & 9         |
 | OpenSUSE   | 42.2 & 42.3    | 7 & 8         |
-| Ubuntu     | 16.04 (xenial) | 8 & 9         |
 | Ubuntu     | 17.10 (artful) | 8 & 9         |
 | Ubuntu     | 18.04 (bionic) | 8, 9, 10 & 11 |
 

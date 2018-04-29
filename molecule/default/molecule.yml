@@ -262,28 +262,6 @@ platforms:
     image: ubuntu:trusty
   - name: java-default-ubuntu-trusty-oracle-10-jdk
     image: ubuntu:trusty
-  # Ubuntu Xenial OpenJDK
-  - name: java-default-ubuntu-xenial-openjdk-8-jre
-    image: ubuntu:xenial
-  - name: java-default-ubuntu-xenial-openjdk-8-jdk
-    image: ubuntu:xenial
-  - name: java-default-ubuntu-xenial-openjdk-9-jre
-    image: ubuntu:xenial
-  - name: java-default-ubuntu-xenial-openjdk-9-jdk
-    image: ubuntu:xenial
-  # Ubuntu Xenial oracle
-  - name: java-default-ubuntu-xenial-oracle-8-jre
-    image: ubuntu:xenial
-  - name: java-default-ubuntu-xenial-oracle-8-jdk
-    image: ubuntu:xenial
-  - name: java-default-ubuntu-xenial-oracle-9-jre
-    image: ubuntu:xenial
-  - name: java-default-ubuntu-xenial-oracle-9-jdk
-    image: ubuntu:xenial
-  - name: java-default-ubuntu-xenial-oracle-10-jre
-    image: ubuntu:xenial
-  - name: java-default-ubuntu-xenial-oracle-10-jdk
-    image: ubuntu:xenial
   # Ubuntu Artful OpenJDK
   - name: java-default-ubuntu-artful-openjdk-8-jre
     image: ubuntu:artful
@@ -305,7 +283,29 @@ platforms:
   - name: java-default-ubuntu-artful-oracle-10-jre
     image: ubuntu:artful
   - name: java-default-ubuntu-artful-oracle-10-jdk
-    image: ubuntu:artful
+    image: ubuntBionic:artful
+  # Ubuntu Bionic OpenJDK
+  - name: java-default-ubuntu-bionic-openjdk-8-jre
+    image: ubuntu:bionic
+  - name: java-default-ubuntu-bionic-openjdk-8-jdk
+    image: ubuntu:bionic
+  - name: java-default-ubuntu-bionic-openjdk-9-jre
+    image: ubuntu:bionic
+  - name: java-default-ubuntu-bionic-openjdk-9-jdk
+    image: ubuntu:bionic
+  # Ubuntu Bionic oracle
+  - name: java-default-ubuntu-bionic-oracle-8-jre
+    image: ubuntu:bionic
+  - name: java-default-ubuntu-bionic-oracle-8-jdk
+    image: ubuntu:bionic
+  - name: java-default-ubuntu-bionic-oracle-9-jre
+    image: ubuntu:bionic
+  - name: java-default-ubuntu-bionic-oracle-9-jdk
+    image: ubuntu:bionic
+  - name: java-default-ubuntu-bionic-oracle-10-jre
+    image: ubuntu:bionic
+  - name: java-default-ubuntu-bionic-oracle-10-jdk
+    image: ubuntu:bionic
 provisioner:
   name: ansible
   lint:

@@ -177,19 +177,6 @@ platforms:
     image: fedora:27
   - name: java-default-fedora-27-oracle-10-jdk-targz
     image: fedora:27
-  # Ubuntu Xenial oracle
-  - name: java-default-ubuntu-xenial-oracle-8-jre
-    image: ubuntu:xenial
-  - name: java-default-ubuntu-xenial-oracle-8-jdk
-    image: ubuntu:xenial
-  - name: java-default-ubuntu-xenial-oracle-9-jre
-    image: ubuntu:xenial
-  - name: java-default-ubuntu-xenial-oracle-9-jdk
-    image: ubuntu:xenial
-  - name: java-default-ubuntu-xenial-oracle-10-jre
-    image: ubuntu:xenial
-  - name: java-default-ubuntu-xenial-oracle-10-jdk
-    image: ubuntu:xenial
   # Ubuntu Artful oracle
   - name: java-default-ubuntu-artful-oracle-8-jre
     image: ubuntu:artful
