@@ -12,13 +12,9 @@ platforms:
     image: ubuntu:bionic
   - name: java-ubuntu-bionic-openjdk-8-jre
     image: ubuntu:bionic
-  - name: java-ubuntu-bionic-openjdk-9-jre
-    image: ubuntu:bionic
   - name: java-ubuntu-bionic-openjdk-11-jre
     image: ubuntu:bionic
   - name: java-ubuntu-bionic-openjdk-8-jdk
-    image: ubuntu:bionic
-  - name: java-ubuntu-bionic-openjdk-9-jdk
     image: ubuntu:bionic
   - name: java-ubuntu-bionic-openjdk-11-jdk
     image: ubuntu:bionic
