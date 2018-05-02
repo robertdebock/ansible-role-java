@@ -126,32 +126,6 @@ platforms:
   - name: java-default-debian-buster-oracle-10-jdk
     image: debian:buster
   # Fedora 26 Oracle rpm
-  - name: java-default-fedora-26-oracle-8-jre-rpm
-    image: fedora:26
-  - name: java-default-fedora-26-oracle-8-jdk-rpm
-    image: fedora:26
-  - name: java-default-fedora-26-oracle-9-jre-rpm
-    image: fedora:26
-  - name: java-default-fedora-26-oracle-9-jdk-rpm
-    image: fedora:26
-  - name: java-default-fedora-26-oracle-10-jre-rpm
-    image: fedora:26
-  - name: java-default-fedora-26-oracle-10-jdk-rpm
-    image: fedora:26
-  # Fedora 26 Oracle targz
-  - name: java-default-fedora-26-oracle-8-jre-targz
-    image: fedora:26
-  - name: java-default-fedora-26-oracle-8-jdk-targz
-    image: fedora:26
-  - name: java-default-fedora-26-oracle-9-jre-targz
-    image: fedora:26
-  - name: java-default-fedora-26-oracle-9-jdk-targz
-    image: fedora:26
-  - name: java-default-fedora-26-oracle-10-jre-targz
-    image: fedora:26
-  - name: java-default-fedora-26-oracle-10-jdk-targz
-    image: fedora:26
-  # Fedora 27 Oracle rpm
   - name: java-default-fedora-27-oracle-8-jre-rpm
     image: fedora:27
   - name: java-default-fedora-27-oracle-8-jdk-rpm
@@ -164,7 +138,7 @@ platforms:
     image: fedora:27
   - name: java-default-fedora-27-oracle-10-jdk-rpm
     image: fedora:27
-  # Fedora 27 Oracle targz
+  # Fedora 26 Oracle targz
   - name: java-default-fedora-27-oracle-8-jre-targz
     image: fedora:27
   - name: java-default-fedora-27-oracle-8-jdk-targz
@@ -177,6 +151,32 @@ platforms:
     image: fedora:27
   - name: java-default-fedora-27-oracle-10-jdk-targz
     image: fedora:27
+  # Fedora 27 Oracle rpm
+  - name: java-default-fedora-28-oracle-8-jre-rpm
+    image: fedora:28
+  - name: java-default-fedora-28-oracle-8-jdk-rpm
+    image: fedora:28
+  - name: java-default-fedora-28-oracle-9-jre-rpm
+    image: fedora:28
+  - name: java-default-fedora-28-oracle-9-jdk-rpm
+    image: fedora:28
+  - name: java-default-fedora-28-oracle-10-jre-rpm
+    image: fedora:28
+  - name: java-default-fedora-28-oracle-10-jdk-rpm
+    image: fedora:28
+  # Fedora 27 Oracle targz
+  - name: java-default-fedora-28-oracle-8-jre-targz
+    image: fedora:28
+  - name: java-default-fedora-28-oracle-8-jdk-targz
+    image: fedora:28
+  - name: java-default-fedora-28-oracle-9-jre-targz
+    image: fedora:28
+  - name: java-default-fedora-28-oracle-9-jdk-targz
+    image: fedora:28
+  - name: java-default-fedora-28-oracle-10-jre-targz
+    image: fedora:28
+  - name: java-default-fedora-28-oracle-10-jdk-targz
+    image: fedora:28
   # Ubuntu Artful oracle
   - name: java-default-ubuntu-artful-oracle-8-jre
     image: ubuntu:artful

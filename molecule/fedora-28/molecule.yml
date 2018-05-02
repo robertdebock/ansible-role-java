@@ -8,22 +8,22 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: java-fedora-26-default
-    image: fedora:26
-  - name: java-fedora-26-openjdk-8-jre
-    image: fedora:26
-  - name: java-fedora-26-openjdk-9-jre
-    image: fedora:26
-  - name: java-fedora-26-openjdk-8-jdk
-    image: fedora:26
-  - name: java-fedora-26-openjdk-9-jdk
-    image: fedora:26
+  - name: java-fedora-28-default
+    image: fedora:28
+  - name: java-fedora-28-openjdk-8-jre
+    image: fedora:28
+  - name: java-fedora-28-openjdk-9-jre
+    image: fedora:28
+  - name: java-fedora-28-openjdk-8-jdk
+    image: fedora:28
+  - name: java-fedora-28-openjdk-9-jdk
+    image: fedora:28
 provisioner:
   name: ansible
   lint:
     name: ansible-lint
 scenario:
-  name: fedora-26
+  name: fedora-28
   test_sequence:
     - lint
     - destroy
