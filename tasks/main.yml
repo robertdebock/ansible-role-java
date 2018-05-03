@@ -18,6 +18,7 @@
     - "{{ java_package['oracle'][java_type][java_version]['rpm'] | default([]) }}"
   when:
     - java_rpm_source == "local"
+    - java_format == "rpm"
 
 - name: install software (rpm) (local)
   package:
@@ -26,6 +27,7 @@
     - "/tmp/{{ java_package['oracle'][java_type][java_version]['rpm'] | default([]) }}"
   when:
     - java_rpm_source == "local"
+    - java_format == "rpm"
 
 - name: install software (rpm) (repository)
   package:
@@ -34,6 +36,7 @@
     - "{{ java_package['oracle'][java_type][java_version]['rpm'] | default([]) }}"
   when:
     - java_rpm_source == "repository"
+    - java_format == "rpm"
 
 - name: ensure java_install_directory exists
   file:
