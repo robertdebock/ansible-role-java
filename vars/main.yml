@@ -1,6 +1,6 @@
 ---
 # vars file for java
-java_package:
+java_packages:
   openjdk:
     Alpine:
       "NA":
