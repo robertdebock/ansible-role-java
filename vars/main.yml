@@ -92,7 +92,7 @@ java_package:
           9:
             name: openjdk-9-jdk
     Fedora:
-      27:
+      "27":
         jre:
           8:
             name: java-1.8.0-openjdk
@@ -103,7 +103,7 @@ java_package:
             name: java-1.8.0-openjdk-devel
           9:
             name: java-9-openjdk-devel
-      28:
+      "28":
         jre:
           8:
             name: java-1.8.0-openjdk
