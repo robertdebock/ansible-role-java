@@ -5,14 +5,15 @@
     name: "{{ item }}"
   with_items:
     - "{{ java_package['openjdk'][ansible_distribution][ansible_distribution_major_version][java_type][java_version]['name']
-      | default(java_packages['openjdk'][ansible_distribution][java_type][java_version]['name'] ) }}"
+      | default(java_packages['openjdk'][ansible_distribution][java_type][java_version]['name']
+      | default([])) }}"
 
 - name: copy software (rpm)
   copy:
     src: "{{ item }}"
     dest: "/tmp/{{ item }}"
   with_items:
-    - "{{ java_package['oracle'][java_type][java_version]['rpm'] }}"
+    - "{{ java_package['oracle'][java_type][java_version]['rpm'] | default([]) }}"
   when:
     - java_rpm_source == "local"
 
@@ -20,7 +21,7 @@
   package:
     name: "{{ item }}"
   with_items:
-    - "/tmp/{{ java_package['oracle'][java_type][java_version]['rpm'] }}"
+    - "/tmp/{{ java_package['oracle'][java_type][java_version]['rpm'] | default([]) }}"
   when:
     - java_rpm_source == "local"
 
@@ -28,7 +29,7 @@
   package:
     name: "{{ item }}"
   with_items:
-    - "{{ java_package['oracle'][java_type][java_version]['rpm'] }}"
+    - "{{ java_package['oracle'][java_type][java_version]['rpm'] | default([]) }}"
   when:
     - java_rpm_source == "repository"
 
@@ -45,7 +46,7 @@
     src: "{{ item }}"
     dest: "{{ java_install_directory }}"
   with_items:
-    - "{{ java_package['oracle'][java_type][java_version]['targz'] }}"
+    - "{{ java_package['oracle'][java_type][java_version]['targz'] | default([]) }}"
   when:
     - java_format == "targz"
 
