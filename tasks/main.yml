@@ -54,6 +54,7 @@
     - "{{ java_package['oracle'][java_type][java_version]['targz'] | default([]) }}"
   when:
     - java_format == "targz"
+    - java_vendor == "oracle"
 
 - name: install policy software (targz)
   unarchive:
@@ -71,3 +72,4 @@
   when:
     - java_format == "targz"
     - ansible_distribution != "Alpine"
+    - java_vendor == "oracle"
