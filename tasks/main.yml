@@ -1,9 +1,5 @@
 ---
 # tasks file for java
-- name: show variable
-  debug:
-    msg: "{{ java_package['openjdk'][ansible_distribution][ansible_distribution_major_version][java_type][java_version]['name'] }}"
-
 - name: install software (package)
   package:
     name: "{{ item }}"
