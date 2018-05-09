@@ -126,6 +126,37 @@ java_package:
             name: java-1_7_0-openjdk-devel
           8:
             name: java-1_8_0-openjdk-devel
+    RedHat:
+      "6":
+        jre:
+          6:
+            name: java-1.6.0-openjdk
+          7:
+            name: java-1.7.0-openjdk
+          8:
+            name: java-1.8.0-openjdk
+        jdk:
+          6:
+            name: java-1.6.0-openjdk-devel
+          7:
+            name: java-1.7.0-openjdk-devel
+          8:
+            name: java-1.8.0-openjdk-devel
+      "7":
+        jre:
+          6:
+            name: java-1.6.0-openjdk
+          7:
+            name: java-1.7.0-openjdk
+          8:
+            name: java-1.8.0-openjdk
+        jdk:
+          6:
+            name: java-1.6.0-openjdk-devel
+          7:
+            name: java-1.7.0-openjdk-devel
+          8:
+            name: java-1.8.0-openjdk-devel
     Ubuntu:
       "16":
         jre:
