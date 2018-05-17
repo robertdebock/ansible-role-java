@@ -8,7 +8,7 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: java-centos-6
+  - name: java-centos-6-default
     image: centos:6
   - name: java-centos-6-openjdk-6-jre
     image: centos:6
