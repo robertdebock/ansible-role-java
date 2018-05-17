@@ -2,6 +2,6 @@
 ---
 file:
   /usr/bin/java:
-    exists: True
+    exists: true
     owner: root
     group: root

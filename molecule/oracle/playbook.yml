@@ -2,8 +2,8 @@
 # Oracle JRE
 - name: oracle 8 jre
   hosts: "*-oracle-8-jre"
-  gather_facts: no
-  become: yes
+  gather_facts: false
+  become: true
 
   roles:
     - role: robertdebock.bootstrap
@@ -12,8 +12,8 @@
 
 - name: oracle 9 jre
   hosts: "*-oracle-9-jre"
-  gather_facts: no
-  become: yes
+  gather_facts: false
+  become: true
 
   roles:
     - role: robertdebock.bootstrap
@@ -23,8 +23,8 @@
 
 - name: oracle 10 jre
   hosts: "*-oracle-10-jre"
-  gather_facts: no
-  become: yes
+  gather_facts: false
+  become: true
 
   roles:
     - role: robertdebock.bootstrap
@@ -35,8 +35,8 @@
 # Oracle JDK
 - name: oracle 8 jdk
   hosts: "*-oracle-8-jdk"
-  gather_facts: no
-  become: yes
+  gather_facts: false
+  become: true
 
   roles:
     - role: robertdebock.bootstrap
@@ -46,8 +46,8 @@
 
 - name: oracle 9 jdk
   hosts: "*-oracle-9-jdk"
-  gather_facts: no
-  become: yes
+  gather_facts: false
+  become: true
 
   roles:
     - role: robertdebock.bootstrap
@@ -58,8 +58,8 @@
 
 - name: oracle 10 jdk
   hosts: "*-oracle-10-jdk"
-  gather_facts: no
-  become: yes
+  gather_facts: false
+  become: true
 
   roles:
     - role: robertdebock.bootstrap
@@ -71,8 +71,8 @@
 # Oracle JRE rpm
 - name: oracle 8 jre rpm
   hosts: "*-oracle-8-jre-rpm"
-  gather_facts: no
-  become: yes
+  gather_facts: false
+  become: true
 
   roles:
     - role: robertdebock.bootstrap
@@ -82,8 +82,8 @@
 
 - name: oracle 9 jre rpm
   hosts: "*-oracle-9-jre-rpm"
-  gather_facts: no
-  become: yes
+  gather_facts: false
+  become: true
 
   roles:
     - role: robertdebock.bootstrap
@@ -94,8 +94,8 @@
 
 - name: oracle 10 jre rpm
   hosts: "*-oracle-10-jre-rpm"
-  gather_facts: no
-  become: yes
+  gather_facts: false
+  become: true
 
   roles:
     - role: robertdebock.bootstrap
@@ -107,8 +107,8 @@
 # Oracle JDK rpm
 - name: oracle 8 jdk rpm
   hosts: "*-oracle-8-jdk-rpm"
-  gather_facts: no
-  become: yes
+  gather_facts: false
+  become: true
 
   roles:
     - role: robertdebock.bootstrap
@@ -119,8 +119,8 @@
 
 - name: oracle 9 jdk rpm
   hosts: "*-oracle-9-jdk-rpm"
-  gather_facts: no
-  become: yes
+  gather_facts: false
+  become: true
 
   roles:
     - role: robertdebock.bootstrap
@@ -132,8 +132,8 @@
 
 - name: oracle 10 jdk rpm
   hosts: "*-oracle-10-jdk-rpm"
-  gather_facts: no
-  become: yes
+  gather_facts: false
+  become: true
 
   roles:
     - role: robertdebock.bootstrap
