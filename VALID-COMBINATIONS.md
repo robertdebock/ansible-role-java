@@ -28,5 +28,5 @@ release = ansible_distribution_major_version
 
 |distribution     |release     |java_version|java_type  |java_format|
 |-----------------|------------|------------|-----------|-----------|
-| Any             | Any        | 8, 9 & 10  | jre & jdk | targz     |
-| CentOS & Fedora | Any        | 8, 9 & 10  | jre & jdk | rpm       |
+| Any             | Any        | 8 & 10     | jre & jdk | targz     |
+| CentOS & Fedora | Any        | 8 & 10     | jre & jdk | rpm       |

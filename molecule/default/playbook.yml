@@ -94,17 +94,6 @@
     - role: ansible-role-java
       java_vendor: oracle
 
-- name: oracle 9 jre
-  hosts: "*-oracle-9-jre"
-  gather_facts: false
-  become: true
-
-  roles:
-    - role: robertdebock.bootstrap
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-
 - name: oracle 10 jre
   hosts: "*-oracle-10-jre"
   gather_facts: false
@@ -126,18 +115,6 @@
     - role: robertdebock.bootstrap
     - role: ansible-role-java
       java_vendor: oracle
-      java_type: jdk
-
-- name: oracle 9 jdk
-  hosts: "*-oracle-9-jdk"
-  gather_facts: false
-  become: true
-
-  roles:
-    - role: robertdebock.bootstrap
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
       java_type: jdk
 
 - name: oracle 10 jdk
@@ -164,18 +141,6 @@
       java_vendor: oracle
       java_format: rpm
 
-- name: oracle 9 jre rpm
-  hosts: "*-oracle-9-jre-rpm"
-  gather_facts: false
-  become: true
-
-  roles:
-    - role: robertdebock.bootstrap
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
-      java_format: rpm
-
 - name: oracle 10 jre rpm
   hosts: "*-oracle-10-jre-rpm"
   gather_facts: false
@@ -198,19 +163,6 @@
     - role: robertdebock.bootstrap
     - role: ansible-role-java
       java_vendor: oracle
-      java_type: jdk
-      java_format: rpm
-
-- name: oracle 9 jdk rpm
-  hosts: "*-oracle-9-jdk-rpm"
-  gather_facts: false
-  become: true
-
-  roles:
-    - role: robertdebock.bootstrap
-    - role: ansible-role-java
-      java_vendor: oracle
-      java_version: 9
       java_type: jdk
       java_format: rpm
 

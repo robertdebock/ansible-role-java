@@ -174,10 +174,6 @@ java_package:
         targz: jre-8u172-linux-x64.tar.gz
         rpm: jre-8u172-linux-x64.rpm
         directory: jre1.8.0_172
-      9:
-        targz: jre-9.0.4_linux-x64_bin.tar.gz
-        rpm: jre-9.0.4_linux-x64_bin.rpm
-        directory: jre-9.0.4
       10:
         targz: jre-10.0.1_linux-x64_bin.tar.gz
         rpm: jre-10.0.1_linux-x64_bin.rpm
@@ -187,10 +183,6 @@ java_package:
         targz: jdk-8u172-linux-x64.tar.gz
         rpm: jdk-8u172-linux-x64.rpm
         directory: jdk1.8.0_172
-      9:
-        targz: jdk-9.0.4_linux-x64_bin.tar.gz
-        rpm: jdk-9.0.4_linux-x64_bin.rpm
-        directory: jdk-9.0.4
       10:
         targz: jdk-10.0.1_linux-x64_bin.tar.gz
         rpm: jdk-10.0.1_linux-x64_bin.rpm

@@ -83,7 +83,7 @@ For a default installation (defaults in defaults/main.yml) use this playbook:
     - role: robertdebock.java
 ```
 
-For an installation of Oracle jdk version 9, use this playbook:
+For an installation of Oracle jdk version 10, use this playbook:
 ```
 - hosts: servers
   gather_facts: yes
@@ -94,7 +94,7 @@ For an installation of Oracle jdk version 9, use this playbook:
     - role: robertdebock.java
       java_vendor: oracle
       java_type: jdk
-      java_version: 9
+      java_version: 10
       java_format: rpm
 ```
 

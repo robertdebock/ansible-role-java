@@ -12,35 +12,19 @@ lint:
 platforms:
   - name: centos-6-openjdk-8
     box: centos/6
-  - name: centos-6-oracle-9
-    box: centos/6
   - name: centos-7-openjdk-8
-    box: centos/7
-  - name: centos-7-oracle-9
     box: centos/7
   - name: debian-8-openjdk-8
     box: desc/jessie64
-  - name: debian-8-oracle-9
-    box: debian/jessie64
   - name: debian-buster-openjdk-8
-    box: desc/buster64
-  - name: debian-buster-oracle-9
     box: desc/buster64
   - name: fedora-27-openjdk-9
     box: fedora/27-cloud-base
-  - name: fedora-27-oracle-9
-    box: fedora/27-cloud-base
   - name: fedora-28-openjdk-9
-    box: fedora/28-cloud-base
-  - name: fedora-28-oracle-9
     box: fedora/28-cloud-base
   - name: ubuntu-trusty-openjdk-7
     box: ubuntu/trusty64
-  - name: ubuntu-trusty-oracle-9
-    box: ubuntu/artful64
   - name: ubuntu-artful-openjdk-8
-    box: ubuntu/artful64
-  - name: ubuntu-artful-oracle-9
     box: ubuntu/artful64
 provisioner:
   name: ansible
