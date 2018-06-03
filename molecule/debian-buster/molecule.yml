@@ -12,11 +12,15 @@ platforms:
     image: debian:buster
   - name: java-debian-buster-openjdk-8-jre
     image: debian:buster
-  - name: java-debian-buster-openjdk-9-jre
+  - name: java-debian-buster-openjdk-10-jre
+    image: debian:buster
+  - name: java-debian-buster-openjdk-11-jre
     image: debian:buster
   - name: java-debian-buster-openjdk-8-jdk
     image: debian:buster
-  - name: java-debian-buster-openjdk-9-jdk
+  - name: java-debian-buster-openjdk-10-jdk
+    image: debian:buster
+  - name: java-debian-buster-openjdk-11-jdk
     image: debian:buster
 provisioner:
   name: ansible
