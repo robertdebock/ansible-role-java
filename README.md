@@ -40,7 +40,7 @@ Dependencies
 
 You can prepare your system using this role:
 
-- robertdebock.bootstrap
+- [robertdebock.bootstrap](https://travis-ci.org/robertdebock/ansible-role-bootstrap)
 
 Download all dependencies by issuing this command:
 ```
