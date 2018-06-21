@@ -86,34 +86,30 @@ java_package:
           name: java-1_8_0-openjdk-devel
     openSUSE Tumbleweed:
       jre:
-        7:
-          name: java-1_7_0-openjdk
         8:
           name: java-1_8_0-openjdk
+        10:
+          name: java-10-openjdk
+        11:
+          name: java-11-openjdk
       jdk:
-        7:
-          name: java-1_7_0-openjdk-devel
         8:
           name: java-1_8_0-openjdk-devel
+        10:
+          name: java-10-openjdk-devel
+        11:
+          name: java-11-openjdk-devel
     Ubuntu:
       jre:
         8:
           name: openjdk-8-jre
         9:
           name: openjdk-9-jre
-        10:
-          name: openjdk-10-jre
-        11:
-          name: openjdk-11-jre
       jdk:
         8:
           name: openjdk-8-jdk
         9:
           name: openjdk-9-jdk
-        10:
-          name: openjdk-10-jdk
-        11:
-          name: openjdk-11-jre
   oracle:
     jre:
       8:

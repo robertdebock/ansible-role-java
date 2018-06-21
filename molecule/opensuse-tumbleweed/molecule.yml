@@ -10,13 +10,17 @@ lint:
 platforms:
   - name: java-opensuse-tumbleweed-default
     image: opensuse:tumbleweed
-  - name: java-opensuse-tumbleweed-openjdk-7-jre
-    image: opensuse:tumbleweed
   - name: java-opensuse-tumbleweed-openjdk-8-jre
     image: opensuse:tumbleweed
-  - name: java-opensuse-tumbleweed-openjdk-7-jdk
+  - name: java-opensuse-tumbleweed-openjdk-10-jre
+    image: opensuse:tumbleweed
+  - name: java-opensuse-tumbleweed-openjdk-11-jre
     image: opensuse:tumbleweed
   - name: java-opensuse-tumbleweed-openjdk-8-jdk
+    image: opensuse:tumbleweed
+  - name: java-opensuse-tumbleweed-openjdk-10-jdk
+    image: opensuse:tumbleweed
+  - name: java-opensuse-tumbleweed-openjdk-11-jdk
     image: opensuse:tumbleweed
 provisioner:
   name: ansible

@@ -12,11 +12,7 @@ platforms:
     image: fedora:rawhide
   - name: java-fedora-rawhide-openjdk-8-jre
     image: fedora:rawhide
-  - name: java-fedora-rawhide-openjdk-9-jre
-    image: fedora:rawhide
   - name: java-fedora-rawhide-openjdk-8-jdk
-    image: fedora:rawhide
-  - name: java-fedora-rawhide-openjdk-9-jdk
     image: fedora:rawhide
 provisioner:
   name: ansible
