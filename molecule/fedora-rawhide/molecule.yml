@@ -1,0 +1,30 @@
+---
+dependency:
+  name: galaxy
+  options:
+    role-file: requirements.yml
+driver:
+  name: docker
+lint:
+  name: yamllint
+platforms:
+  - name: java-fedora-rawhide-default
+    image: fedora:rawhide
+  - name: java-fedora-rawhide-openjdk-8-jre
+    image: fedora:rawhide
+  - name: java-fedora-rawhide-openjdk-9-jre
+    image: fedora:rawhide
+  - name: java-fedora-rawhide-openjdk-8-jdk
+    image: fedora:rawhide
+  - name: java-fedora-rawhide-openjdk-9-jdk
+    image: fedora:rawhide
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+scenario:
+  name: fedora-rawhide
+verifier:
+  name: goss
+  lint:
+    name: yamllint

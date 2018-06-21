@@ -1,0 +1,30 @@
+---
+dependency:
+  name: galaxy
+  options:
+    role-file: requirements.yml
+driver:
+  name: docker
+lint:
+  name: yamllint
+platforms:
+  - name: java-opensuse-leap-default
+    image: opensuse:leap
+  - name: java-opensuse-leap-openjdk-7-jre
+    image: opensuse:leap
+  - name: java-opensuse-leap-openjdk-8-jre
+    image: opensuse:leap
+  - name: java-opensuse-leap-openjdk-7-jdk
+    image: opensuse:leap
+  - name: java-opensuse-leap-openjdk-8-jdk
+    image: opensuse:leap
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+scenario:
+  name: opensuse-leap
+verifier:
+  name: goss
+  lint:
+    name: yamllint

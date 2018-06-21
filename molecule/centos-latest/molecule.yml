@@ -1,0 +1,34 @@
+---
+dependency:
+  name: galaxy
+  options:
+    role-file: requirements.yml
+driver:
+  name: docker
+lint:
+  name: yamllint
+platforms:
+  - name: java-centos-latest-default
+    image: centos:latest
+  - name: java-centos-latest-openjdk-6-jre
+    image: centos:latest
+  - name: java-centos-latest-openjdk-latest-jre
+    image: centos:latest
+  - name: java-centos-latest-openjdk-8-jre
+    image: centos:latest
+  - name: java-centos-latest-openjdk-6-jdk
+    image: centos:latest
+  - name: java-centos-latest-openjdk-latest-jdk
+    image: centos:latest
+  - name: java-centos-latest-openjdk-8-jdk
+    image: centos:latest
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+scenario:
+  name: centos-latest
+verifier:
+  name: goss
+  lint:
+    name: yamllint
