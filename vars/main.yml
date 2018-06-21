@@ -3,37 +3,35 @@
 java_package:
   openjdk:
     Alpine:
-      "NA":
-        jre:
-          7:
-            name: openjdk7-jre-base
-          8:
-            name: openjdk8-jre-base
-        jdk:
-          7:
-            name: openjdk7
-          8:
-            name: openjdk8
+      jre:
+        7:
+          name: openjdk7-jre-base
+        8:
+          name: openjdk8-jre-base
+      jdk:
+        7:
+          name: openjdk7
+        8:
+          name: openjdk8
     Archlinux:
-      "NA":
-        jre:
-          7:
-            name: jre7-openjdk
-          8:
-            name: jre8-openjdk
-          9:
-            name: jre9-openjdk
-          10:
-            name: jre10-openjdk
-        jdk:
-          7:
-            name: jdk7-openjdk
-          8:
-            name: jdk8-openjdk
-          9:
-            name: jdk9-openjdk
-          10:
-            name: jdk10-openjdk
+      jre:
+        7:
+          name: jre7-openjdk
+        8:
+          name: jre8-openjdk
+        9:
+          name: jre9-openjdk
+        10:
+          name: jre10-openjdk
+      jdk:
+        7:
+          name: jdk7-openjdk
+        8:
+          name: jdk8-openjdk
+        9:
+          name: jdk9-openjdk
+        10:
+          name: jdk10-openjdk
     CentOS:
       jre:
         6:
