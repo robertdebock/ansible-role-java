@@ -4,7 +4,7 @@
   package:
     name: "{{ item }}"
   with_items:
-    - "{{ java_package['openjdk'][ansible_distribution][java_type][java_version]['name'] 
+    - "{{ java_package['openjdk'][ansible_distribution][java_type][java_version]['name']
       | default([]) }}"
 
 - name: copy software (rpm)
