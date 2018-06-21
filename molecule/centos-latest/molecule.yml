@@ -12,13 +12,13 @@ platforms:
     image: centos:latest
   - name: java-centos-latest-openjdk-6-jre
     image: centos:latest
-  - name: java-centos-latest-openjdk-latest-jre
+  - name: java-centos-latest-openjdk-7-jre
     image: centos:latest
   - name: java-centos-latest-openjdk-8-jre
     image: centos:latest
   - name: java-centos-latest-openjdk-6-jdk
     image: centos:latest
-  - name: java-centos-latest-openjdk-latest-jdk
+  - name: java-centos-latest-openjdk-7-jdk
     image: centos:latest
   - name: java-centos-latest-openjdk-8-jdk
     image: centos:latest
