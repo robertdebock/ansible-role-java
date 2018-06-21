@@ -35,36 +35,20 @@ java_package:
           10:
             name: jdk10-openjdk
     CentOS:
-      "6":
-        jre:
-          6:
-            name: java-1.6.0-openjdk
-          7:
-            name: java-1.7.0-openjdk
-          8:
-            name: java-1.8.0-openjdk
-        jdk:
-          6:
-            name: java-1.6.0-openjdk-devel
-          7:
-            name: java-1.7.0-openjdk-devel
-          8:
-            name: java-1.8.0-openjdk-devel
-      "7":
-        jre:
-          6:
-            name: java-1.6.0-openjdk
-          7:
-            name: java-1.7.0-openjdk
-          8:
-            name: java-1.8.0-openjdk
-        jdk:
-          6:
-            name: java-1.6.0-openjdk-devel
-          7:
-            name: java-1.7.0-openjdk-devel
-          8:
-            name: java-1.8.0-openjdk-devel
+      jre:
+        6:
+          name: java-1.6.0-openjdk
+        7:
+          name: java-1.7.0-openjdk
+        8:
+          name: java-1.8.0-openjdk
+      jdk:
+        6:
+          name: java-1.6.0-openjdk-devel
+        7:
+          name: java-1.7.0-openjdk-devel
+        8:
+          name: java-1.8.0-openjdk-devel
     Debian:
       "8":
         jre:
@@ -96,52 +80,38 @@ java_package:
           11:
             name: openjdk-11-jdk
     Fedora:
-      "27":
-        jre:
-          8:
-            name: java-1.8.0-openjdk
-          9:
-            name: java-9-openjdk
-        jdk:
-          8:
-            name: java-1.8.0-openjdk-devel
-          9:
-            name: java-9-openjdk-devel
-      "28":
-        jre:
-          8:
-            name: java-1.8.0-openjdk
-          9:
-            name: java-9-openjdk
-        jdk:
-          8:
-            name: java-1.8.0-openjdk-devel
-          9:
-            name: java-9-openjdk-devel
+      jre:
+        8:
+          name: java-1.8.0-openjdk
+        9:
+          name: java-9-openjdk
+      jdk:
+        8:
+          name: java-1.8.0-openjdk-devel
+        9:
+          name: java-9-openjdk-devel
     openSUSE Leap:
-      "42":
-        jre:
-          7:
-            name: java-1_7_0-openjdk
-          8:
-            name: java-1_8_0-openjdk
-        jdk:
-          7:
-            name: java-1_7_0-openjdk-devel
-          8:
-            name: java-1_8_0-openjdk-devel
+      jre:
+        7:
+          name: java-1_7_0-openjdk
+        8:
+          name: java-1_8_0-openjdk
+      jdk:
+        7:
+          name: java-1_7_0-openjdk-devel
+        8:
+          name: java-1_8_0-openjdk-devel
     openSUSE Tumbleweed:
-      "42":
-        jre:
-          7:
-            name: java-1_7_0-openjdk
-          8:
-            name: java-1_8_0-openjdk
-        jdk:
-          7:
-            name: java-1_7_0-openjdk-devel
-          8:
-            name: java-1_8_0-openjdk-devel
+      jre:
+        7:
+          name: java-1_7_0-openjdk
+        8:
+          name: java-1_8_0-openjdk
+      jdk:
+        7:
+          name: java-1_7_0-openjdk-devel
+        8:
+          name: java-1_8_0-openjdk-devel
     Ubuntu:
       "16":
         jre:
