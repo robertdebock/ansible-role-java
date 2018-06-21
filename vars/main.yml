@@ -80,7 +80,7 @@ java_package:
         jdk:
           8:
             name: openjdk-8-jdk
-      "buster/sid":
+      "10":
         jre:
           8:
             name: openjdk-8-jre
