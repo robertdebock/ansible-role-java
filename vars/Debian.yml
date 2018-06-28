@@ -1,0 +1,17 @@
+---
+# vars file for java
+java_openjdk_package:
+  jre:
+    8:
+      name: openjdk-8-jre
+    10:
+      name: openjdk-10-jre
+    11:
+      name: openjdk-11-jre
+  jdk:
+    8:
+      name: openjdk-8-jdk
+    10:
+      name: openjdk-10-jdk
+    11:
+      name: openjdk-11-jdk

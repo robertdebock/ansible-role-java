@@ -1,0 +1,13 @@
+---
+# vars file for java
+java_openjdk_package:
+  jre:
+    7:
+      name: java-1_7_0-openjdk
+    8:
+      name: java-1_8_0-openjdk
+  jdk:
+    7:
+      name: java-1_7_0-openjdk-devel
+    8:
+      name: java-1_8_0-openjdk-devel
