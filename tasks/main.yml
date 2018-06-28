@@ -1,18 +1,32 @@
 ---
 # tasks file for java
+- name: load default variables
+  include_vars:
+    file: "{{ item }}"
+  with_items:
+    - default.yml
+    - oracle.yml
+
+- name: load os-specific variables
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution }}.yml"
+    - default.yml
+
 - name: install software (package)
   package:
     name: "{{ item }}"
   with_items:
-    - "{{ java_package['openjdk'][ansible_distribution][java_type][java_version]['name']
-      | default([]) }}"
+    - "{{ java_openjdk_package[java_version] | default([]) }}"
+  when:
+    java_type == "openjdk"
 
 - name: copy software (rpm)
   copy:
     src: "{{ item }}"
     dest: "/tmp/{{ item }}"
   with_items:
-    - "{{ java_package['oracle'][java_type][java_version]['rpm'] | default([]) }}"
+    - "{{ java_oracle_package[java_type][java_version]['rpm'] | default([]) }}"
   when:
     - java_rpm_source == "local"
     - java_format == "rpm"
@@ -21,7 +35,7 @@
   package:
     name: "{{ item }}"
   with_items:
-    - "/tmp/{{ java_package['oracle'][java_type][java_version]['rpm'] | default([]) }}"
+    - "/tmp/{{ java_oracle_package[java_type][java_version]['rpm'] | default([]) }}"
   when:
     - java_rpm_source == "local"
     - java_format == "rpm"
@@ -30,7 +44,7 @@
   package:
     name: "{{ item }}"
   with_items:
-    - "{{ java_package['oracle'][java_type][java_version]['rpm'] | default([]) }}"
+    - "{{ java_oracle_package[java_type][java_version]['rpm'] | default([]) }}"
   when:
     - java_rpm_source == "repository"
     - java_format == "rpm"
@@ -45,10 +59,8 @@
 
 - name: install software (targz)
   unarchive:
-    src: "{{ item }}"
+    src: "{{ java_oracle_package[java_type][java_version]['targz'] | default([]) }}"
     dest: "{{ java_install_directory }}"
-  with_items:
-    - "{{ java_package['oracle'][java_type][java_version]['targz'] | default([]) }}"
   when:
     - java_format == "targz"
     - java_vendor == "oracle"
@@ -66,7 +78,7 @@
   alternatives:
     name: java
     link: /usr/bin/java
-    path: "{{ java_install_directory }}/{{ java_package['oracle'][java_type][java_version]['directory'] }}/bin/java"
+    path: "{{ java_install_directory }}/{{ java_oracle_package[java_type][java_version]['directory'] }}/bin/java"
   when:
     - java_format == "targz"
     - ansible_distribution != "Alpine"
