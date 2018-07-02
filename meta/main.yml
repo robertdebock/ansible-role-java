@@ -37,12 +37,12 @@ galaxy_info:
         - bionic
 
   galaxy_tags:
-    - Alpine
-    - CentOS
-    - Debian
-    - Fedora
+    - alpine
+    - centos
+    - debian
+    - fedora
     - java
-    - Oracle
+    - oracle
     - openjdk
     - jre
     - jdk
