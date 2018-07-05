@@ -17,7 +17,7 @@
   package:
     name: "{{ item }}"
   with_items:
-    - "{{ java_openjdk_package[java_version] | default([]) }}"
+    - "{{ java_openjdk_package[java_type][java_version]['name'] | default([]) }}"
   when:
     java_vendor == "openjdk"
 
