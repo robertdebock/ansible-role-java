@@ -19,7 +19,7 @@
   with_items:
     - "{{ java_openjdk_package[java_version] | default([]) }}"
   when:
-    java_type == "openjdk"
+    java_vendor == "openjdk"
 
 - name: copy software (rpm)
   copy:
