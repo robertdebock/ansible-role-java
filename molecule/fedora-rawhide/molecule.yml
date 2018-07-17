@@ -10,10 +10,16 @@ lint:
 platforms:
   - name: java-fedora-rawhide-default
     image: fedora:rawhide
+    registry:
+      url: registry.fedoraproject.org
   - name: java-fedora-rawhide-openjdk-8-jre
     image: fedora:rawhide
+    registry:
+      url: registry.fedoraproject.org
   - name: java-fedora-rawhide-openjdk-8-jdk
     image: fedora:rawhide
+    registry:
+      url: registry.fedoraproject.org
 provisioner:
   name: ansible
   lint:
