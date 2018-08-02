@@ -1,7 +1,0 @@
-# Molecule managed
----
-file:
-  /usr/bin/java:
-    exists: true
-    owner: root
-    group: root
