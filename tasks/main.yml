@@ -20,6 +20,9 @@
     - "{{ java_openjdk_package[java_type][java_version]['name'] | default([]) }}"
   when:
     java_vendor == "openjdk"
+  register: packageresult
+  until: packageresult is succeeded
+  retries: 3
 
 - name: copy software (rpm)
   copy:
