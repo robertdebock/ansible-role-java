@@ -16,6 +16,7 @@ release = ansible_distribution_major_version
 | Debian     | stable & latest         | 8            |
 | Fedora     | latest                  | 8 & 9        |
 | Fedora     | rawhide                 | 8            |
+| Gentoo     | latest                  | 8            |
 | OpenSUSE   | leap                    | 7 & 8        |
 | OpenSUSE   | tumbleweed              | 8, 10 & 11   |
 | Ubuntu     | 17.10 (artful) & latest | 8 & 9        |

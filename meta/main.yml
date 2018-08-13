@@ -28,6 +28,9 @@ galaxy_info:
       versions:
         - 6
         - 7
+    - name: Gentoo
+      version:
+        - all
     - name: OpenSUSE
       versions:
         - all

@@ -5,9 +5,11 @@ java
 
 Provides java (oracle or openjdk), jre or jdk, versions 6, 7, 8 or 9 for many distributions:
 - Alpine
+- ArchLinux
 - CentOS
 - Debian
 - Fedora
+- Gentoo
 - Ubuntu
 
 Context
