@@ -23,6 +23,8 @@
   register: packageresult
   until: packageresult is succeeded
   retries: 3
+  environment:
+    USE: "X -cups -alsa -fontconfig"
 
 - name: copy software (rpm)
   copy:
