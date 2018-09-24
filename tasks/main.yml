@@ -16,6 +16,7 @@
 - name: install software (package)
   package:
     name: "{{ item }}"
+    state: present
   with_items:
     - "{{ java_openjdk_package[java_type][java_version]['name'] | default([]) }}"
   when:
@@ -39,6 +40,7 @@
 - name: install software (rpm) (local)
   package:
     name: "{{ item }}"
+    state: present
   with_items:
     - "/tmp/{{ java_oracle_package[java_type][java_version]['rpm'] | default([]) }}"
   when:
@@ -48,6 +50,7 @@
 - name: install software (rpm) (repository)
   package:
     name: "{{ item }}"
+    state: present
   with_items:
     - "{{ java_oracle_package[java_type][java_version]['rpm'] | default([]) }}"
   when:
