@@ -10,14 +10,19 @@ lint:
 platforms:
   - name: java-alpine-edge-default
     image: alpine:edge
+    command: sh -c "while true ; do sleep 1 ; done"
   - name: java-alpine-edge-openjdk-7-jre
     image: alpine:edge
+    command: sh -c "while true ; do sleep 1 ; done"
   - name: java-alpine-edge-openjdk-8-jre
     image: alpine:edge
+    command: sh -c "while true ; do sleep 1 ; done"
   - name: java-alpine-edge-openjdk-7-jdk
     image: alpine:edge
+    command: sh -c "while true ; do sleep 1 ; done"
   - name: java-alpine-edge-openjdk-8-jdk
     image: alpine:edge
+    command: sh -c "while true ; do sleep 1 ; done"
 provisioner:
   name: ansible
   lint:

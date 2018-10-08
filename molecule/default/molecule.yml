@@ -1,0 +1,50 @@
+---
+dependency:
+  name: galaxy
+  options:
+    role-file: requirements.yml
+driver:
+  name: docker
+lint:
+  name: yamllint
+platforms:
+  - name: java-alpine-edge
+    image: alpine:edge
+    command: sh -c "while true ; do sleep 1 ; done"
+  - name: java-alpine-latest
+    image: alpine:latest
+    command: sh -c "while true ; do sleep 1 ; done"
+  - name: java-archlinux
+    image: base/archlinux
+  - name: java-centos-6
+    image: centos:6
+  - name: java-centos-latest
+    image: centos:latest
+  - name: java-debian-latest
+    image: debian:latest
+  - name: java-debian-stable
+    image: debian:stable
+  - name: java-debian-unstable
+    image: debian:unstable
+  - name: java-fedora-latest
+    image: fedora:latest
+  - name: java-fedora-rawhide
+    image: fedora:rawhide
+  - name: java-opensuse-leap
+    image: opensuse:leap
+  - name: java-opensuse-tumbleweed
+    image: opensuse:tumbleweed
+  - name: java-ubuntu-artful
+    image: ubuntu:artful
+  - name: java-ubuntu-devel
+    image: ubuntu:devel
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+scenario:
+  name: default
+verifier:
+  name: goss
+  lint:
+    name: yamllint

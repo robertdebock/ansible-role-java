@@ -1,24 +1,11 @@
 ---
 # tasks file for java
-- name: load default variables
-  include_vars:
-    file: "{{ item }}"
-  with_items:
-    - default.yml
-    - oracle.yml
-
-- name: load os-specific variables
-  include_vars: "{{ item }}"
-  with_first_found:
-    - "{{ ansible_distribution }}.yml"
-    - default.yml
-
-- name: install software (package)
+- name: install openjdk java (package)
   package:
-    name: "{{ item }}"
+    name: "{{ java_openjdk_package[java_type][java_version][ansible_distribution]
+          | default(java_openjdk_package[java_type][java_version]['default']
+          | default([])) }}"
     state: present
-  with_items:
-    - "{{ java_openjdk_package[java_type][java_version]['name'] | default([]) }}"
   when:
     java_vendor == "openjdk"
   register: packageresult
@@ -27,7 +14,7 @@
   environment:
     USE: "X -cups -alsa -fontconfig"
 
-- name: copy software (rpm)
+- name: copy oracle java (rpm)
   copy:
     src: "{{ item }}"
     dest: "/tmp/{{ item }}"
@@ -37,7 +24,7 @@
     - java_rpm_source == "local"
     - java_format == "rpm"
 
-- name: install software (rpm) (local)
+- name: install oracle java (rpm) (local)
   package:
     name: "{{ item }}"
     state: present
@@ -47,7 +34,7 @@
     - java_rpm_source == "local"
     - java_format == "rpm"
 
-- name: install software (rpm) (repository)
+- name: install oracle java (rpm) (repository)
   package:
     name: "{{ item }}"
     state: present
@@ -65,7 +52,7 @@
     - java_vendor == "oracle"
     - java_format == "targz"
 
-- name: install software (targz)
+- name: install oracle java (targz)
   unarchive:
     src: "{{ java_oracle_package[java_type][java_version]['targz'] | default([]) }}"
     dest: "{{ java_install_directory }}"
@@ -73,7 +60,7 @@
     - java_format == "targz"
     - java_vendor == "oracle"
 
-- name: install policy software (targz)
+- name: install oracle java policy software (targz)
   unarchive:
     src: jce_policy-8.zip
     dest: "{{ java_install_directory }}"

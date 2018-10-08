@@ -27,3 +27,6 @@ java_jce: yes
 # In case of "java_vendor == oracle" and "java_format == targz", a directory
 # as to be set where to install.
 java_install_directory: /opt
+
+# To update all packages installed by this roles, set `java_package_state` to `latest`.
+java_package_state: present

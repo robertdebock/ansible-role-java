@@ -10,14 +10,19 @@ lint:
 platforms:
   - name: java-alpine-latest-default
     image: alpine:latest
+    command: sh -c "while true ; do sleep 1 ; done"
   - name: java-alpine-latest-openjdk-7-jre
     image: alpine:latest
+    command: sh -c "while true ; do sleep 1 ; done"
   - name: java-alpine-latest-openjdk-8-jre
     image: alpine:latest
+    command: sh -c "while true ; do sleep 1 ; done"
   - name: java-alpine-latest-openjdk-7-jdk
     image: alpine:latest
+    command: sh -c "while true ; do sleep 1 ; done"
   - name: java-alpine-latest-openjdk-8-jdk
     image: alpine:latest
+    command: sh -c "while true ; do sleep 1 ; done"
 provisioner:
   name: ansible
   lint:
