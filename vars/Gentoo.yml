@@ -1,9 +1,0 @@
----
-# vars file for java
-java_openjdk_package:
-  jre:
-    8:
-      name: jre
-  jdk:
-    8:
-      name: jdk
