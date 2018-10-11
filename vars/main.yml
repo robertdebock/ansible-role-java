@@ -21,7 +21,7 @@ java_openjdk_package:
       Gentoo: jre
       Ubuntu: openjdk-8-jre
       openSUSE Leap: java-1_8_0-openjdk
-      openSUSE Tubmleweed: java-1_8_0-openjdk
+      openSUSE Tumbleweed: java-1_8_0-openjdk
     9:
       Archlinux: jre9-openjdk
       Fedora: java-9-openjdk
