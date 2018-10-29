@@ -12,53 +12,221 @@ Provides java (oracle or openjdk), jre or jdk, versions 6, 7, 8 or 9 for many di
 - Gentoo
 - Ubuntu
 
-[Unit tests](https://travis-ci.org/robertdebock/ansible-role-java) are done on every commit and periodically.
 
-If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-java/issues)
+Example Playbook
+----------------
 
-To test this role locally please use [Molecule](https://github.com/metacloud/molecule):
+This example is taken from `molecule/default/playbook.yml`:
 ```
-pip install molecule
-molecule test
+---
+- name: Default
+  hosts: "*-default"
+  gather_facts: false
+
+  roles:
+    - robertdebock.bootstrap
+    - robertdebock.java
+
+- name: OpenJDK 6 JRE
+  hosts: "*-openjdk-6-jre"
+  gather_facts: false
+
+  vars:
+    java_version: 6
+
+  roles:
+    - robertdebock.bootstrap
+    - robertdebock.java
+
+- name: OpenJDK 7 JRE
+  hosts: "*-openjdk-7-jre"
+  gather_facts: false
+
+  vars:
+    java_version: 7
+
+  roles:
+    - robertdebock.bootstrap
+    - robertdebock.java
+
+- name: OpenJDK 8 JRE
+  hosts: "*-openjdk-8-jre"
+  gather_facts: false
+
+  vars:
+    java_version: 8
+
+  roles:
+    - robertdebock.bootstrap
+    - robertdebock.java
+
+- name: OpenJDK 9 JRE
+  hosts: "*-openjdk-9-jre"
+  gather_facts: false
+
+  vars:
+    java_version: 9
+
+  roles:
+    - robertdebock.bootstrap
+    - robertdebock.java
+
+- name: OpenJDK 10 JRE
+  hosts: "*-openjdk-10-jre"
+  gather_facts: false
+
+  vars:
+    java_version: 10
+
+  roles:
+    - robertdebock.bootstrap
+    - robertdebock.java
+
+- name: OpenJDK 11 JRE
+  hosts: "*-openjdk-11-jre"
+  gather_facts: false
+
+  vars:
+    java_version: 11
+
+  roles:
+    - robertdebock.bootstrap
+    - robertdebock.java
+
+- name: OpenJDK 6 JDK
+  hosts: "*-openjdk-6-jdk"
+  gather_facts: false
+
+  vars:
+    java_version: 6
+    java_type: jdk
+
+  roles:
+    - robertdebock.bootstrap
+    - robertdebock.java
+
+- name: OpenJDK 7 JDK
+  hosts: "*-openjdk-7-jdk"
+  gather_facts: false
+
+  vars:
+    java_version: 7
+    java_type: jdk
+
+  roles:
+    - robertdebock.bootstrap
+    - robertdebock.java
+
+- name: OpenJDK 8 JDK
+  hosts: "*-openjdk-8-jdk"
+  gather_facts: false
+
+  vars:
+    java_version: 8
+    java_type: jdk
+
+  roles:
+    - robertdebock.bootstrap
+    - robertdebock.java
+
+- name: OpenJDK 9 JDK
+  hosts: "*-openjdk-9-jdk"
+  gather_facts: false
+
+  vars:
+    java_version: 9
+    java_type: jdk
+
+  roles:
+    - robertdebock.bootstrap
+    - robertdebock.java
+
+- name: OpenJDK 10 JDK
+  hosts: "*-openjdk-10-jdk"
+  gather_facts: false
+
+  vars:
+    java_version: 10
+    java_type: jdk
+
+  roles:
+    - robertdebock.bootstrap
+    - robertdebock.java
+
+- name: OpenJDK 11 JDK
+  hosts: "*-openjdk-11-jdk"
+  gather_facts: false
+
+  vars:
+    java_version: 11
+    java_type: jdk
+
+  roles:
+    - robertdebock.bootstrap
+    - robertdebock.java
+
 ```
-There are many scenarios available, please have a look in the `molecule/` directory.
+
+Role Variables
+--------------
+
+These variables are set in `defaults/main.yml`:
+```
+---
+# defaults file for java
+
+# Set the vendor of java, valid values are "openjdk" and "oracle".
+java_vendor: openjdk
+
+# Set the variable to install the type, valid values are "jre" and "jdk".
+java_type: jre
+
+# Set the version of java, valid values are "6", 7", "8" and "9".
+java_version: 8
+
+# Set the format of the installation source, valid values are "targz" and
+# "rpm". This is only valid with "java_vendor == oracle"
+java_format: targz
+
+# Where do the RPMs come from when installing Oracle RPMs?
+# Either "local" or "repository".
+# Valid for "java_vendor == oracle" and "java_format" == "rpm"
+java_rpm_source: local
+
+# Choose if you can JCE installed. Only applicable for (both):
+# - java_vendor == "oracle"
+# - java_version == "8"
+java_jce: yes
+
+# In case of "java_vendor == oracle" and "java_format == targz", a directory
+# as to be set where to install.
+java_install_directory: /opt
+
+# To update all packages installed by this roles, set `java_package_state` to `latest`.
+java_package_state: present
+
+```
+
+Requirements
+------------
+
+- Access to a repository containing packages, likely on the internet.
+- A recent version of Ansible. (Tests run on the last 3 release of Ansible.)
+
+The following roles can be installed to ensure all requirements are met, using `ansible-galaxy install -r requirements.yml`:
+
+---
+- robertdebock.bootstrap
+
 
 Context
---------
+-------
+
 This role is a part of many compatible roles. Have a look at [the documentation of these roles](https://robertdebock.nl/) for further information.
 
 Here is an overview of related roles:
 ![dependencies](https://raw.githubusercontent.com/robertdebock/drawings/artifacts/java.png "Dependency")
 
-Requirements
-------------
-
-- For openjdk: Access to a repository containing packages, likely on the internet.
-- For oracle: Download the rpms and/or tar.gz's from the [Oracle website](http://www.oracle.com/technetwork/java/javase/downloads/index.html) and place then in the "files" directory. These files are not included because a license has to be accepted. For each version download the "jre" and "jdk", x64 version.
-
-Role Variables
---------------
-
-- java_version: 6, 7, 8, 9 or 10, defaults: 8
-- java_vendor: openjdk or oracle, default: openjdk
-- java_type: jdk or jre, default: jre
-- java_format: rpm or targz, default: targz. (only applicable for java_vendor: oracle)
-- java_install_directory: for targz installations, default: /opt. (only applicable for java_vendor: oracle)
-- java_jce: "yes" if you want to install the Java Cryptography Extension, default: unset (only applicable for java_vendor: oracle and java_version: 8)
-
-Have a look in vars/main.yml to see all available combinations.
-
-Dependencies
-------------
-
-You can prepare your system using this role:
-
-- [robertdebock.bootstrap](https://travis-ci.org/robertdebock/ansible-role-bootstrap)
-
-Download all dependencies by issuing this command:
-```
-ansible-galaxy install -r requirements.yml
-```
 
 Compatibility
 -------------
@@ -85,55 +253,26 @@ This role has been tested against the following distributions and Ansible versio
 
 A single star means the build may fail, it's marked as an experimental build.
 
-Example Playbooks
-----------------
+Testing
+-------
 
-For a default installation (defaults in defaults/main.yml) use this playbook:
+[Unit tests](https://travis-ci.org/robertdebock/ansible-role-java) are done on every commit and periodically.
+
+If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-java/issues)
+
+To test this role locally please use [Molecule](https://github.com/metacloud/molecule):
 ```
-- hosts: servers
-  gather_facts: yes
-  become: yes
-
-  roles:
-    - role: robertdebock.bootstrap
-    - role: robertdebock.java
+pip install molecule
+molecule test
 ```
+There are many specific scenarios available, please have a look in the `molecule/` directory.
 
-For an installation of Oracle jdk version 10, use this playbook:
-```
-- hosts: servers
-  gather_facts: yes
-  become: yes
-
-  roles:
-    - role: robertdebock.bootstrap
-    - role: robertdebock.java
-      java_vendor: oracle
-      java_type: jdk
-      java_version: 10
-      java_format: rpm
-```
-
-Red Hat distributes Oracle Java, so this may be an appropriate playbook:
-```
-- hosts: all
-  gather_facts: yes
-  become: yes
-
-  roles:
-    - role: robertdebock.bootstrap
-    - role: robertdebock.java
-      java_vendor: oracle
-      java_format: rpm
-      java_rpm_source: repository
-```
-
-Install this role using `galaxy install robertdebock.java`.
 
 License
 -------
 
-Apache License, Version 2.0
+Apache-2.0
+
 
 Author Information
 ------------------
