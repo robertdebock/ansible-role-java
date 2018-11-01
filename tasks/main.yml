@@ -2,9 +2,7 @@
 # tasks file for java
 - name: install openjdk java (package)
   package:
-    name: "{{ java_openjdk_package[java_type][java_version][ansible_distribution]
-          | default(java_openjdk_package[java_type][java_version]['default']
-          | default([])) }}"
+    name: "{{ java_openjdk_package }}"
     state: present
   when:
     java_vendor == "openjdk"
@@ -16,30 +14,24 @@
 
 - name: copy oracle java (rpm)
   copy:
-    src: "{{ item }}"
-    dest: "/tmp/{{ item }}"
-  with_items:
-    - "{{ java_oracle_package[java_type][java_version]['rpm'] | default([]) }}"
+    src: "{{ java_package }}"
+    dest: "/tmp/{{ java_oracle_package }}"
   when:
     - java_rpm_source == "local"
     - java_format == "rpm"
 
 - name: install oracle java (rpm) (local)
   package:
-    name: "{{ item }}"
+    name: /tmp/{{ java_oracle_package }}"
     state: present
-  with_items:
-    - "/tmp/{{ java_oracle_package[java_type][java_version]['rpm'] | default([]) }}"
   when:
     - java_rpm_source == "local"
     - java_format == "rpm"
 
 - name: install oracle java (rpm) (repository)
   package:
-    name: "{{ item }}"
+    name: "{{ java_oracle_package }}"
     state: present
-  with_items:
-    - "{{ java_oracle_package[java_type][java_version]['rpm'] | default([]) }}"
   when:
     - java_rpm_source == "repository"
     - java_format == "rpm"
@@ -54,7 +46,7 @@
 
 - name: install oracle java (targz)
   unarchive:
-    src: "{{ java_oracle_package[java_type][java_version]['targz'] | default([]) }}"
+    src: "{{ java_oracle_package }}"
     dest: "{{ java_install_directory }}"
   when:
     - java_format == "targz"
@@ -73,7 +65,7 @@
   alternatives:
     name: java
     link: /usr/bin/java
-    path: "{{ java_install_directory }}/{{ java_oracle_package[java_type][java_version]['directory'] }}/bin/java"
+    path: "{{ java_install_directory }}/{{ java_oracle_directory }}/bin/java"
   when:
     - java_format == "targz"
     - ansible_distribution != "Alpine"

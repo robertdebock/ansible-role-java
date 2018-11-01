@@ -1,6 +1,6 @@
 ---
 # vars file for java
-java_openjdk_package:
+_java_openjdk_package:
   jre:
     6:
       default: java-1.6.0-openjdk
@@ -70,7 +70,9 @@ java_openjdk_package:
       Ubuntu: openjdk-11-jdk
       openSUSE Tumbleweed: java-11-openjdk-devel
 
-java_package:
+java_openjdk_package: "{{ _java_openjdk_package[java_type][java_version][ansible_distribution] | default(_java_openjdk_package[java_type][java_version]['default'] | default([])) }}"
+
+_java_package:
   oracle:
     jre:
       8:
@@ -90,3 +92,7 @@ java_package:
         targz: jdk-10.0.2_linux-x64_bin.tar.gz
         rpm: jdk-10.0.2_linux-x64_bin.rpm
         directory: jdk-10.0.2
+
+java_oracle_package: "{{ _java_oracle_package[java_type][java_version][java_format] | default([]) }}"
+
+java_oracle_directory: "{{ _java_oracle_package[java_type][java_version]['directory] }}"
