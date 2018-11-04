@@ -22,7 +22,7 @@
 
 - name: install oracle java (rpm) (local)
   package:
-    name: /tmp/{{ java_oracle_package }}"
+    name: "/tmp/{{ java_oracle_package }}"
     state: present
   when:
     - java_rpm_source == "local"
