@@ -2,7 +2,7 @@
 galaxy_info:
   author: Robert de Bock
   role_name: java
-  description: Provides java (openjdk or oracle) for your system.
+  description: The purpose of this role is to install and configure java on your system.
   license: Apache-2.0
   company: none
   min_ansible_version: 2.4

@@ -1,7 +1,8 @@
 ---
 - name: Default
   hosts: "*-default"
-  gather_facts: false
+  gather_facts: no
+  become: yes
 
   roles:
     - robertdebock.bootstrap
@@ -9,7 +10,8 @@
 
 - name: OpenJDK 6 JRE
   hosts: "*-openjdk-6-jre"
-  gather_facts: false
+  gather_facts: no
+  become: yes
 
   vars:
     java_version: 6
@@ -20,7 +22,8 @@
 
 - name: OpenJDK 7 JRE
   hosts: "*-openjdk-7-jre"
-  gather_facts: false
+  gather_facts: no
+  become: yes
 
   vars:
     java_version: 7
@@ -31,7 +34,8 @@
 
 - name: OpenJDK 8 JRE
   hosts: "*-openjdk-8-jre"
-  gather_facts: false
+  gather_facts: no
+  become: yes
 
   vars:
     java_version: 8
@@ -42,7 +46,8 @@
 
 - name: OpenJDK 9 JRE
   hosts: "*-openjdk-9-jre"
-  gather_facts: false
+  gather_facts: no
+  become: yes
 
   vars:
     java_version: 9
@@ -53,7 +58,8 @@
 
 - name: OpenJDK 10 JRE
   hosts: "*-openjdk-10-jre"
-  gather_facts: false
+  gather_facts: no
+  become: yes
 
   vars:
     java_version: 10
@@ -64,7 +70,8 @@
 
 - name: OpenJDK 11 JRE
   hosts: "*-openjdk-11-jre"
-  gather_facts: false
+  gather_facts: no
+  become: yes
 
   vars:
     java_version: 11
@@ -75,7 +82,8 @@
 
 - name: OpenJDK 6 JDK
   hosts: "*-openjdk-6-jdk"
-  gather_facts: false
+  gather_facts: no
+  become: yes
 
   vars:
     java_version: 6
@@ -87,7 +95,8 @@
 
 - name: OpenJDK 7 JDK
   hosts: "*-openjdk-7-jdk"
-  gather_facts: false
+  gather_facts: no
+  become: yes
 
   vars:
     java_version: 7
@@ -99,7 +108,8 @@
 
 - name: OpenJDK 8 JDK
   hosts: "*-openjdk-8-jdk"
-  gather_facts: false
+  gather_facts: no
+  become: yes
 
   vars:
     java_version: 8
@@ -111,7 +121,8 @@
 
 - name: OpenJDK 9 JDK
   hosts: "*-openjdk-9-jdk"
-  gather_facts: false
+  gather_facts: no
+  become: yes
 
   vars:
     java_version: 9
@@ -123,7 +134,8 @@
 
 - name: OpenJDK 10 JDK
   hosts: "*-openjdk-10-jdk"
-  gather_facts: false
+  gather_facts: no
+  become: yes
 
   vars:
     java_version: 10
@@ -135,7 +147,8 @@
 
 - name: OpenJDK 11 JDK
   hosts: "*-openjdk-11-jdk"
-  gather_facts: false
+  gather_facts: no
+  become: yes
 
   vars:
     java_version: 11
