@@ -16,7 +16,15 @@ platforms:
     image: fedora:rawhide
     registry:
       url: registry.fedoraproject.org
+  - name: java-fedora-rawhide-openjdk-11-jre
+    image: fedora:rawhide
+    registry:
+      url: registry.fedoraproject.org
   - name: java-fedora-rawhide-openjdk-8-jdk
+    image: fedora:rawhide
+    registry:
+      url: registry.fedoraproject.org
+  - name: java-fedora-rawhide-openjdk-11-jdk
     image: fedora:rawhide
     registry:
       url: registry.fedoraproject.org
