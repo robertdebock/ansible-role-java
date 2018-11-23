@@ -30,12 +30,13 @@ _java_openjdk_package:
       Archlinux: jre10-openjdk
       Debian: openjdk-10-jre
       Ubuntu: openjdk-10-jre
-      openSUSE Tumbleweed: java-10-openjdk
     11:
       Debian: openjdk-11-jre
       Fedora: java-11-openjdk
       Ubuntu: openjdk-11-jre
       openSUSE Tumbleweed: java-11-openjdk
+    12:
+      openSUSE Tumbleweed: java-12-openjdk
   jdk:
     6:
       default: java-1.6.0-openjdk-devel
@@ -71,6 +72,8 @@ _java_openjdk_package:
       Fedora: java-11-openjdk-devel
       Ubuntu: openjdk-11-jdk
       openSUSE Tumbleweed: java-11-openjdk-devel
+    12:
+      openSUSE Tumbleweed: java-12-openjdk-devel
 
 java_openjdk_package: "{{ _java_openjdk_package[java_type][java_version][ansible_distribution] | default(_java_openjdk_package[java_type][java_version]['default'] | default([])) }}"
 

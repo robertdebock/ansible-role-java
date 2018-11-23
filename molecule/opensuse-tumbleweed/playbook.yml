@@ -80,6 +80,18 @@
     - robertdebock.bootstrap
     - ansible-role-java
 
+- name: OpenJDK 12 JRE
+  hosts: "*-openjdk-12-jre"
+  gather_facts: no
+  become: yes
+
+  vars:
+    java_version: 12
+
+  roles:
+    - robertdebock.bootstrap
+    - ansible-role-java
+
 - name: OpenJDK 6 JDK
   hosts: "*-openjdk-6-jdk"
   gather_facts: no
@@ -152,6 +164,19 @@
 
   vars:
     java_version: 11
+    java_type: jdk
+
+  roles:
+    - robertdebock.bootstrap
+    - ansible-role-java
+
+- name: OpenJDK 12 JDK
+  hosts: "*-openjdk-12-jdk"
+  gather_facts: no
+  become: yes
+
+  vars:
+    java_version: 12
     java_type: jdk
 
   roles:

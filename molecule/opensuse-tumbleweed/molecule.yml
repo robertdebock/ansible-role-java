@@ -12,15 +12,15 @@ platforms:
     image: opensuse:tumbleweed
   - name: java-opensuse-tumbleweed-openjdk-8-jre
     image: opensuse:tumbleweed
-  - name: java-opensuse-tumbleweed-openjdk-10-jre
-    image: opensuse:tumbleweed
   - name: java-opensuse-tumbleweed-openjdk-11-jre
+    image: opensuse:tumbleweed
+  - name: java-opensuse-tumbleweed-openjdk-12-jre
     image: opensuse:tumbleweed
   - name: java-opensuse-tumbleweed-openjdk-8-jdk
     image: opensuse:tumbleweed
-  - name: java-opensuse-tumbleweed-openjdk-10-jdk
-    image: opensuse:tumbleweed
   - name: java-opensuse-tumbleweed-openjdk-11-jdk
+    image: opensuse:tumbleweed
+  - name: java-opensuse-tumbleweed-openjdk-12-jdk
     image: opensuse:tumbleweed
 provisioner:
   name: ansible
