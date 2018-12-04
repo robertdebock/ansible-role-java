@@ -6,8 +6,8 @@
     state: present
   when:
     java_vendor == "openjdk"
-  register: packageresult
-  until: packageresult is succeeded
+  register: java_install_openjdk_java_package
+  until: java_install_openjdk_java_package is succeeded
   retries: 3
   environment:
     USE: "X -cups -alsa -fontconfig"
@@ -35,6 +35,9 @@
   when:
     - java_rpm_source == "repository"
     - java_format == "rpm"
+  register: java_install_oracle_java_rpm_repository
+  until: java_install_oracle_java_rpm_repository is succeeded
+  retries: 3
 
 - name: ensure java_install_directory exists
   file:
