@@ -9,19 +9,19 @@ lint:
   name: yamllint
 platforms:
   - name: java-archlinux-default
-    image: base/archlinux
+    image: archlinux/base
   - name: java-archlinux-openjdk-7-jre
-    image: base/archlinux
+    image: archlinux/base
   - name: java-archlinux-openjdk-8-jre
-    image: base/archlinux
+    image: archlinux/base
   - name: java-archlinux-openjdk-10-jre
-    image: base/archlinux
+    image: archlinux/base
   - name: java-archlinux-openjdk-7-jdk
-    image: base/archlinux
+    image: archlinux/base
   - name: java-archlinux-openjdk-8-jdk
-    image: base/archlinux
+    image: archlinux/base
   - name: java-archlinux-openjdk-10-jdk
-    image: base/archlinux
+    image: archlinux/base
 provisioner:
   name: ansible
   lint:
