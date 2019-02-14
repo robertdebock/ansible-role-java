@@ -34,8 +34,10 @@ platforms:
     image: opensuse:leap
   - name: java-opensuse-tumbleweed
     image: opensuse:tumbleweed
-  - name: java-ubuntu-artful
-    image: ubuntu:artful
+  - name: java-ubuntu-latest
+    image: ubuntu:latest
+  - name: java-ubuntu-rolling
+    image: ubuntu:rolling
   - name: java-ubuntu-devel
     image: ubuntu:devel
   - name: java-ubuntu-latest

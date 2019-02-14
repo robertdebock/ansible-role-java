@@ -1,0 +1,30 @@
+---
+dependency:
+  name: galaxy
+  options:
+    role-file: requirements.yml
+driver:
+  name: docker
+lint:
+  name: yamllint
+platforms:
+  - name: java-ubuntu-rolling-default
+    image: ubuntu:rolling
+  - name: java-ubuntu-rolling-openjdk-8-jre
+    image: ubuntu:rolling
+  - name: java-ubuntu-rolling-openjdk-9-jre
+    image: ubuntu:rolling
+  - name: java-ubuntu-rolling-openjdk-8-jdk
+    image: ubuntu:rolling
+  - name: java-ubuntu-rolling-openjdk-9-jdk
+    image: ubuntu:rolling
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+scenario:
+  name: ubuntu-rolling
+verifier:
+  name: goss
+  lint:
+    name: yamllint
