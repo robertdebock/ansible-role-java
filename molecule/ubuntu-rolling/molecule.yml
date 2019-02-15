@@ -12,11 +12,11 @@ platforms:
     image: ubuntu:rolling
   - name: java-ubuntu-rolling-openjdk-8-jre
     image: ubuntu:rolling
-  - name: java-ubuntu-rolling-openjdk-9-jre
+  - name: java-ubuntu-rolling-openjdk-11-jre
     image: ubuntu:rolling
   - name: java-ubuntu-rolling-openjdk-8-jdk
     image: ubuntu:rolling
-  - name: java-ubuntu-rolling-openjdk-9-jdk
+  - name: java-ubuntu-rolling-openjdk-11-jdk
     image: ubuntu:rolling
 provisioner:
   name: ansible
