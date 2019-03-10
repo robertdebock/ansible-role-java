@@ -149,7 +149,3 @@ provisioner:
     name: ansible-lint
 scenario:
   name: oracle
-verifier:
-  name: goss
-  lint:
-    name: yamllint
