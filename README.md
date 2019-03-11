@@ -20,7 +20,6 @@ This example is taken from `molecule/default/playbook.yml`:
   roles:
     - robertdebock.bootstrap
     - robertdebock.java
-
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
@@ -62,7 +61,6 @@ java_install_directory: /opt
 
 # To update all packages installed by this roles, set `java_package_state` to `latest`.
 java_package_state: present
-
 ```
 
 Requirements
