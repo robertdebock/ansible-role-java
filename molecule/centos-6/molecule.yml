@@ -3,24 +3,12 @@ dependency:
   name: galaxy
   options:
     role-file: requirements.yml
-driver:
-  name: docker
 lint:
   name: yamllint
+driver:
+  name: docker
 platforms:
-  - name: java-centos-6-default
-    image: centos:6
-  - name: java-centos-6-openjdk-6-jre
-    image: centos:6
-  - name: java-centos-6-openjdk-7-jre
-    image: centos:6
-  - name: java-centos-6-openjdk-8-jre
-    image: centos:6
-  - name: java-centos-6-openjdk-6-jdk
-    image: centos:6
-  - name: java-centos-6-openjdk-7-jdk
-    image: centos:6
-  - name: java-centos-6-openjdk-8-jdk
+  - name: java-centos-6
     image: centos:6
 provisioner:
   name: ansible

@@ -3,20 +3,12 @@ dependency:
   name: galaxy
   options:
     role-file: requirements.yml
-driver:
-  name: docker
 lint:
   name: yamllint
+driver:
+  name: docker
 platforms:
-  - name: java-fedora-latest-default
-    image: fedora:latest
-  - name: java-fedora-latest-openjdk-8-jre
-    image: fedora:latest
-  - name: java-fedora-latest-openjdk-11-jre
-    image: fedora:latest
-  - name: java-fedora-latest-openjdk-8-jdk
-    image: fedora:latest
-  - name: java-fedora-latest-openjdk-11-jdk
+  - name: java-fedora-latest
     image: fedora:latest
 provisioner:
   name: ansible

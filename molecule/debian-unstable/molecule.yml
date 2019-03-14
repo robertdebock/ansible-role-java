@@ -3,16 +3,12 @@ dependency:
   name: galaxy
   options:
     role-file: requirements.yml
-driver:
-  name: docker
 lint:
   name: yamllint
+driver:
+  name: docker
 platforms:
-  - name: java-debian-unstable-default
-    image: debian:unstable
-  - name: java-debian-unstable-openjdk-8-jre
-    image: debian:unstable
-  - name: java-debian-unstable-openjdk-8-jdk
+  - name: java-debian-unstable
     image: debian:unstable
 provisioner:
   name: ansible

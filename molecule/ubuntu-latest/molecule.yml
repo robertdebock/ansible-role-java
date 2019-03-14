@@ -3,20 +3,12 @@ dependency:
   name: galaxy
   options:
     role-file: requirements.yml
-driver:
-  name: docker
 lint:
   name: yamllint
+driver:
+  name: docker
 platforms:
-  - name: java-ubuntu-latest-default
-    image: ubuntu:latest
-  - name: java-ubuntu-latest-openjdk-8-jre
-    image: ubuntu:latest
-  - name: java-ubuntu-latest-openjdk-11-jre
-    image: ubuntu:latest
-  - name: java-ubuntu-latest-openjdk-8-jdk
-    image: ubuntu:latest
-  - name: java-ubuntu-latest-openjdk-11-jdk
+  - name: java-ubuntu-latest
     image: ubuntu:latest
 provisioner:
   name: ansible
