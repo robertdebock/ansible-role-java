@@ -7,4 +7,3 @@
 
   roles:
     - robertdebock.bootstrap
-    - ansible-role-java

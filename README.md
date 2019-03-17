@@ -11,6 +11,18 @@ Example Playbook
 This example is taken from `molecule/default/playbook.yml`:
 ```yaml
 ---
+- name: Converge
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  roles:
+    - robertdebock.java
+```
+
+The machine you are running this on, may need to be prepared. Tests have been done on machines prepared by this playbook:
+```yaml
+---
 - name: Default
   hosts: all
   gather_facts: no
@@ -19,7 +31,6 @@ This example is taken from `molecule/default/playbook.yml`:
 
   roles:
     - robertdebock.bootstrap
-    - robertdebock.java
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
