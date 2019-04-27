@@ -13,5 +13,5 @@
       # You can also install multiple versions, but be aware that one
       # version is selected using `alternatives`. /usr/bin/java links
       # to the latest installed version.
-    - role: ansible-role-java
-      java_version: 9
+      # - role: ansible-role-java
+      #   java_version: 9

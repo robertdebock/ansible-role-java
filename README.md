@@ -25,8 +25,8 @@ This example is taken from `molecule/default/playbook.yml`:
       # You can also install multiple versions, but be aware that one
       # version is selected using `alternatives`. /usr/bin/java links
       # to the latest installed version.
-    - role: robertdebock.java
-      java_version: 9
+      # - role: robertdebock.java
+      #   java_version: 9
 ```
 
 The machine you are running this on, may need to be prepared. Tests have been done on machines prepared by this playbook:
