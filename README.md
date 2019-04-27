@@ -17,7 +17,16 @@ This example is taken from `molecule/default/playbook.yml`:
   gather_facts: yes
 
   roles:
-    - robertdebock.java
+    - role: robertdebock.java
+      # You can use specific version, depending on the distributions
+      # use 7, 8, 9, 10 or 11. (The default is 8, this next line is
+      # just an example.
+      java_version: 8
+      # You can also install multiple versions, but be aware that one
+      # version is selected using `alternatives`. /usr/bin/java links
+      # to the latest installed version.
+    - role: robertdebock.java
+      java_version: 9
 ```
 
 The machine you are running this on, may need to be prepared. Tests have been done on machines prepared by this playbook:
@@ -49,7 +58,7 @@ java_vendor: openjdk
 # Set the variable to install the type, valid values are "jre" and "jdk".
 java_type: jre
 
-# Set the version of java, valid values are "6", 7", "8" and "9".
+# Set the version of java, valid values are "6", 7", "8", "9", "10" and "11".
 java_version: 8
 
 # Set the format of the installation source, valid values are "targz" and
