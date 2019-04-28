@@ -15,7 +15,7 @@ provisioner:
   name: ansible
   playbooks:
     prepare: ../resources/prepare.yml
-    converge: ../resources/playbook.yml
+    converge: ../resources/playbook-13.yml
   lint:
     name: ansible-lint
 scenario:

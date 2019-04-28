@@ -34,6 +34,9 @@ _java_openjdk_package:
       Fedora: java-11-openjdk
       Ubuntu: openjdk-11-jre
     12:
+      Ubuntu: openjdk-12-jre
+    13:
+      Ubuntu: openjdk-13-jre
   jdk:
     6:
       default: java-1.6.0-openjdk-devel
@@ -66,6 +69,10 @@ _java_openjdk_package:
       Debian: openjdk-11-jdk
       Fedora: java-11-openjdk-devel
       Ubuntu: openjdk-11-jdk
+    12:
+      Ubuntu: openjdk-12-jdk
+    13:
+      Ubuntu: openjdk-13-jdk
 
 java_openjdk_package: "{{ _java_openjdk_package[java_type][java_version][ansible_distribution] | default(_java_openjdk_package[java_type][java_version]['default'] | default([])) }}"
 
