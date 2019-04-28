@@ -13,14 +13,6 @@ platforms:
     pre_build_image: yes
 provisioner:
   name: ansible
-  inventory:
-    group_vars:
-      all:
-        java_version: 11
-    host_vars:
-      foo1-01:
-        foo: bar
-
   playbooks:
     prepare: ../resources/prepare.yml
     converge: ../resources/playbook.yml
