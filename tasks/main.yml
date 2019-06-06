@@ -84,6 +84,6 @@
 
 - name: set JAVA_HOME in /etc/environment
   lineinfile:
-    path: /etc/java_home.sh
+    path: /etc/profile.d/java_home.sh
     regexp: '^JAVA_HOME='
     line: 'JAVA_HOME="{{ java_home.stdout }}"'
