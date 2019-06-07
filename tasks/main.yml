@@ -87,3 +87,4 @@
     path: /etc/profile.d/java_home.sh
     regexp: '^JAVA_HOME='
     line: 'JAVA_HOME="{{ java_home.stdout }}"'
+    create: yes
