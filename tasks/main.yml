@@ -1,5 +1,13 @@
 ---
 # tasks file for java
+- name: install requirements
+  package:
+    name: bash
+    state: present
+  register: java_install_requirements
+  until: java_install_requirements is succeeded
+  retries: 3
+
 - name: install openjdk java (package)
   package:
     name: "{{ java_openjdk_package }}"
@@ -79,6 +87,8 @@
 
 - name: find JAVA_HOME
   shell: set -o pipefail ; readlink -f /usr/bin/java | sed 's%/bin/java%%'
+  args:
+    executable: /bin/bash
   changed_when: no
   register: java_home
 
