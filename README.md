@@ -37,7 +37,6 @@ The machine you are running this on, may need to be prepared.
   hosts: all
   gather_facts: no
   become: yes
-  serial: 2
 
   roles:
     - robertdebock.bootstrap
