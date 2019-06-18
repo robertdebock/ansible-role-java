@@ -36,7 +36,7 @@
     - java_rpm_source == "local"
     - java_format == "rpm"
   register: java_install_oracle_java_rpm_local
-  until: java_install_oracle_java_rpm_local
+  until: java_install_oracle_java_rpm_local is succeeded
   retries: 3
 
 - name: install oracle java (rpm) (repository)
