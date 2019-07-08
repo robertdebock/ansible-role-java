@@ -38,6 +38,7 @@ galaxy_info:
     - centos
     - debian
     - fedora
+    - rhel
     - java
     - oracle
     - openjdk
