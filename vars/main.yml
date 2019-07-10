@@ -1,5 +1,24 @@
 ---
 # vars file for java
+
+# This part maps a distribution to a version of java.
+_java_default_version:
+  CentOS: 8
+  RedHat: 8
+  Alpine: 8
+  openSUSE Leap: 8
+  Archlinux: 8
+  Fedora: 8
+  Gentoo: 8
+  Ubuntu: 8
+  Ubuntu-19: 13
+  Debian: 8
+  Debian-9: 11
+
+java_default_version: "{{ java_version | default(_java_default_version[ansible_distribution ~ '-' ~ ansible_distribution_major_version] | default(_java_default_version[ansible_distribution])) }}"
+
+# This part maps the type of java package (jre/jdk) to a package name
+# for the distribution.
 _java_openjdk_package:
   jre:
     6:
@@ -84,7 +103,7 @@ _java_openjdk_package:
     13:
       Ubuntu: openjdk-13-jdk
 
-java_openjdk_package: "{{ _java_openjdk_package[java_type][java_version][ansible_distribution] | default(_java_openjdk_package[java_type][java_version]['default'] | default([])) }}"
+java_openjdk_package: "{{ _java_openjdk_package[java_type][java_default_version|int][ansible_distribution] | default(_java_openjdk_package[java_type][java_default_version|int]['default'] | default([])) }}"
 
 _java_package:
   oracle:
