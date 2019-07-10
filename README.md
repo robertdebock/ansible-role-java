@@ -19,15 +19,6 @@ This example is taken from `molecule/resources/playbook.yml`:
 
   roles:
     - role: robertdebock.java
-      # You can use specific version, depending on the distributions
-      # use 7, 8, 9, 10 or 11. (The default is 8, this next line is
-      # just an example.
-      java_version: 8
-      # You can also install multiple versions, but be aware that one
-      # version is selected using `alternatives`. /usr/bin/java links
-      # to the latest installed version.
-      # - role: robertdebock.java
-      #   java_version: 9
 ```
 
 The machine you are running this on, may need to be prepared.
@@ -60,7 +51,10 @@ java_type: jre
 
 # Set the version of java, valid values are "6", 7", "8", "9", "10", "11",
 # "12" or "13".
-java_version: 8
+# By default, a distibution default is used, mapped in `vars/main.yml`.
+# By setting java_version, you overwrite this default to your selected
+# version.
+# java_version: 8
 
 # Set the format of the installation source, valid values are "targz" and
 # "rpm". This is only valid with "java_vendor == oracle"
