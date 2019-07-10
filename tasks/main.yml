@@ -72,6 +72,7 @@
     dest: "{{ java_install_directory }}"
   when:
     - java_jce | bool
+    - java_version is defined
     - java_version == 8
     - java_vendor == "oracle"
 
