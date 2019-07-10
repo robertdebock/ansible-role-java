@@ -6,8 +6,7 @@ _java_default_version:
   Alpine: 8
   Archlinux: 8
   CentOS: 8
-  Debian: 8
-  Debian-9: 11
+  Debian: 11
   Fedora: 8
   Gentoo: 8
   RedHat: 8
