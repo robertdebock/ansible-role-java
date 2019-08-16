@@ -1,1 +1,0 @@
-This role [lists a version](https://github.com/robertdebock/ansible-role-java/blob/master/vars/main.yml) that's related to the [upstream project](https://www.oracle.com/technetwork/java/javaseproducts/downloads/index.html).
