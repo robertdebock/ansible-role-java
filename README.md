@@ -121,6 +121,11 @@ This role has been tested against the following distributions and Ansible versio
 
 A single star means the build may fail, it's marked as an experimental build.
 
+Upstream version(s)
+-------------------
+
+This role [lists a version](https://github.com/robertdebock/ansible-role-java/blob/master/vars/main.yml) that's related to the [upstream project](https://www.oracle.com/technetwork/java/javaseproducts/downloads/index.html).
+
 Testing
 -------
 
