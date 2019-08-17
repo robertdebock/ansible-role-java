@@ -147,5 +147,9 @@ provisioner:
   name: ansible
   lint:
     name: ansible-lint
+    options:
+      exclude:
+        - meta/version.yml
+        - meta/exception.yml
 scenario:
   name: oracle
