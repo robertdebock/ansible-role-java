@@ -4,6 +4,7 @@
 # This part maps a distribution to a version of java.
 _java_default_version:
   Alpine: 8
+  Amazon: 8
   Archlinux: 8
   CentOS: 8
   Debian: 11
