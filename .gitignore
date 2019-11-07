@@ -1,5 +1,6 @@
-molecule/*/.molecule
-*.log
-files/*
-*.swp
+# Molecule's temporary data
+.molecule
+# Tox's temporary data
 .tox
+# Vi's temporary data
+.swp
