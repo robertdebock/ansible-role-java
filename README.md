@@ -35,45 +35,6 @@ The machine you are running this on, may need to be prepared.
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
 
-Role Variables
---------------
-
-These variables are set in `defaults/main.yml`:
-```yaml
----
-# defaults file for java
-
-# Set the vendor of java, valid values are "openjdk" and "oracle".
-java_vendor: openjdk
-
-# Set the variable to install the type, valid values are "jre" and "jdk".
-java_type: jre
-
-# Set the version of java, valid values are "6", 7", "8", "9", "10", "11",
-# "12" or "13".
-# By default, a distibution default is used, mapped in `vars/main.yml`.
-# By setting java_version, you overwrite this default to your selected
-# version.
-# java_version: 8
-
-# Set the format of the installation source, valid values are "targz" and
-# "rpm". This is only valid with "java_vendor == oracle"
-java_format: targz
-
-# Where do the RPMs come from when installing Oracle RPMs?
-# Either "local" or "repository".
-# Valid for "java_vendor == oracle" and "java_format" == "rpm"
-java_rpm_source: local
-
-# Choose if you can JCE installed. Only applicable for (both):
-# - java_vendor == "oracle"
-# - java_version == "8"
-java_jce: yes
-
-# In case of "java_vendor == oracle" and "java_format == targz", a directory
-# as to be set where to install.
-java_install_directory: /opt
-```
 
 Requirements
 ------------
