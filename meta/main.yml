@@ -38,7 +38,7 @@ galaxy_info:
 
   galaxy_tags:
     - centos
-    - rhel
+    - redhat
     - java
     - oracle
     - openjdk

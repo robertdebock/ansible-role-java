@@ -24,7 +24,9 @@ env:
     - image="fedora"
     - image="fedora" tag="rawhide"
     - image="centos" tag="7"
+    - image="redhat" tag="7"
     - image="centos"
+    - image="redhat"
     - image="opensuse"
     - image="ubuntu"
 
