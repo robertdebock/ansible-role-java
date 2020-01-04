@@ -5,7 +5,6 @@
 _java_default_version:
   Alpine: 8
   Amazon: 8
-  Archlinux: 8
   CentOS: 8
   Debian: 11
   Fedora: 8
@@ -28,14 +27,12 @@ _java_openjdk_package:
     7:
       default: java-1.7.0-openjdk
       Alpine: openjdk7-jre-base
-      Archlinux: jre7-openjdk
       CentOS: java-1.7.0-openjdk
       openSUSE Leap: java-1_7_0-openjdk
       RedHat: java-1.7.0-openjdk
     8:
       default: java-1.8.0-openjdk
       Alpine: openjdk8-jre-base
-      Archlinux: jre8-openjdk
       CentOS: java-1.8.0-openjdk
       Debian: openjdk-8-jre
       Fedora: java-1.8.0-openjdk
@@ -44,11 +41,9 @@ _java_openjdk_package:
       openSUSE Leap: java-1_8_0-openjdk
       RedHat: java-1.8.0-openjdk
     9:
-      Archlinux: jre9-openjdk
       Fedora: java-9-openjdk
       Ubuntu: openjdk-9-jre
     10:
-      Archlinux: jre10-openjdk
       Debian: openjdk-10-jre
       Ubuntu: openjdk-10-jre
     11:
@@ -69,14 +64,12 @@ _java_openjdk_package:
     7:
       default: java-1.7.0-openjdk-devel
       Alpine: openjdk7
-      Archlinux: jdk7-openjdk
       CentOS: java-1.7.0-openjdk-devel
       openSUSE Leap: java-1_7_0-openjdk-devel
       RedHat: java-1.7.0-openjdk-devel
     8:
       default: java-1.8.0-openjdk-devel
       Alpine: openjdk8
-      Archlinux: jdk8-openjdk
       CentOS: java-1.8.0-openjdk-devel
       Debian: openjdk-8-jdk
       Fedora: java-1.8.0-openjdk-devel
@@ -85,11 +78,9 @@ _java_openjdk_package:
       openSUSE Leap: java-1_8_0-openjdk-devel
       RedHat: java-1.8.0-openjdk-devel
     9:
-      Archlinux: jdk9-openjdk
       Fedora: java-9-openjdk-devel
       Ubuntu: openjdk-9-jdk
     10:
-      Archlinux: jdk10-openjdk
       Debian: openjdk-10-jdk
       Ubuntu: openjdk-10-jdk
     11:
