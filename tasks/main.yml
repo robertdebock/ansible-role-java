@@ -91,6 +91,7 @@
   args:
     executable: /bin/bash
   changed_when: no
+  check_mode: no
   register: java_home
 
 - name: set JAVA_HOME in /etc/environment
