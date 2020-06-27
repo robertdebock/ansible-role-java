@@ -1,0 +1,57 @@
+---
+- name: test if java_vendor is set correctly
+  assert:
+    that:
+      - java_vendor is defined
+      - java_vendor | length > 0
+      - java_vendor in ["openjdk", "oracle"]
+
+- name: test if java_type is set correctly
+  assert:
+    that:
+      - java_type is defined
+      - java_type | length > 0
+      - java_type in ["jre", "jdk"]
+
+- name: test if java_version is set correctly
+  assert:
+    that:
+      - java_version is defined
+      - java_version | int
+      - java_version | int >= 6
+      - java_version | int <= 13
+
+- name: test if java_format is set correctly
+  assert:
+    that:
+      - java_format is defined
+      - java_format | length > 0
+      - java_format in ["rpm", "targz"]
+
+- name: test if java_rpm_source is set correctly
+  assert:
+    that:
+      - java_rpm_source is defined
+      - java_rpm_source | length > 0
+      - java_rpm_source in ["local", "repository"]
+  when:
+    - java_vendor == "oracle"
+    - java_format == "rpm"
+
+- name: test if java_jce is set correctly
+  assert:
+    that:
+      - java_jce is defined
+      - java_jce | type_debug == "bool"
+  when:
+    - java_vendor == "oracle"
+    - java_version == 8
+
+- name: test if java_install_directory is set correctly
+  assert:
+    that:
+      - java_install_directory is defined
+      - java_install_directory | length > 0
+  when:
+    - java_vendor == "oracle"
+    - java_format == "targz"
