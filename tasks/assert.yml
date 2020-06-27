@@ -16,10 +16,11 @@
 - name: test if java_version is set correctly
   assert:
     that:
-      - java_version is defined
       - java_version | int
       - java_version | int >= 6
       - java_version | int <= 13
+  when:
+    - java_version is defined
 
 - name: test if java_format is set correctly
   assert:
