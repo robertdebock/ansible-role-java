@@ -21,6 +21,7 @@
   copy:
     src: "{{ java_package }}"
     dest: "/tmp/{{ java_oracle_package }}"
+    mode: "0640"
   when:
     - java_rpm_source == "local"
     - java_format == "rpm"
@@ -45,6 +46,7 @@
   file:
     path: "{{ java_install_directory }}"
     state: directory
+    mode: "0755"
   when:
     - java_vendor == "oracle"
     - java_format == "targz"
@@ -53,6 +55,7 @@
   unarchive:
     src: "{{ java_oracle_package }}"
     dest: "{{ java_install_directory }}"
+    mode: "0755"
   when:
     - java_format == "targz"
     - java_vendor == "oracle"
@@ -61,6 +64,7 @@
   unarchive:
     src: jce_policy-8.zip
     dest: "{{ java_install_directory }}"
+    mode: "0755"
   when:
     - java_jce | bool
     - java_version is defined
@@ -91,3 +95,4 @@
     regexp: '^export JAVA_HOME='
     line: 'export JAVA_HOME="{{ java_home.stdout }}"'
     create: yes
+    mode: "0644"
