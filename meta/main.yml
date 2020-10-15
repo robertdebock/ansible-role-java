@@ -36,8 +36,6 @@ galaxy_info:
         - xenial
 
   galaxy_tags:
-    - centos
-    - redhat
     - java
     - oracle
     - openjdk
