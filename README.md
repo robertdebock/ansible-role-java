@@ -46,6 +46,7 @@ For verification `molecule/resources/verify.yml` runs after the role has been ap
 
     - name: check if java can be started
       command: java -version
+      changed_when: no
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.

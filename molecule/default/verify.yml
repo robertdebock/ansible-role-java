@@ -10,3 +10,4 @@
 
     - name: check if java can be started
       command: java -version
+      changed_when: no
