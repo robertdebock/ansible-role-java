@@ -4,7 +4,7 @@
     that:
       - java_vendor is defined
       - java_vendor | length > 0
-      - java_vendor in ["openjdk", "oracle"]
+      - java_vendor in [ "openjdk", "oracle" ]
     quiet: yes
 
 - name: test if java_type is set correctly
@@ -12,7 +12,7 @@
     that:
       - java_type is defined
       - java_type | length > 0
-      - java_type in ["jre", "jdk"]
+      - java_type in [ "jre", "jdk" ]
     quiet: yes
 
 - name: test if java_version is set correctly
@@ -30,7 +30,7 @@
     that:
       - java_format is defined
       - java_format | length > 0
-      - java_format in ["rpm", "targz"]
+      - java_format in [ "rpm", "targz" ]
     quiet: yes
 
 - name: test if java_rpm_source is set correctly
@@ -38,7 +38,7 @@
     that:
       - java_rpm_source is defined
       - java_rpm_source | length > 0
-      - java_rpm_source in ["local", "repository"]
+      - java_rpm_source in [ "local", "repository" ]
     quiet: yes
   when:
     - java_vendor == "oracle"
