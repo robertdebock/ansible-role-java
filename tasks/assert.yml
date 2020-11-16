@@ -17,8 +17,8 @@
   assert:
     that:
       - java_version is number
-      - java_version | int >= 6
-      - java_version | int <= 13
+      - java_version >= 6
+      - java_version <= 13
     quiet: yes
   when:
     - java_version is defined
