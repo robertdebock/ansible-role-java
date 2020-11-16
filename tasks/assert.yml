@@ -3,7 +3,6 @@
   assert:
     that:
       - java_vendor is defined
-      - java_vendor | length > 0
       - java_vendor in [ "openjdk", "oracle" ]
     quiet: yes
 
@@ -11,7 +10,6 @@
   assert:
     that:
       - java_type is defined
-      - java_type | length > 0
       - java_type in [ "jre", "jdk" ]
     quiet: yes
 
@@ -29,7 +27,6 @@
   assert:
     that:
       - java_format is defined
-      - java_format | length > 0
       - java_format in [ "rpm", "targz" ]
     quiet: yes
 
@@ -37,7 +34,6 @@
   assert:
     that:
       - java_rpm_source is defined
-      - java_rpm_source | length > 0
       - java_rpm_source in [ "local", "repository" ]
     quiet: yes
   when:
@@ -58,7 +54,6 @@
   assert:
     that:
       - java_install_directory is defined
-      - java_install_directory | length > 0
     quiet: yes
   when:
     - java_vendor == "oracle"
