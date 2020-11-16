@@ -48,7 +48,7 @@
   assert:
     that:
       - java_jce is defined
-      - java_jce | type_debug == "bool"
+      - java_jce is boolean
     quiet: yes
   when:
     - java_vendor == "oracle"
