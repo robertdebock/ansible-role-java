@@ -10,8 +10,8 @@ _java_default_version:
   Fedora: 8
   Gentoo: 8
   RedHat: 8
-  Ubuntu-19: 13
-  Ubuntu: 8
+  Ubuntu: 11
+  Ubuntu-16: 8
   openSUSE Leap: 8
 
 java_default_version: "{{ java_version | default(_java_default_version[ansible_distribution ~ '-' ~ ansible_distribution_major_version] | default(_java_default_version[ansible_distribution])) }}"
