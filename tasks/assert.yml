@@ -1,4 +1,5 @@
 ---
+
 - name: test if java_vendor is set correctly
   assert:
     that:
