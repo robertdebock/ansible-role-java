@@ -19,19 +19,18 @@
   environment:
     USE: "X -cups -alsa -fontconfig"
 
-- name: copy oracle java (rpm)
-  copy:
-    src: "{{ java_package }}"
-    dest: "/tmp/{{ java_oracle_package }}"
-    mode: "0640"
-  when:
-    - java_rpm_source == "local"
-    - java_format == "rpm"
+- name: configure local rpm
+  block:
+    - name: copy oracle java (rpm)
+      copy:
+        src: "{{ java_package }}"
+        dest: "/tmp/{{ java_oracle_package }}"
+        mode: "0640"
 
-- name: install oracle java (rpm) (local)
-  package:
-    name: "/tmp/{{ java_oracle_package }}"
-    state: present
+    - name: install oracle java (rpm) (local)
+      package:
+        name: "/tmp/{{ java_oracle_package }}"
+        state: present
   when:
     - java_rpm_source == "local"
     - java_format == "rpm"
@@ -44,20 +43,19 @@
     - java_rpm_source == "repository"
     - java_format == "rpm"
 
-- name: ensure java_install_directory exists
-  file:
-    path: "{{ java_install_directory }}"
-    state: directory
-    mode: "0755"
-  when:
-    - java_vendor == "oracle"
-    - java_format == "targz"
+- name: configure oracle targz
+  block:
+    - name: ensure java_install_directory exists
+      file:
+        path: "{{ java_install_directory }}"
+        state: directory
+        mode: "0755"
 
-- name: install oracle java (targz)
-  unarchive:
-    src: "{{ java_oracle_package }}"
-    dest: "{{ java_install_directory }}"
-    mode: "0755"
+    - name: install oracle java (targz)
+      unarchive:
+        src: "{{ java_oracle_package }}"
+        dest: "{{ java_install_directory }}"
+        mode: "0755"
   when:
     - java_format == "targz"
     - java_vendor == "oracle"
@@ -69,7 +67,6 @@
     mode: "0755"
   when:
     - java_jce | bool
-    - java_version is defined
     - java_version == 8
     - java_vendor == "oracle"
 
