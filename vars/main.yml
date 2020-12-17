@@ -14,7 +14,7 @@ _java_default_version:
   Ubuntu-16: 8
   openSUSE Leap: 8
 
-java_default_version: "{{ java_version | default(_java_default_version[ansible_distribution ~ '-' ~ ansible_distribution_major_version] | default(_java_default_version[ansible_distribution])) }}"
+java_default_version: "{{ java_version | default(_java_default_version[ansible_distribution ~ '-' ~ ansible_distribution_major_version] | default(_java_default_version[ansible_distribution])) | int }}"
 
 # This part maps the type of java package (jre/jdk) to a package name
 # for the distribution.
