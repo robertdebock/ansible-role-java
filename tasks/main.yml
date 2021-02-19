@@ -7,12 +7,12 @@
   delegate_to: localhost
 
 - name: install requirements
-  package:
+  ansible.builtin.package:
     name: bash
     state: present
 
 - name: install openjdk java (package)
-  package:
+  ansible.builtin.package:
     name: "{{ java_openjdk_package }}"
     state: present
   when:
@@ -37,7 +37,7 @@
     - java_format == "rpm"
 
 - name: install oracle java (rpm) (repository)
-  package:
+  ansible.builtin.package:
     name: "{{ java_oracle_package }}"
     state: present
   when:
@@ -62,7 +62,7 @@
     - java_vendor == "oracle"
 
 - name: install oracle java policy software (targz)
-  unarchive:
+  ansible.builtin.unarchive:
     src: jce_policy-8.zip
     dest: "{{ java_install_directory }}"
     mode: "0755"
@@ -72,7 +72,7 @@
     - java_vendor == "oracle"
 
 - name: set alternative (targz)
-  alternatives:
+  community.general.alternatives:
     name: java
     link: /usr/bin/java
     path: "{{ java_install_directory }}/{{ java_oracle_directory }}/bin/java"
@@ -82,7 +82,7 @@
     - java_vendor == "oracle"
 
 - name: find JAVA_HOME
-  shell: set -o pipefail ; readlink -f /usr/bin/java | sed 's%/bin/java%%'
+  ansible.builtin.shell: set -o pipefail ; readlink -f /usr/bin/java | sed 's%/bin/java%%'
   args:
     executable: /bin/bash
   changed_when: no
@@ -90,7 +90,7 @@
   register: java_home
 
 - name: set JAVA_HOME in /etc/environment
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /etc/profile.d/java_home.sh
     regexp: '^export JAVA_HOME='
     line: 'export JAVA_HOME="{{ java_home.stdout }}"'
