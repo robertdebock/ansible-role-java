@@ -23,13 +23,13 @@
 - name: configure local rpm
   block:
     - name: copy oracle java (rpm)
-      copy:
+      ansible.builtin.copy:
         src: "{{ java_package }}"
         dest: "/tmp/{{ java_oracle_package }}"
         mode: "0640"
 
     - name: install oracle java (rpm) (local)
-      package:
+      ansible.builtin.package:
         name: "/tmp/{{ java_oracle_package }}"
         state: present
   when:
@@ -47,13 +47,13 @@
 - name: configure oracle targz
   block:
     - name: ensure java_install_directory exists
-      file:
+      ansible.builtin.file:
         path: "{{ java_install_directory }}"
         state: directory
         mode: "0755"
 
     - name: install oracle java (targz)
-      unarchive:
+      ansible.builtin.unarchive:
         src: "{{ java_oracle_package }}"
         dest: "{{ java_install_directory }}"
         mode: "0755"
