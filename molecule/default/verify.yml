@@ -6,7 +6,7 @@
 
   tasks:
     - name: check if connection still works
-      ping:
+      ansible.builtin.ping:
 
     - name: check if java can be started
       command: java -version
