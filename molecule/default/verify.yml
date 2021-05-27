@@ -5,9 +5,7 @@
   gather_facts: no
 
   tasks:
-    - name: check if connection still works
-      ansible.builtin.ping:
-
     - name: check if java can be started
-      command: java -version
+      ansible.builtin.command:
+        cmd: java -version
       changed_when: no
