@@ -112,7 +112,6 @@ The minimum version of Ansible required is 2.10, tests have been done to:
 - The current version.
 - The development version.
 
-
 ## [Included version(s)](#included-versions)
 
 This role [refers to a version](https://github.com/robertdebock/ansible-role-java/blob/master/vars/main.yml) released by Oracle. Check the released version(s) here:
