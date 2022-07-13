@@ -89,7 +89,7 @@
   check_mode: no
   register: java_home
 
-- name: set JAVA_HOME in /etc/environment
+- name: set JAVA_HOME in /etc/profile.d/java_home.sh
   ansible.builtin.lineinfile:
     path: /etc/profile.d/java_home.sh
     regexp: '^export JAVA_HOME='
