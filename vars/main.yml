@@ -72,7 +72,7 @@ _java_openjdk_package:
     13:
       default: openjdk-13-jdk
 
-java_openjdk_package: "{{ _java_openjdk_package[java_type][java_default_version | int][ansible_distribution] | default(_java_openjdk_package[java_type][java_default_version | int]['default'] | default([] )) }}"
+java_openjdk_package: "{{ _java_openjdk_package[java_type][java_version | int][ansible_distribution] | default(_java_openjdk_package[java_type][java_default_version | int]['default'] | default([] )) }}"
 
 _java_package:
   oracle:
@@ -97,4 +97,4 @@ _java_package:
 
 java_oracle_package: "{{ _java_oracle_package[java_type][java_version][java_format] | default([] ) }}"
 
-java_oracle_directory: "{{ _java_oracle_package[java_type][java_version]['directory] }}"
+java_oracle_directory: "{{ _java_oracle_package[java_type][java_version]['directory'] }}"
