@@ -1,16 +1,16 @@
 ---
-image: "robertdebock/github-action-molecule:3.3.1"
+image: "robertdebock/github-action-molecule:4.0.8"
 
-services:
-  - docker:dind
+# services:
+#   - docker:dind
 
 variables:
-  DOCKER_HOST: "tcp://docker:2375"
   PY_COLORS: 1
 
 molecule:
   script:
-    - image=${image} tag=${tag} molecule test
+    - if [ -f tox.ini ] ; then tox ; fi
+    - if [ ! -f tox.ini ; then molecule test ; fi
   rules:
     - if: $CI_COMMIT_REF_NAME == "master"
   retry: 1
@@ -21,13 +21,13 @@ molecule:
       - image: "amazonlinux"
         tag: "latest"
       - image: "enterpriselinux"
-        tag: "latest"
+        tag: "8"
       - image: "debian"
         tag: "latest"
       - image: "debian"
         tag: "bookworm"
       - image: "fedora"
-        tag: "34"
+        tag: "35"
       - image: "fedora"
         tag: "latest"
       - image: "fedora"
@@ -36,6 +36,8 @@ molecule:
         tag: "latest"
       - image: "ubuntu"
         tag: "latest"
+      - image: "ubuntu"
+        tag: "focal"
       - image: "ubuntu"
         tag: "bionic"
 
