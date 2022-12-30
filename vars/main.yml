@@ -5,7 +5,7 @@
 _java_default_version:
   default: 11
   Alpine: 8
-  Debian: 11
+  Debian: 17
   Gentoo: 8
   RedHat: 8
   Ubuntu-16: 8
@@ -44,6 +44,8 @@ _java_openjdk_package:
       default: openjdk-12-jre
     13:
       default: openjdk-13-jre
+    17:
+      default: openjdk-17-jre
   jdk:
     6:
       default: java-1.6.0-openjdk-devel
@@ -71,6 +73,8 @@ _java_openjdk_package:
       default: openjdk-12-jdk
     13:
       default: openjdk-13-jdk
+    17:
+      default: openjdk-17-jdk
 
 java_openjdk_package: "{{ _java_openjdk_package[java_type][java_default_version | int][ansible_distribution] | default(_java_openjdk_package[java_type][java_default_version | int]['default'] | default([] )) }}"
 
@@ -97,4 +101,4 @@ _java_package:
 
 java_oracle_package: "{{ _java_oracle_package[java_type][java_version][java_format] | default([] ) }}"
 
-java_oracle_directory: "{{ _java_oracle_package[java_type][java_version]['directory] }}"
+java_oracle_directory: "{{ _java_oracle_package[java_type][java_version]['directory'] }}"
