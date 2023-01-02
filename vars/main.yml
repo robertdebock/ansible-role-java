@@ -77,7 +77,7 @@ _java_openjdk_package:
     17:
       default: openjdk-17-jdk
 
-java_openjdk_package: "{{ _java_openjdk_package[java_type][java_default_version | int][ansible_distribution] | default(_java_openjdk_package[java_type][java_default_version | int]['default'] | default([] )) }}"
+java_openjdk_package: "{{ _java_openjdk_package[java_type][java_default_version | int][ansible_distribution] | default(_java_openjdk_package[java_type][java_default_version | int]['default'] | default([])) }}"
 
 _java_package:
   oracle:
@@ -100,6 +100,6 @@ _java_package:
         rpm: jdk-10.0.2_linux-x64_bin.rpm
         directory: jdk-10.0.2
 
-java_oracle_package: "{{ _java_oracle_package[java_type][java_version][java_format] | default([] ) }}"
+java_oracle_package: "{{ _java_oracle_package[java_type][java_version][java_format] | default([]) }}"
 
 java_oracle_directory: "{{ _java_oracle_package[java_type][java_version]['directory'] }}"
