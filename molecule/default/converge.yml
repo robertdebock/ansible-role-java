@@ -6,3 +6,4 @@
 
   roles:
     - role: ansible-role-java
+      java_version: 8

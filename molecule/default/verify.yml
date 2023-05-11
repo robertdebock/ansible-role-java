@@ -5,7 +5,18 @@
   gather_facts: no
 
   tasks:
-    - name: check if java can be started
+    - name: Check if java can be started
       ansible.builtin.command:
         cmd: java -version
       changed_when: no
+      register: output
+
+    - name: Show output
+      ansible.builtin.debug:
+        msg: "{{ output }}"
+
+    - name: Check if version 8 was found.
+      ansible.builtin.assert:
+        that:
+          - output.stderr is search('openjdk version "1.8.')
+        quiet: yes
