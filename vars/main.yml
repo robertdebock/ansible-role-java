@@ -77,7 +77,7 @@ _java_openjdk_package:
     17:
       default: openjdk-17-jdk
 
-java_openjdk_package: "{{ _java_openjdk_package[java_type][java_default_version | int][ansible_distribution] | default(_java_openjdk_package[java_type][java_default_version | int]['default'] | default([])) }}"
+java_openjdk_package: "{{ _java_openjdk_package[java_type][java_version | int][ansible_distribution] | default(_java_openjdk_package[java_type][java_version | int]['default'] | default([])) }}"
 
 _java_package:
   oracle:
