@@ -8,7 +8,8 @@
     _expected_java_version:
       default: 'openjdk version "1.8.'
       Debian: 'openjdk version "11.0.'
-    expected_java_version: "{{ _expected_java_version[ansible_distribution] | default(_expected_java_version['default']) }}"
+      Debian-bookworm: 'openjdk version "17.0.'
+    expected_java_version: "{{ _expected_java_version[ansible_distribution ~ '-' ~ ansible_distribution_release] | default(_expected_java_version[ansible_distribution] | default(_expected_java_version['default'])) }}"
 
   tasks:
     - name: Run java -version

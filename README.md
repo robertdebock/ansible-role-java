@@ -22,7 +22,8 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
     _desired_java_version:
       default: 8
       Debian: 11
-    desired_java_version: "{{ _desired_java_version[ansible_distribution] | default(_desired_java_version['default']) }}"
+      Debian-bookworm: 17
+    desired_java_version: "{{ _desired_java_version[ansible_distribution ~ '-' ~ ansible_distribution_release] | default(_desired_java_version[ansible_distribution] | default(_desired_java_version['default'])) }}"
 
   roles:
     - role: robertdebock.java
@@ -33,10 +34,10 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
 
 ```yaml
 ---
-- name: Default
+- name: Prepare
   hosts: all
-  gather_facts: no
   become: yes
+  gather_facts: no
 
   roles:
     - role: robertdebock.bootstrap
