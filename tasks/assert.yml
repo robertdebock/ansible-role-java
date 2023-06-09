@@ -59,6 +59,7 @@
     that:
       - java_install_directory is defined
       - java_install_directory is string
+      - java_install_directory is not none
     quiet: yes
   when:
     - java_vendor == "oracle"
