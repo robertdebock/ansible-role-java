@@ -21,6 +21,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
   vars:
     _desired_java_version:
       default: 8
+      Amazon: 17
       Debian: 11
       Debian-bookworm: 17
     desired_java_version: "{{ _desired_java_version[ansible_distribution ~ '-' ~ ansible_distribution_release] | default(_desired_java_version[ansible_distribution] | default(_desired_java_version['default'])) }}"
@@ -59,7 +60,7 @@ java_vendor: openjdk
 # Set the variable to install the type, valid values are "jre" and "jdk".
 java_type: jre
 
-# Set the version of java, valid values are 6, 7, 8, 9, 10, 11, 12 or 13.
+# Set the version of java, valid values are 6, 7, 8, 9, 10, 11, 12, 13 or 17.
 # By default, a distribution default is used, mapped in `vars/main.yml`.
 # By setting java_version, you overwrite this default to your selected
 # version.
