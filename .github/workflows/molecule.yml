@@ -34,13 +34,15 @@ jobs:
           - image: "amazonlinux"
             tag: "latest"
           - image: "enterpriselinux"
+            tag: "8"
+          - image: "enterpriselinux"
             tag: "latest"
           - image: "debian"
             tag: "latest"
           - image: "debian"
             tag: "bookworm"
           - image: "fedora"
-            tag: "35"
+            tag: "37"
           - image: "fedora"
             tag: "latest"
           - image: "fedora"
@@ -63,7 +65,7 @@ jobs:
       - name: parse apparmor for mysql
         run: sudo apparmor_parser -R /etc/apparmor.d/usr.sbin.mysqld
       - name: molecule
-        uses: robertdebock/molecule-action@4.0.8
+        uses: robertdebock/molecule-action@5.0.2
         with:
           image: ${{ matrix.config.image }}
           tag: ${{ matrix.config.tag }}

@@ -2,10 +2,25 @@
 - name: Verify
   hosts: all
   become: yes
-  gather_facts: no
+  gather_facts: yes
+
+  vars:
+    _expected_java_version:
+      default: 'openjdk version "1.8.'
+      Amazon: 'openjdk version "17.0.'
+      Debian: 'openjdk version "11.0.'
+      Debian-bookworm: 'openjdk version "17.0.'
+    expected_java_version: "{{ _expected_java_version[ansible_distribution ~ '-' ~ ansible_distribution_release] | default(_expected_java_version[ansible_distribution] | default(_expected_java_version['default'])) }}"
 
   tasks:
-    - name: check if java can be started
+    - name: Run java -version
       ansible.builtin.command:
         cmd: java -version
       changed_when: no
+      register: output
+
+    - name: Check if the correct version was found.
+      ansible.builtin.assert:
+        that:
+          - output.stderr is search(expected_java_version)
+        quiet: yes

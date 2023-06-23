@@ -5,10 +5,12 @@
 _java_default_version:
   default: 11
   Alpine: 8
-  Debian: 11
+  Amazon: 17
+  Debian: 17
   Gentoo: 8
   RedHat: 8
   Ubuntu-16: 8
+  Ubuntu: 11
   Suse: 8
 
 java_default_version: "{{ _java_default_version[ansible_distribution ~ '-' ~ ansible_distribution_major_version] | default(_java_default_version[ansible_distribution] | default(_java_default_version[ansible_os_family] | default(_java_default_version['default'] ))) }}"
@@ -44,6 +46,9 @@ _java_openjdk_package:
       default: openjdk-12-jre
     13:
       default: openjdk-13-jre
+    17:
+      default: openjdk-17-jre
+      Amazon: java-17-amazon-corretto
   jdk:
     6:
       default: java-1.6.0-openjdk-devel
@@ -71,6 +76,9 @@ _java_openjdk_package:
       default: openjdk-12-jdk
     13:
       default: openjdk-13-jdk
+    17:
+      default: openjdk-17-jdk
+      Amazon: java-17-amazon-corretto-devel
 
 java_openjdk_package: "{{ _java_openjdk_package[java_type][java_version | int][ansible_distribution] | default(_java_openjdk_package[java_type][java_default_version | int]['default'] | default([] )) }}"
 
