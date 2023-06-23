@@ -91,8 +91,8 @@
 
 - name: Set JAVA_HOME in /etc/environment
   ansible.builtin.lineinfile:
-    path: /etc/profile.d/java_home.sh
-    regexp: '^export JAVA_HOME='
-    line: 'export JAVA_HOME="{{ java_home.stdout }}"'
+    path: /etc/environment
+    regexp: '^JAVA_HOME='
+    line: 'JAVA_HOME="{{ java_home.stdout }}"'
     create: yes
     mode: "0644"
