@@ -12,6 +12,7 @@ _java_default_version:
   Ubuntu-16: 8
   Ubuntu: 11
   Suse: 8
+  Rocky: 11
 
 java_default_version: "{{ _java_default_version[ansible_distribution ~ '-' ~ ansible_distribution_major_version] | default(_java_default_version[ansible_distribution] | default(_java_default_version[ansible_os_family] | default(_java_default_version['default'] ))) }}"
 
