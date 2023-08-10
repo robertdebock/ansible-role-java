@@ -9,6 +9,9 @@ _java_default_version:
   Debian: 17
   Gentoo: 8
   RedHat: 8
+  OracleLinux: 8
+  Rocky: *redhat_default_version
+  Ubuntu: 11
   Ubuntu-16: 8
   Ubuntu: 11
   Suse: 8
@@ -25,6 +28,8 @@ _java_openjdk_package:
       default: java-1.7.0-openjdk
       Alpine: openjdk7-jre-base
       openSUSE Leap: java-1_7_0-openjdk
+      RedHat: java-1.7.0-openjdk
+      OracleLinux: java-1.7.0-openjdk
     8:
       default: java-1.8.0-openjdk
       Alpine: openjdk8-jre-base
@@ -33,6 +38,9 @@ _java_openjdk_package:
       Gentoo: jre
       Ubuntu: openjdk-8-jre
       openSUSE Leap: java-1_8_0-openjdk
+      RedHat: &redhat_8_openjdk_package java-1.8.0-openjdk
+      OracleLinux: java-1.8.0-openjdk
+      Rocky: *redhat_8_openjdk_package
     9:
       default: openjdk-9-jre
     10:
@@ -42,6 +50,9 @@ _java_openjdk_package:
       Debian: openjdk-11-jre
       Fedora: java-11-openjdk-headless
       Ubuntu: openjdk-11-jre
+      RedHat: &redhat_11_openjdk_package java-11-openjdk
+      OracleLinux: java-11-openjdk
+      Rocky: *redhat_11_openjdk_package
     12:
       default: openjdk-12-jre
     13:
@@ -56,6 +67,8 @@ _java_openjdk_package:
       default: java-1.7.0-openjdk-devel
       Alpine: openjdk7
       openSUSE Leap: java-1_7_0-openjdk-devel
+      OracleLinux: java-1.7.0-openjdk-devel
+      RedHat: java-1.7.0-openjdk-devel
     8:
       default: java-1.8.0-openjdk-devel
       Alpine: openjdk8
@@ -63,6 +76,9 @@ _java_openjdk_package:
       Gentoo: jdk
       Ubuntu: openjdk-8-jdk
       openSUSE Leap: java-1_8_0-openjdk-devel
+      RedHat: java-1.8.0-openjdk-devel
+      OracleLinux: java-1.8.0-openjdk-devel
+      Rocky: java-1.8.0-openjdk-devel
     9:
       default: java-9-openjdk-devel
       Ubuntu: openjdk-9-jdk
@@ -72,6 +88,9 @@ _java_openjdk_package:
       default: java-11-openjdk-devel
       Debian: openjdk-11-jdk
       Ubuntu: openjdk-11-jdk
+      RedHat: java-11-openjdk-devel
+      OracleLinux: java-11-openjdk-devel
+      Rocky: java-11-openjdk-devel
     12:
       default: openjdk-12-jdk
     13:
