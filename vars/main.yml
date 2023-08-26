@@ -6,7 +6,8 @@ _java_default_version:
   default: 11
   Alpine: 8
   Amazon: 17
-  Debian: 17
+  Debian: 11
+  Debian-bookworm: 17
   Gentoo: 8
   RedHat: 8
   Ubuntu-16: 8
