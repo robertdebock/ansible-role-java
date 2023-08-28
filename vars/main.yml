@@ -6,7 +6,6 @@ _java_default_version:
   default: 11
   Alpine: 8
   Amazon: 17
-  Debian: 11
   Debian-12: 17
   Gentoo: 8
   RedHat: 8
@@ -50,6 +49,8 @@ _java_openjdk_package:
     17:
       default: openjdk-17-jre
       Amazon: java-17-amazon-corretto
+    19:
+      default: openjdk-19-jre
   jdk:
     6:
       default: java-1.6.0-openjdk-devel
@@ -80,6 +81,8 @@ _java_openjdk_package:
     17:
       default: openjdk-17-jdk
       Amazon: java-17-amazon-corretto-devel
+    19:
+      default: openjdk-19-jdk
 
 java_openjdk_package: "{{ _java_openjdk_package[java_type][java_version | int][ansible_distribution] | default(_java_openjdk_package[java_type][java_version | int]['default'] | default([])) }}"
 
