@@ -6,3 +6,10 @@
 
   roles:
     - role: ansible-role-java
+# To install Oracle java 21 package:
+# NOTE: Please download Java yourself, place it in `files/`.
+# This is to avoid licensing issues.
+# java_source: local
+# java_type: jdk
+# java_format: deb
+# java_version: 21

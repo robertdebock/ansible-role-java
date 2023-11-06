@@ -30,7 +30,7 @@
     that:
       - java_format is defined
       - java_format is string
-      - java_format in [ "rpm", "targz" ]
+      - java_format in [ "deb", "rpm", "targz" ]
     quiet: yes
 
 - name: assert | Test java_rpm_source

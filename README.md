@@ -2,9 +2,9 @@
 
 Install and configure java on your system.
 
-|GitHub|GitLab|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![github](https://github.com/robertdebock/ansible-role-java/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-java/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-java/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-java)|[![quality](https://img.shields.io/ansible/quality/24518)](https://galaxy.ansible.com/robertdebock/java)|[![downloads](https://img.shields.io/ansible/role/d/24518)](https://galaxy.ansible.com/robertdebock/java)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-java.svg)](https://github.com/robertdebock/ansible-role-java/releases/)|
+|GitHub|GitLab|Downloads|Version|
+|------|------|---------|-------|
+|[![github](https://github.com/robertdebock/ansible-role-java/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-java/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-java/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-java)|[![downloads](https://img.shields.io/ansible/role/d/24518)](https://galaxy.ansible.com/robertdebock/java)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-java.svg)](https://github.com/robertdebock/ansible-role-java/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -19,6 +19,13 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 
   roles:
     - role: robertdebock.java
+# To install Oracle java 21 package:
+# NOTE: Please download Java yourself, place it in `files/`.
+# This is to avoid licensing issues.
+# java_source: local
+# java_type: jdk
+# java_format: deb
+# java_version: 21
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/robertdebock/ansible-role-java/blob/master/molecule/default/prepare.yml):
@@ -56,14 +63,14 @@ java_type: jre
 # version.
 java_version: "{{ java_default_version }}"
 
-# Set the format of the installation source, valid values are "targz" and
-# "rpm". This is only valid with "java_vendor == oracle"
+# Set the format of the installation source, valid values are "deb", "rpm" or "targz".
+# This is only valid with "java_vendor == oracle"
 java_format: targz
 
 # Where do the RPMs come from when installing Oracle RPMs?
 # Either "local" or "repository".
 # Valid for "java_vendor == oracle" and "java_format" == "rpm"
-java_rpm_source: local
+java_source: local
 
 # Choose if you can JCE installed. Only applicable for (both):
 # - java_vendor == "oracle"
@@ -114,7 +121,7 @@ The minimum version of Ansible required is 2.12, tests have been done to:
 - The current version.
 - The development version.
 
-If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-java/issues)
+If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-java/issues).
 
 ## [License](#license)
 

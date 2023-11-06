@@ -21,20 +21,36 @@
   environment:
     USE: "X -cups -alsa -fontconfig"
 
-- name: Configure local rpm
+- name: Install RPM
   when:
-    - java_rpm_source == "local"
+    - java_source == "local"
     - java_format == "rpm"
   block:
     - name: Copy oracle java (rpm)
       ansible.builtin.copy:
         src: "{{ java_package }}"
-        dest: "/tmp/{{ java_oracle_package }}"
+        dest: "/tmp/{{ java_package }}"
         mode: "0640"
 
     - name: Install oracle java (rpm) (local)
       ansible.builtin.package:
-        name: "/tmp/{{ java_oracle_package }}"
+        name: "/tmp/{{ java_package }}"
+        state: present
+
+- name: Install DEB
+  when:
+    - java_source == "local"
+    - java_format == "deb"
+  block:
+    - name: Copy oracle java (deb)
+      ansible.builtin.copy:
+        src: "{{ java_package }}"
+        dest: "/tmp/{{ java_package }}"
+        mode: "0640"
+
+    - name: Install oracle java (deb) (local)
+      ansible.builtin.apt:
+        deb: "/tmp/{{ java_package }}"
         state: present
 
 - name: Install oracle java (rpm) (repository)
@@ -42,7 +58,7 @@
     name: "{{ java_oracle_package }}"
     state: present
   when:
-    - java_rpm_source == "repository"
+    - java_source == "repository"
     - java_format == "rpm"
 
 - name: Configure oracle targz
