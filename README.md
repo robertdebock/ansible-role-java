@@ -1,4 +1,4 @@
-# Ansible role [java](#java)
+# [Ansible role java](#java)
 
 Install and configure java on your system.
 
