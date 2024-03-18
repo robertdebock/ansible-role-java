@@ -1,11 +1,11 @@
 ---
 - name: Verify
   hosts: all
-  become: yes
-  gather_facts: yes
+  become: true
+  gather_facts: true
 
   tasks:
     - name: Run java -version
       ansible.builtin.command:
         cmd: java -version
-      changed_when: no
+      changed_when: false
