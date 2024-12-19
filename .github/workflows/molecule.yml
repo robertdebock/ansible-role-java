@@ -119,7 +119,7 @@ jobs:
       - lint
     runs-on: ubuntu-20.04
     container:
-      image: python:3:13
+      image: python:3.13
     strategy:
       fail-fast: false
       matrix:
