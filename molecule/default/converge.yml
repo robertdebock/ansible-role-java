@@ -5,7 +5,7 @@
   gather_facts: true
 
   roles:
-    - role: ansible-role-java
+    - role: robertdebock.java
 # To install Oracle java 21 package:
 # NOTE: Please download Java yourself, place it in `files/`.
 # This is to avoid licensing issues.
