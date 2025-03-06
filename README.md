@@ -18,7 +18,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
   gather_facts: true
 
   roles:
-    - role: robertdebock.java
+    - role: ansible-role-java
 # To install Oracle java 21 package:
 # NOTE: Please download Java yourself, place it in `files/`.
 # This is to avoid licensing issues.
