@@ -9,7 +9,7 @@ _java_default_version:
   Debian-12: 17
   Fedora: 21
   Gentoo: 8
-  RedHat: 8
+  RedHat: 11
   Ubuntu: 19
   Ubuntu-18: 17
   Ubuntu-20: 17
