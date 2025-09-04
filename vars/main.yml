@@ -7,6 +7,7 @@ _java_default_version:
   Alpine: 8
   Amazon: 17
   Debian-12: 17
+  Debian-13: 21
   Fedora: 21
   Gentoo: 8
   RedHat: 11
