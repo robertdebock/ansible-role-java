@@ -95,7 +95,7 @@
     path: "{{ java_install_directory }}/{{ java_oracle_directory }}/bin/java"
   when:
     - java_format == "targz"
-    - ansible_distribution != "Alpine"
+    - ansible_facts['distribution'] != "Alpine"
     - java_vendor == "oracle"
 
 - name: Find JAVA_HOME
