@@ -14,6 +14,7 @@ _java_default_version:
   Ubuntu: 19
   Ubuntu-18: 17
   Ubuntu-20: 17
+  Ubuntu-22: 17
   Ubuntu-24: 21
   Suse: 8
 java_default_version: "{{ _java_default_version[ansible_facts['distribution'] ~ '-' ~ ansible_facts['distribution_major_version']] | default(_java_default_version[ansible_facts['distribution']] | default(_java_default_version[ansible_facts['os_family']] | default(_java_default_version['default'] ))) }}"
