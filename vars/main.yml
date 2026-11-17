@@ -10,7 +10,7 @@ _java_default_version:
   Debian-13: 21
   Fedora: 25
   Gentoo: 8
-  RedHat: 11
+  RedHat: 17
   Ubuntu: 19
   Ubuntu-18: 17
   Ubuntu-20: 17
@@ -51,17 +51,20 @@ _java_openjdk_package:
     13:
       default: openjdk-13-jre
     17:
-      default: openjdk-17-jre
+      default: java-17-openjdk-headless
       Amazon: java-17-amazon-corretto
-      Fedora: java-17-openjdk-headless
+      Debian: openjdk-17-jre
+      Ubuntu: openjdk-17-jre
     19:
       default: openjdk-19-jre
     21:
-      default: openjdk-21-jre
-      Fedora: java-21-openjdk-headless
+      default: java-21-openjdk-headless
+      Debian: openjdk-21-jre
+      Ubuntu: openjdk-21-jre
     25:
-      default: openjdk-25-jre
-      Fedora: java-25-openjdk-headless
+      default: java-25-openjdk-headless
+      Debian: openjdk-25-jre
+      Ubuntu: openjdk-25-jre
   jdk:
     6:
       default: java-1.6.0-openjdk-devel
@@ -90,16 +93,20 @@ _java_openjdk_package:
     13:
       default: openjdk-13-jdk
     17:
-      default: openjdk-17-jdk
+      default: java-17-openjdk-devel
       Amazon: java-17-amazon-corretto-devel
+      Debian: openjdk-17-jdk
+      Ubuntu: openjdk-17-jdk
     19:
       default: openjdk-19-jdk
     21:
-      default: openjdk-21-jdk
-      Fedora: java-21-openjdk-devel
+      default: java-21-openjdk-devel
+      Debian: openjdk-21-jdk
+      Ubuntu: openjdk-21-jdk
     25:
-      default: openjdk-25-jdk
-      Fedora: java-25-openjdk-devel
+      default: java-25-openjdk-devel
+      Debian: openjdk-25-jdk
+      Ubuntu: openjdk-25-jdk
 java_openjdk_package: "{{ _java_openjdk_package[java_type][java_version | int][ansible_facts['distribution']] | default(_java_openjdk_package[java_type][java_version | int]['default'] | default([])) }}"
 
 _java_package:
