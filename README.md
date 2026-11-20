@@ -57,7 +57,7 @@ java_vendor: openjdk
 # Set the variable to install the type, valid values are "jre" and "jdk".
 java_type: jre
 
-# Set the version of java, valid values are 6, 7, 8, 9, 10, 11, 12, 13 17, 19, 20 or 21.
+# Set the version of java, valid values are 6, 7, 8, 9, 10, 11, 12, 13 17, 19, 20, 21 or 25.
 # By default, a distribution default is used, mapped in `vars/main.yml`.
 # By setting java_version, you overwrite this default to your selected
 # version.
@@ -113,11 +113,7 @@ This role has been tested on these [container images](https://hub.docker.com/u/r
 |[Fedora](https://hub.docker.com/r/robertdebock/fedora)|all|
 |[Ubuntu](https://hub.docker.com/r/robertdebock/ubuntu)|all|
 
-The minimum version of Ansible required is 2.12, tests have been done on:
-
-- The previous version.
-- The current version.
-- The development version.
+The minimum version of Ansible (ansible-core) required is 2.20, tests are done with the latest release of ansible-core.
 
 If you find issues, please register them on [GitHub](https://github.com/robertdebock/ansible-role-java/issues).
 
